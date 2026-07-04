@@ -1,0 +1,12 @@
+panel,group,n,old,new,old_rate,new_rate
+recall(positives),atypical/pseudokinase,1,1,1,1.0,1.0
+recall(positives),cofactor pseudoenzyme,2,2,2,1.0,1.0
+recall(positives),metabolic pseudoenzyme,2,1,1,0.5,0.5
+recall(positives),pseudo-DUB,3,0,0,0.0,0.0
+recall(positives),pseudo-GTPase,5,4,4,0.8,0.8
+recall(positives),pseudokinase,20,18,16,0.9,0.8
+recall(positives),pseudophosphatase,7,6,6,0.857,0.857
+recall(positives),pseudoprotease,3,3,3,1.0,1.0
+recall(positives),ALL,43,35,33,0.814,0.767
+specificity(negatives),gold_comparators,22,22,22,1.0,1.0
+specificity(negatives),active_kinase_panel,74,38,65,0.514,0.878

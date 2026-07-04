@@ -303,3 +303,76 @@ fully-off-domain positives = 0). Both are display-level caveats only.
 QuickJS renders the full `openD` detail panel — titin shows the red cofactor banner,
 ⚑ chips, and the literature symbol caveat; AHCYL1 shows the amber partial-note (no red
 banner), its sensor breakdown intact, and no false literature caveat.
+
+
+---
+
+## v8 — mycelium review response: F1/F2/F3 fixes (2026-07-04)
+
+Applied the `arjunrajlaboratory/mycelium` `/mycelium:review` rubric (six lenses, Major/Minor
+ladder) to the whole tool. Three Major findings were raised and are now addressed. Full audit:
+`MYCELIUM_REVIEW.md`.
+
+### F1 — Death-motif gate flipped active kinases to "dead" on a single missed VAIK-lysine  *(Major → fixed)*
+
+**Problem.** The Move-1 gate called a protein-kinase-fold domain dead whenever <3 of 3 motifs
+(VAIK-K / HRD-D / DFG-D) were detected. The VAIK β3-lysine detector has a high false-negative
+rate: **36 of 68 ePK "dead" calls rested on losing only VAIK, with HRD and DFG both intact.**
+This promoted ~42 canonically **active** kinases to `override_pos` — FGFR2/3/4, PDGFRA, NTRK1/2,
+MEK1/2 (MAP2K1/2, at MR 0.70 "high"), DDR1/2, LCK, ITK, JAK3, PLK1, STK11/LKB1, CDK6, the four
+WNKs — as if they were metabolite-sensing pseudoenzymes.
+
+**Fix.** Family-specific rule: an ePK domain is death-motif-dead only if the catalytic
+**HRD-Asp or DFG-Asp** is substituted, **or ≥2 of 3 motifs** are lost. VAIK-lysine loss *alone*
+is no longer death (weakest single-motif evidence, least reliable column). Death-motif-dead
+count **92 → 38**; `override_pos` **479 → 435**. **36 ePK rescued** to active-fold. Each affected
+record carries a `motif_gate_note` / `motif_gate_class` shown on the detail card ("Active-fold
+(rescued): HRD-Asp and DFG-Asp both intact; only VAIK…" vs "Death call: Lost catalytic
+residue(s)…"). Non-kinase buckets (PTP CX5R, CASP His/Cys, RHB) are untouched — PTPRN2 etc.
+still correctly dead.
+
+**Honest cost.** KSR1/KSR2 are genuine pseudokinases whose only lesion is VAIK-lysine loss, so
+the stricter rule now misses them (they revert to base-pipeline status). VRK3/PRAG1 are called
+`not_applicable` (alignment too weak). This is a real recall/precision trade — see F2.
+
+### F2 — "Specificity held at 1.00" was measured on a blind comparator set  *(Major → fixed)*
+
+**Problem.** The v6/v7 methods claimed specificity 1.00 through the recall lift, but the shipped
+benchmark had **no specificity/false-positive column**. The 23 gold "active comparators" happened
+to contain **none** of the kinases the VAIK bug mislabelled, so 1.00 was true-but-uninformative.
+
+**Fix.** Rebuilt the benchmark (`benchmark_v3.csv` / `benchmark_v3.png`) with an **expanded
+74-gene active-kinase panel** (drug targets + textbook actives) as an explicit negative set, and
+report specificity alongside recall, old rule vs new:
+
+| Panel | old rule | new rule |
+|---|---|---|
+| Gold recall (43 positives) | 0.81 | **0.77** |
+| Gold-comparator specificity (22) | 1.00 | 1.00 |
+| **Active-kinase-panel specificity (74)** | **0.51** | **0.88** |
+
+The old gate's *true* specificity on active kinases was **0.51** (34/74 wrongly dead), not 1.00.
+The new rule trades ~4 points of gold recall for **+37 points of active-kinase specificity**. The
+methods paragraph in the tool now states this honestly and no longer claims 1.00.
+
+**Residual (documented).** 9/74 active kinases still score dead under the new rule (MKNK1/2,
+STK32A/B/C, TSSK1B, EIF2AK4, STYK1, KALRN) — all lost DFG-Asp; genuinely atypical activation
+loops. Flagged for follow-up, not silently passed.
+
+### F3 — `struct_conf` is a near-constant (0.70 for 91% of records)  *(Major → disclosed)*
+
+**Problem.** MR is presented as a two-factor product `pocket_retention × struct_conf` with both
+bars shown, but `struct_conf = 0.70` for **2435/2670 (91.2%)** — a default floor where no
+per-model active-site confidence was measured. For those, MR is effectively 0.70 × pocket_retention
+and the second axis adds no independent information.
+
+**Fix.** Added `struct_conf_source` (`default` 2435 / `measured` 235). The sensor panel now marks
+the structural-confidence row **"(default)"** with a tooltip when the floor is applied, so a flat
+axis is not over-read as evidence. MR itself is unchanged (product still exact, max dev 7.6e-5);
+this is disclosure, not a re-score. Methods section documents the 0.70 floor.
+
+**Validation (v8).** JSON parses (2670 records; `motif_gate_note`, `motif_gate_class`,
+`struct_conf_source` present); esprima clean; QuickJS `openD` render confirmed: FGFR2 & MEK1 show
+the "Active-fold (rescued)" note + intact badge; PTPRN2 stays dead; KSR1 shows rescued (the
+documented cost); every record shows the "(default)" flag where the 0.70 floor applies. MR =
+pocket × conf integrity held (max dev 7.6e-5). Guards and rankings from v7 unaffected.
