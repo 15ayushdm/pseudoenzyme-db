@@ -1,0 +1,538 @@
+acc,gene,bucket,home_family_name,death_motif_call,motif_intact,death_motifs_lost,m_VAIK,m_HRD,m_DFG,m_CX5R,m_sig,m_WPD,m_His,m_Cys,m_Ser,aln_score
+O15519,CFLAR,CASP,caspase-1,dead,0.0,cat-His;cat-Cys,,,,,,,False,False,,
+P29466,CASP1,CASP,caspase-1,intact,2.0,,,,,,,,True,True,,
+Q92851,CASP10,CASP,caspase-8,intact,2.0,,,,,,,,True,True,,
+Q6UXS9,CASP12,CASP,caspase-1,intact,2.0,,,,,,,,True,True,,
+P31944,CASP14,CASP,caspase-3,intact,2.0,,,,,,,,True,True,,
+P42575,CASP2,CASP,caspase-1,intact,2.0,,,,,,,,True,True,,
+P42574,CASP3,CASP,caspase-3,intact,2.0,,,,,,,,True,True,,
+P49662,CASP4,CASP,caspase-1,intact,2.0,,,,,,,,True,True,,
+P51878,CASP5,CASP,caspase-1,intact,2.0,,,,,,,,True,True,,
+P55212,CASP6,CASP,caspase-3,intact,2.0,,,,,,,,True,True,,
+P55210,CASP7,CASP,caspase-3,intact,2.0,,,,,,,,True,True,,
+Q14790,CASP8,CASP,caspase-8,intact,2.0,,,,,,,,True,True,,
+P55211,CASP9,CASP,caspase-8,intact,2.0,,,,,,,,True,True,,
+P60484,PTEN,PTP,Classical protein-tyrosine phosphatase (PTP1B),dead,0.0,CX5R,,,,False,False,False,,,,
+Q16849,PTPRN,PTP,protein-tyrosine-phosphatase non-receptor type 1,dead,1.0,PTP-signature(Ala->X),,,,True,False,False,,,,
+Q92932,PTPRN2,PTP,Classical protein-tyrosine phosphatase (PTP1B),dead,2.0,PTP-signature(Ala->X),,,,True,False,True,,,,
+P18031,PTPN1,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+Q06124,PTPN11,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+Q05209,PTPN12,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+Q12923,PTPN13,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+Q15678,PTPN14,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+Q99952,PTPN18,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+P17706,PTPN2,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+Q4JDL3,PTPN20,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+Q9Y2R2,PTPN22,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+P26045,PTPN3,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+P29074,PTPN4,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+P54829,PTPN5,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+P29350,PTPN6,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+P35236,PTPN7,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+P43378,PTPN9,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+P18433,PTPRA,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+P23467,PTPRB,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+P23468,PTPRD,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+P23469,PTPRE,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+P10586,PTPRF,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+P23470,PTPRG,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+Q9HD43,PTPRH,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+Q12913,PTPRJ,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+Q15262,PTPRK,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+P28827,PTPRM,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+Q16827,PTPRO,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+Q15256,PTPRR,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+Q13332,PTPRS,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+O14522,PTPRT,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+P23471,PTPRZ1,PTP,Classical protein-tyrosine phosphatase (PTP1B),intact,3.0,,,,,True,True,True,,,,
+Q16825,PTPN21,PTP,Classical protein-tyrosine phosphatase (PTP1B),partial,2.0,WPD-loop,,,,True,True,False,,,,
+Q9H3S7,PTPN23,PTP,Classical protein-tyrosine phosphatase (PTP1B),partial,2.0,WPD-loop,,,,True,True,False,,,,
+Q9UMZ3,PTPRQ,PTP,Classical protein-tyrosine phosphatase (PTP1B),partial,2.0,WPD-loop,,,,True,True,False,,,,
+Q92729,PTPRU,PTP,Classical protein-tyrosine phosphatase (PTP1B),partial,2.0,WPD-loop,,,,True,True,False,,,,
+Q96CC6,RHBDF1,RHB,Rhomboid intramembrane protease (RHBDL2),dead,1.0,GxSxG-Ser,,,,,,,True,,False,
+Q6PJF5,RHBDF2,RHB,Rhomboid intramembrane protease (RHBDL2),dead,1.0,GxSxG-Ser,,,,,,,True,,False,
+O75783,RHBDL1,RHB,Rhomboid intramembrane protease (RHBDL2),intact,2.0,,,,,,,,True,,True,
+Q9NX52,RHBDL2,RHB,Rhomboid intramembrane protease (RHBDL2),intact,2.0,,,,,,,,True,,True,
+P58872,RHBDL3,RHB,Rhomboid intramembrane protease (RHBDL2),intact,2.0,,,,,,,,True,,True,
+Q8NCB2,CAMKV,ePK,mitogen-activated protein kinase kinase,dead,1.0,HRD-Asp;DFG-Asp,True,False,False,,,,,,,319.0
+O14936,CASK,ePK,phosphorylase kinase,dead,2.0,DFG-Asp,True,True,False,,,,,,,312.0
+O00311,CDC7,ePK,mitogen-activated protein kinase kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,102.0
+Q9BWU1,CDK19,ePK,mitogen-activated protein kinase kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,174.0
+Q00534,CDK6,ePK,mitogen-activated protein kinase kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,178.0
+P49336,CDK8,ePK,mitogen-activated protein kinase kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,175.0
+Q08345,DDR1,ePK,receptor protein-tyrosine kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,127.0
+Q16832,DDR2,ePK,receptor protein-tyrosine kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,154.0
+Q9P2K8,EIF2AK4,ePK,mitogen-activated protein kinase kinase,dead,0.0,VAIK-Lys;HRD-Asp;DFG-Asp,False,False,False,,,,,,,175.0
+P21709,EPHA1,ePK,receptor protein-tyrosine kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,137.0
+Q5JZY3,EPHA10,ePK,protein kinase C,dead,1.0,HRD-Asp;DFG-Asp,,False,False,,,,,,,113.0
+P54764,EPHA4,ePK,receptor protein-tyrosine kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,158.0
+O15197,EPHB6,ePK,protein kinase C,dead,0.0,VAIK-Lys;HRD-Asp;DFG-Asp,False,False,False,,,,,,,131.0
+P21860,ERBB3,ePK,mitogen-activated protein kinase kinase,dead,1.0,VAIK-Lys;HRD-Asp,False,False,True,,,,,,,139.0
+P21802,FGFR2,ePK,receptor protein-tyrosine kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,170.0
+P22607,FGFR3,ePK,receptor protein-tyrosine kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,155.0
+P22455,FGFR4,ePK,receptor protein-tyrosine kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,153.0
+Q13418,ILK,ePK,protein kinase C,dead,1.0,HRD-Asp;DFG-Asp,,False,False,,,,,,,103.0
+Q9Y616,IRAK3,ePK,mitogen-activated protein kinase kinase,dead,1.0,HRD-Asp;DFG-Asp,True,False,False,,,,,,,119.0
+Q08881,ITK,ePK,receptor protein-tyrosine kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,148.0
+P52333,JAK3,ePK,protein kinase C,dead,2.0,VAIK-Lys,False,True,True,,,,,,,204.0
+O60229,KALRN,ePK,mitogen-activated protein kinase kinase,dead,2.0,DFG-Asp,True,True,False,,,,,,,261.0
+Q8IVT5,KSR1,ePK,receptor protein-tyrosine kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,121.0
+Q6VAB6,KSR2,ePK,receptor protein-tyrosine kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,134.0
+P06239,LCK,ePK,receptor protein-tyrosine kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,136.0
+Q02750,MAP2K1,ePK,mitogen-activated protein kinase kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,252.0
+P36507,MAP2K2,ePK,mitogen-activated protein kinase kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,232.0
+Q6ZN16,MAP3K15,ePK,protein kinase C,dead,2.0,VAIK-Lys,False,True,True,,,,,,,261.0
+Q99683,MAP3K5,ePK,protein kinase C,dead,2.0,VAIK-Lys,False,True,True,,,,,,,270.0
+Q9BUB5,MKNK1,ePK,phosphorylase kinase,dead,2.0,DFG-Asp,True,True,False,,,,,,,259.0
+Q9HBH9,MKNK2,ePK,phosphorylase kinase,dead,2.0,DFG-Asp,True,True,False,,,,,,,285.0
+Q15746,MYLK,ePK,phosphorylase kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,319.0
+Q8NG66,NEK11,ePK,phosphorylase kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,266.0
+P20594,NPR2,ePK,mitogen-activated protein kinase kinase,dead,2.0,HRD-Asp,True,False,True,,,,,,,129.0
+Q7Z2Y5,NRK,ePK,phosphorylase kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,222.0
+P04629,NTRK1,ePK,receptor protein-tyrosine kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,142.0
+Q16620,NTRK2,ePK,receptor protein-tyrosine kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,148.0
+Q5VST9,OBSCN,ePK,phosphorylase kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,276.0
+P16234,PDGFRA,ePK,receptor protein-tyrosine kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,153.0
+Q8N165,PDIK1L,ePK,mitogen-activated protein kinase kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,161.0
+P53350,PLK1,ePK,protein kinase C,dead,2.0,VAIK-Lys,False,True,True,,,,,,,348.0
+Q96QS6,PSKH2,ePK,mitogen-activated protein kinase kinase,dead,2.0,HRD-Asp,True,False,True,,,,,,,396.0
+Q13308,PTK7,ePK,receptor protein-tyrosine kinase,dead,1.0,VAIK-Lys;DFG-Asp,False,True,False,,,,,,,159.0
+Q01973,ROR1,ePK,receptor protein-tyrosine kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,131.0
+Q96S38,RPS6KC1,ePK,mitogen-activated protein kinase kinase,dead,2.0,DFG-Asp,,True,False,,,,,,,203.0
+Q9Y6S9,RPS6KL1,ePK,protein kinase C,dead,2.0,DFG-Asp,,True,False,,,,,,,220.0
+P34925,RYK,ePK,receptor protein-tyrosine kinase,dead,2.0,DFG-Asp,True,True,False,,,,,,,118.0
+Q6P3W7,SCYL2,ePK,mitogen-activated protein kinase kinase,dead,1.0,HRD-Asp;DFG-Asp,,False,False,,,,,,,111.0
+Q15831,STK11,ePK,phosphorylase kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,294.0
+Q8WU08,STK32A,ePK,protein kinase C,dead,2.0,DFG-Asp,True,True,False,,,,,,,500.0
+Q9NY57,STK32B,ePK,protein kinase C,dead,2.0,DFG-Asp,True,True,False,,,,,,,481.0
+Q86UX6,STK32C,ePK,protein kinase C,dead,2.0,DFG-Asp,True,True,False,,,,,,,458.0
+Q8TDR2,STK35,ePK,phosphorylase kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,149.0
+Q8N2I9,STK40,ePK,phosphorylase kinase,dead,2.0,DFG-Asp,,True,False,,,,,,,169.0
+Q8NE28,STKLD1,ePK,mitogen-activated protein kinase kinase,dead,1.0,HRD-Asp;DFG-Asp,True,False,False,,,,,,,115.0
+Q7RTN6,STRADA,ePK,mitogen-activated protein kinase kinase,dead,0.0,VAIK-Lys;HRD-Asp;DFG-Asp,False,False,False,,,,,,,111.0
+Q6J9G0,STYK1,ePK,receptor protein-tyrosine kinase,dead,1.0,VAIK-Lys;DFG-Asp,False,True,False,,,,,,,149.0
+Q8TEA7,TBCK,ePK,mitogen-activated protein kinase kinase,dead,1.0,HRD-Asp;DFG-Asp,,False,False,,,,,,,125.0
+Q96RU8,TRIB1,ePK,mitogen-activated protein kinase kinase,dead,1.0,HRD-Asp;DFG-Asp,,False,False,,,,,,,186.0
+Q92519,TRIB2,ePK,mitogen-activated protein kinase kinase,dead,1.0,HRD-Asp;DFG-Asp,,False,False,,,,,,,195.0
+Q96RU7,TRIB3,ePK,mitogen-activated protein kinase kinase,dead,1.0,HRD-Asp;DFG-Asp,True,False,False,,,,,,,169.0
+Q9BXA7,TSSK1B,ePK,phosphorylase kinase,dead,2.0,DFG-Asp,True,True,False,,,,,,,308.0
+Q8WZ42,TTN,ePK,protein kinase C,dead,2.0,DFG-Asp,True,True,False,,,,,,,224.0
+Q96C45,ULK4,ePK,mitogen-activated protein kinase kinase,dead,1.0,VAIK-Lys;DFG-Asp,False,True,False,,,,,,,215.0
+Q9H4A3,WNK1,ePK,mitogen-activated protein kinase kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,219.0
+Q9Y3S1,WNK2,ePK,mitogen-activated protein kinase kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,206.0
+Q9BYP7,WNK3,ePK,mitogen-activated protein kinase kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,224.0
+Q96J92,WNK4,ePK,mitogen-activated protein kinase kinase,dead,2.0,VAIK-Lys,False,True,True,,,,,,,211.0
+Q6ZMQ8,AATK,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,118.0
+P00519,ABL1,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,203.0
+P42684,ABL2,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,216.0
+Q04771,ACVR1,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,107.0
+P36896,ACVR1B,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,126.0
+P37023,ACVRL1,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,102.0
+P31749,AKT1,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,679.0
+P31751,AKT2,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,681.0
+Q9Y243,AKT3,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,681.0
+Q9UM73,ALK,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,123.0
+Q8NFD2,ANKK1,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,147.0
+P10398,ARAF,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,162.0
+O14965,AURKA,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,399.0
+Q96GD4,AURKB,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,391.0
+Q9UQB9,AURKC,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,413.0
+P30530,AXL,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,138.0
+P51451,BLK,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,174.0
+Q9NSY1,BMP2K,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,122.0
+P36894,BMPR1A,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,113.0
+O00238,BMPR1B,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,107.0
+Q13873,BMPR2,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,119.0
+P51813,BMX,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,195.0
+P15056,BRAF,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,174.0
+Q8TDC3,BRSK1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,418.0
+Q8IWQ3,BRSK2,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,402.0
+Q06187,BTK,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,193.0
+Q14012,CAMK1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,416.0
+Q8IU85,CAMK1D,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,452.0
+Q96NX5,CAMK1G,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,440.0
+Q9UQM7,CAMK2A,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,356.0
+Q13554,CAMK2B,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,351.0
+Q13557,CAMK2D,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,366.0
+Q13555,CAMK2G,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,360.0
+Q16566,CAMK4,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,334.0
+Q8N5S9,CAMKK1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,356.0
+Q96RR4,CAMKK2,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,341.0
+Q5VT25,CDC42BPA,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,535.0
+Q9Y5S2,CDC42BPB,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,530.0
+Q6DT37,CDC42BPG,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,495.0
+P06493,CDK1,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,237.0
+Q15131,CDK10,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,184.0
+Q9UQ88,CDK11A,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,186.0
+P21127,CDK11B,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,183.0
+Q9NYV4,CDK12,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,216.0
+Q14004,CDK13,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,215.0
+O94921,CDK14,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,211.0
+Q96Q40,CDK15,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,162.0
+Q00536,CDK16,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,208.0
+Q00537,CDK17,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,202.0
+Q07002,CDK18,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,208.0
+P24941,CDK2,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,234.0
+Q8IZL9,CDK20,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,203.0
+Q00526,CDK3,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,243.0
+P11802,CDK4,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,155.0
+Q00535,CDK5,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,177.0
+P50613,CDK7,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,209.0
+P50750,CDK9,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,157.0
+Q00532,CDKL1,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,225.0
+Q92772,CDKL2,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,260.0
+Q8IVW4,CDKL3,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,305.0
+Q5MAI5,CDKL4,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,226.0
+O76039,CDKL5,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,281.0
+O14757,CHEK1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,282.0
+O96017,CHEK2,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,413.0
+O15111,CHUK,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,265.0
+Q9UPZ9,CILK1,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,227.0
+O14578,CIT,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,467.0
+P49759,CLK1,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,219.0
+P49760,CLK2,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,191.0
+P49761,CLK3,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,172.0
+Q9HAZ1,CLK4,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,193.0
+P41240,CSK,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,204.0
+P48729,CSNK1A1,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,140.0
+Q8N752,CSNK1A1L,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,139.0
+P48730,CSNK1D,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,135.0
+P49674,CSNK1E,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,142.0
+Q9HCP0,CSNK1G1,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,162.0
+P78368,CSNK1G2,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,149.0
+Q9Y6M4,CSNK1G3,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,155.0
+P68400,CSNK2A1,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,169.0
+P19784,CSNK2A2,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,176.0
+Q8NEV1,CSNK2A3,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,166.0
+P53355,DAPK1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,325.0
+Q9UIK4,DAPK2,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,287.0
+O43293,DAPK3,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,300.0
+O15075,DCLK1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,408.0
+Q8N568,DCLK2,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,406.0
+Q9C098,DCLK3,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,416.0
+Q09013,DMPK,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,511.0
+Q13627,DYRK1A,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,195.0
+Q9Y463,DYRK1B,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,193.0
+Q92630,DYRK2,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,231.0
+O43781,DYRK3,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,190.0
+Q9NR20,DYRK4,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,190.0
+P00533,EGFR,ePK,ERBB/EGFR receptor tyrosine kinase (curated),intact,3.0,,True,True,True,,,,,,,161.0
+P19525,EIF2AK2,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,194.0
+P29317,EPHA2,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,158.0
+P29320,EPHA3,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,153.0
+P54756,EPHA5,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,153.0
+Q15375,EPHA7,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,153.0
+P29322,EPHA8,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,144.0
+P54762,EPHB1,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,155.0
+P29323,EPHB2,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,153.0
+P54753,EPHB3,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,149.0
+P54760,EPHB4,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,142.0
+P04626,ERBB2,ePK,ERBB/EGFR receptor tyrosine kinase (curated),intact,3.0,,True,True,True,,,,,,,167.0
+Q15303,ERBB4,ePK,ERBB/EGFR receptor tyrosine kinase (curated),intact,3.0,,True,True,True,,,,,,,152.0
+P16591,FER,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,186.0
+P07332,FES,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,178.0
+P11362,FGFR1,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,157.0
+P09769,FGR,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,151.0
+P42685,FRK,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,145.0
+P06241,FYN,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,168.0
+Q15835,GRK1,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,460.0
+P25098,GRK2,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,472.0
+P35626,GRK3,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,475.0
+P32298,GRK4,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,443.0
+P34947,GRK5,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,449.0
+P43250,GRK6,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,436.0
+Q8WTQ7,GRK7,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,448.0
+P49840,GSK3A,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,212.0
+P49841,GSK3B,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,211.0
+P08631,HCK,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,157.0
+Q86Z02,HIPK1,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,179.0
+Q9H2X6,HIPK2,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,185.0
+Q9H422,HIPK3,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,179.0
+Q8NE63,HIPK4,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,170.0
+P57058,HUNK,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,359.0
+P08069,IGF1R,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,130.0
+O14920,IKBKB,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,257.0
+Q14164,IKBKE,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,188.0
+P06213,INSR,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,136.0
+P14616,INSRR,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,148.0
+P51617,IRAK1,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,120.0
+Q9NWZ3,IRAK4,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,143.0
+P23458,JAK1,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,175.0
+O60674,JAK2,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,176.0
+O95835,LATS1,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,544.0
+Q9NRM7,LATS2,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,550.0
+P53667,LIMK1,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,207.0
+P53671,LIMK2,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,210.0
+P07948,LYN,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,173.0
+P20794,MAK,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,215.0
+P46734,MAP2K3,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,184.0
+P45985,MAP2K4,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,169.0
+Q13163,MAP2K5,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,207.0
+O14733,MAP2K7,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,204.0
+Q13233,MAP3K1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,259.0
+Q02779,MAP3K10,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,213.0
+Q16584,MAP3K11,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,207.0
+Q12852,MAP3K12,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,183.0
+O43283,MAP3K13,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,196.0
+Q99558,MAP3K14,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,182.0
+Q56UN5,MAP3K19,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,241.0
+Q9Y2U5,MAP3K2,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,277.0
+Q9NYL2,MAP3K20,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,205.0
+Q5TCX8,MAP3K21,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,175.0
+Q99759,MAP3K3,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,300.0
+Q9Y6R4,MAP3K4,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,266.0
+O95382,MAP3K6,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,256.0
+P41279,MAP3K8,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,171.0
+P80192,MAP3K9,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,197.0
+Q92918,MAP4K1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,257.0
+Q12851,MAP4K2,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,233.0
+Q8IVH8,MAP4K3,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,237.0
+O95819,MAP4K4,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,220.0
+Q9Y4K4,MAP4K5,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,220.0
+P28482,MAPK1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,184.0
+P53779,MAPK10,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,193.0
+Q15759,MAPK11,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,216.0
+P53778,MAPK12,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,200.0
+O15264,MAPK13,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,216.0
+Q16539,MAPK14,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,236.0
+Q8TD08,MAPK15,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,187.0
+P27361,MAPK3,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,188.0
+P31152,MAPK4,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,193.0
+Q16659,MAPK6,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,201.0
+Q13164,MAPK7,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,223.0
+P45983,MAPK8,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,186.0
+P45984,MAPK9,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,202.0
+P49137,MAPKAPK2,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,336.0
+Q16644,MAPKAPK3,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,326.0
+Q8IW41,MAPKAPK5,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,322.0
+Q9P0L2,MARK1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,440.0
+Q7KZI7,MARK2,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,447.0
+P27448,MARK3,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,457.0
+Q96L34,MARK4,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,444.0
+Q9Y2H9,MAST1,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,571.0
+Q6P0Q8,MAST2,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,578.0
+O60307,MAST3,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,570.0
+O15021,MAST4,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,582.0
+Q96GX5,MASTL,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,271.0
+P42679,MATK,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,164.0
+Q14680,MELK,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,393.0
+Q12866,MERTK,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,158.0
+P08581,MET,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,143.0
+Q8N4C8,MINK1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,228.0
+Q9UQ07,MOK,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,190.0
+P00540,MOS,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,152.0
+Q04912,MST1R,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,157.0
+O15146,MUSK,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,128.0
+Q9H1R3,MYLK2,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,275.0
+Q32MK0,MYLK3,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,285.0
+Q86YV6,MYLK4,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,269.0
+Q8NEV4,MYO3A,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,273.0
+Q8WXR4,MYO3B,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,245.0
+Q96PY6,NEK1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,351.0
+Q6ZWH5,NEK10,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,273.0
+P51955,NEK2,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,290.0
+P51956,NEK3,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,309.0
+P51957,NEK4,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,302.0
+Q6P3R8,NEK5,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,317.0
+Q9HC98,NEK6,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,249.0
+Q8TDX7,NEK7,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,267.0
+Q86SG6,NEK8,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,304.0
+Q8TD19,NEK9,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,260.0
+Q8IY84,NIM1K,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,372.0
+Q9UBE8,NLK,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,186.0
+Q16288,NTRK3,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,136.0
+O60285,NUAK1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,361.0
+Q9H093,NUAK2,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,361.0
+O95747,OXSR1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,199.0
+Q13153,PAK1,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,314.0
+Q13177,PAK2,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,310.0
+O75914,PAK3,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,307.0
+O96013,PAK4,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,273.0
+Q9P286,PAK5,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,287.0
+Q9NQU5,PAK6,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,299.0
+Q96RG2,PASK,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,267.0
+O15530,PDPK1,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,539.0
+Q6A1A2,PDPK2P,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,544.0
+Q16816,PHKG1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,350.0
+P15735,PHKG2,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,354.0
+P11309,PIM1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,215.0
+Q9P1W9,PIM2,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,230.0
+Q86V86,PIM3,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,228.0
+Q99640,PKMYT1,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,208.0
+Q16512,PKN1,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,610.0
+Q16513,PKN2,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,643.0
+Q6P5Z2,PKN3,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,611.0
+Q9NYY3,PLK2,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,330.0
+Q9H4B4,PLK3,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,332.0
+O00444,PLK4,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,368.0
+Q6P2M8,PNCK,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,418.0
+Q13131,PRKAA1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,427.0
+P54646,PRKAA2,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,411.0
+P17612,PRKACA,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,1850.0
+P22694,PRKACB,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,1720.0
+P22612,PRKACG,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,1579.0
+P17252,PRKCA,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,614.0
+P05771,PRKCB,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,620.0
+Q05655,PRKCD,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,600.0
+Q02156,PRKCE,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,622.0
+P05129,PRKCG,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,574.0
+P24723,PRKCH,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,643.0
+P41743,PRKCI,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,588.0
+Q04759,PRKCQ,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,580.0
+Q05513,PRKCZ,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,553.0
+Q15139,PRKD1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,378.0
+Q9BZL6,PRKD2,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,386.0
+O94806,PRKD3,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,367.0
+Q13976,PRKG1,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,715.0
+Q13237,PRKG2,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,725.0
+P51817,PRKX,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,954.0
+Q13523,PRP4K,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,153.0
+P11801,PSKH1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,372.0
+Q05397,PTK2,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,155.0
+Q14289,PTK2B,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,169.0
+Q13882,PTK6,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,147.0
+P04049,RAF1,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,157.0
+P07949,RET,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,187.0
+Q13546,RIPK1,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,144.0
+O43353,RIPK2,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,146.0
+Q9Y572,RIPK3,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,184.0
+P57078,RIPK4,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,156.0
+Q13464,ROCK1,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,574.0
+O75116,ROCK2,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,553.0
+P08922,ROS1,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,152.0
+Q15418,RPS6KA1,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,601.0
+Q15349,RPS6KA2,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,607.0
+P51812,RPS6KA3,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,606.0
+O75676,RPS6KA4,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,617.0
+O75582,RPS6KA5,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,599.0
+Q9UK32,RPS6KA6,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,597.0
+P23443,RPS6KB1,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,596.0
+Q9UBS0,RPS6KB2,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,614.0
+Q96LW2,RSKR,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,368.0
+Q52WX2,SBK1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,249.0
+P0C263,SBK2,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,226.0
+P0C264,SBK3,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,163.0
+O00141,SGK1,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,688.0
+Q9HBY8,SGK2,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,688.0
+Q96BR1,SGK3,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,642.0
+P57059,SIK1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,419.0
+Q9H0K1,SIK2,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,391.0
+Q9Y2K2,SIK3,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,382.0
+Q9H2G2,SLK,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,295.0
+Q9NRH2,SNRK,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,409.0
+Q15772,SPEG,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,223.0
+P12931,SRC,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,160.0
+Q9H3Y6,SRMS,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,129.0
+O94804,STK10,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,295.0
+O75716,STK16,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,157.0
+Q9UEE5,STK17A,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,269.0
+O94768,STK17B,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,263.0
+Q9Y6E0,STK24,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,274.0
+O00506,STK25,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,268.0
+Q9P289,STK26,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,280.0
+Q13188,STK3,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,302.0
+Q9BYT3,STK33,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,357.0
+Q9NRP7,STK36,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,370.0
+Q15208,STK38,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,567.0
+Q9Y2H1,STK38L,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,600.0
+Q9UEW8,STK39,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,205.0
+Q13043,STK4,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,300.0
+P43405,SYK,ePK,ERBB/EGFR receptor tyrosine kinase (curated),intact,3.0,,True,True,True,,,,,,,173.0
+Q7L7X3,TAOK1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,222.0
+Q9UL54,TAOK2,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,211.0
+Q9H2K8,TAOK3,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,204.0
+Q9UHD2,TBK1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,212.0
+P42680,TEC,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,178.0
+Q02763,TEK,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,171.0
+Q15569,TESK1,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,196.0
+Q96S53,TESK2,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,170.0
+P36897,TGFBR1,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,128.0
+P35590,TIE1,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,156.0
+Q9UKI8,TLK1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,198.0
+Q86UE8,TLK2,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,197.0
+Q9UKE5,TNIK,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,232.0
+Q07912,TNK2,ePK,ERBB/EGFR receptor tyrosine kinase (curated),intact,3.0,,True,True,True,,,,,,,146.0
+Q59H18,TNNI3K,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,169.0
+O75962,TRIO,ePK,protein kinase C,intact,3.0,,True,True,True,,,,,,,277.0
+Q96PF2,TSSK2,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,302.0
+Q96PN8,TSSK3,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,281.0
+Q6SA08,TSSK4,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,290.0
+Q9BXA6,TSSK6,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,266.0
+Q5TCY1,TTBK1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,115.0
+P33981,TTK,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,147.0
+P42681,TXK,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,168.0
+P29597,TYK2,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,178.0
+Q06418,TYRO3,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,175.0
+O75385,ULK1,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,323.0
+Q8IYT8,ULK2,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,311.0
+Q6PHR2,ULK3,ePK,phosphorylase kinase,intact,3.0,,True,True,True,,,,,,,351.0
+P30291,WEE1,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,127.0
+P0C1S8,WEE2,ePK,mitogen-activated protein kinase kinase,intact,3.0,,True,True,True,,,,,,,132.0
+P07947,YES1,ePK,receptor protein-tyrosine kinase,intact,3.0,,True,True,True,,,,,,,149.0
+P43403,ZAP70,ePK,ERBB/EGFR receptor tyrosine kinase (curated),intact,3.0,,True,True,True,,,,,,,160.0
+Q2M2I8,AAK1,ePK,phosphorylase kinase,intact_partial_coverage,3.0,,,True,True,,,,,,,121.0
+Q6XUX3,DSTYK,ePK,mitogen-activated protein kinase kinase,intact_partial_coverage,3.0,,,True,True,,,,,,,165.0
+Q9BQI3,EIF2AK1,ePK,phosphorylase kinase,intact_partial_coverage,3.0,,,True,True,,,,,,,111.0
+Q9NZJ5,EIF2AK3,ePK,phosphorylase kinase,intact_partial_coverage,3.0,,,True,True,,,,,,,130.0
+Q9UF33,EPHA6,ePK,receptor protein-tyrosine kinase,intact_partial_coverage,3.0,,,True,True,,,,,,,128.0
+O75460,ERN1,ePK,phosphorylase kinase,intact_partial_coverage,3.0,,,True,True,,,,,,,111.0
+Q76MJ5,ERN2,ePK,phosphorylase kinase,intact_partial_coverage,3.0,,,True,True,,,,,,,115.0
+P17948,FLT1,ePK,receptor protein-tyrosine kinase,intact_partial_coverage,3.0,,,True,True,,,,,,,135.0
+P36888,FLT3,ePK,receptor protein-tyrosine kinase,intact_partial_coverage,3.0,,,True,True,,,,,,,114.0
+P35916,FLT4,ePK,receptor protein-tyrosine kinase,intact_partial_coverage,3.0,,,True,True,,,,,,,133.0
+P35968,KDR,ePK,receptor protein-tyrosine kinase,intact_partial_coverage,3.0,,,True,True,,,,,,,134.0
+P10721,KIT,ePK,receptor protein-tyrosine kinase,intact_partial_coverage,3.0,,,True,True,,,,,,,131.0
+P29376,LTK,ePK,receptor protein-tyrosine kinase,intact_partial_coverage,3.0,,,True,True,,,,,,,110.0
+P52564,MAP2K6,ePK,mitogen-activated protein kinase kinase,intact_partial_coverage,3.0,,,True,True,,,,,,,179.0
+O43318,MAP3K7,ePK,receptor protein-tyrosine kinase,intact_partial_coverage,3.0,,,True,True,,,,,,,195.0
+P09619,PDGFRB,ePK,receptor protein-tyrosine kinase,intact_partial_coverage,3.0,,,True,True,,,,,,,133.0
+Q9BXM7,PINK1,ePK,protein kinase C,intact_partial_coverage,3.0,,,True,True,,,,,,,105.0
+Q01974,ROR2,ePK,receptor protein-tyrosine kinase,intact_partial_coverage,3.0,,,True,True,,,,,,,105.0
+Q13470,TNK1,ePK,ERBB/EGFR receptor tyrosine kinase (curated),intact_partial_coverage,3.0,,,True,True,,,,,,,135.0
+Q8NER5,ACVR1C,ePK,mitogen-activated protein kinase kinase,not_applicable,,,,,,,,,,,,84.0
+P27037,ACVR2A,ePK,mitogen-activated protein kinase kinase,not_applicable,,,,,,,,,,,,98.0
+Q13705,ACVR2B,ePK,mitogen-activated protein kinase kinase,not_applicable,,,,,,,,,,,,97.0
+Q86TW2,ADCK1,ePK,mitogen-activated protein kinase kinase,not_applicable,,,,,,,,,,,,41.0
+Q16671,AMHR2,ePK,mitogen-activated protein kinase kinase,not_applicable,,,,,,,,,,,,82.0
+O14874,BCKDK,ePK,[pyruvate dehydrogenase (acetyl-transferring)] kinase,not_applicable,,,,,,,,,,,,29.0
+O43683,BUB1,ePK,mitogen-activated protein kinase kinase,not_applicable,,,,,,,,,,,,84.0
+O60566,BUB1B,ePK,protein kinase C,not_applicable,,,,,,,,,,,,48.0
+P07333,CSF1R,ePK,receptor protein-tyrosine kinase,not_applicable,,,,,,,,,,,,99.0
+P25092,GUCY2C,ePK,mitogen-activated protein kinase kinase,not_applicable,,,,,,,,,,,,99.0
+Q02846,GUCY2D,ePK,mitogen-activated protein kinase kinase,not_applicable,,,,,,,,,,,,73.0
+P51841,GUCY2F,ePK,mitogen-activated protein kinase kinase,not_applicable,,,,,,,,,,,,74.0
+Q8TF76,HASPIN,ePK,protein kinase C,not_applicable,,,,,,,,,,,,40.0
+O43187,IRAK2,ePK,mitogen-activated protein kinase kinase,not_applicable,,,,,,,,,,,,85.0
+Q8IWU2,LMTK2,ePK,receptor protein-tyrosine kinase,not_applicable,,,,,,,,,,,,94.0
+Q96Q04,LMTK3,ePK,receptor protein-tyrosine kinase,not_applicable,,,,,,,,,,,,97.0
+Q8NB16,MLKL,ePK,mitogen-activated protein kinase kinase,not_applicable,,,,,,,,,,,,57.0
+P16066,NPR1,ePK,mitogen-activated protein kinase kinase,not_applicable,,,,,,,,,,,,93.0
+Q9UHY1,NRBP1,ePK,mitogen-activated protein kinase kinase,not_applicable,,,,,,,,,,,,78.0
+Q9NSY0,NRBP2,ePK,phosphorylase kinase,not_applicable,,,,,,,,,,,,69.0
+Q96KB5,PBK,ePK,mitogen-activated protein kinase kinase,not_applicable,,,,,,,,,,,,83.0
+Q15118,PDK1,ePK,[pyruvate dehydrogenase (acetyl-transferring)] kinase,not_applicable,,,,,,,,,,,,35.0
+Q15119,PDK2,ePK,[pyruvate dehydrogenase (acetyl-transferring)] kinase,not_applicable,,,,,,,,,,,,37.0
+Q15120,PDK3,ePK,[pyruvate dehydrogenase (acetyl-transferring)] kinase,not_applicable,,,,,,,,,,,,48.0
+Q16654,PDK4,ePK,[pyruvate dehydrogenase (acetyl-transferring)] kinase,not_applicable,,,,,,,,,,,,45.0
+Q9H792,PEAK1,ePK,protein kinase C,not_applicable,,,,,,,,,,,,75.0
+Q99570,PIK3R4,ePK,protein kinase C,not_applicable,,,,,,,,,,,,84.0
+Q504Y2,PKDCC,ePK,mitogen-activated protein kinase kinase,not_applicable,,,,,,,,,,,,30.0
+Q9H5K3,POMK,ePK,ERBB/EGFR receptor tyrosine kinase (curated),not_applicable,,,,,,,,,,,,47.0
+Q86YV5,PRAG1,ePK,protein kinase C,not_applicable,,,,,,,,,,,,69.0
+Q7Z7A4,PXK,ePK,mitogen-activated protein kinase kinase,not_applicable,,,,,,,,,,,,75.0
+Q05823,RNASEL,ePK,receptor protein-tyrosine kinase,not_applicable,,,,,,,,,,,,65.0
+Q96KG9,SCYL1,ePK,mitogen-activated protein kinase kinase,not_applicable,,,,,,,,,,,,62.0
+Q8IZE3,SCYL3,ePK,protein kinase C,not_applicable,,,,,,,,,,,,34.0
+Q96SB4,SRPK1,ePK,mitogen-activated protein kinase kinase,not_applicable,,,,,,,,,,,,82.0
+P78362,SRPK2,ePK,mitogen-activated protein kinase kinase,not_applicable,,,,,,,,,,,,82.0
+Q9UPE1,SRPK3,ePK,protein kinase C,not_applicable,,,,,,,,,,,,79.0
+Q9BXU1,STK31,ePK,mitogen-activated protein kinase kinase,not_applicable,,,,,,,,,,,,79.0
+Q9C0K7,STRADB,ePK,mitogen-activated protein kinase kinase,not_applicable,,,,,,,,,,,,92.0
+Q8IWB6,TEX14,ePK,phosphorylase kinase,not_applicable,,,,,,,,,,,,79.0
+P37173,TGFBR2,ePK,mitogen-activated protein kinase kinase,not_applicable,,,,,,,,,,,,89.0
+Q96S44,TP53RK,ePK,ERBB/EGFR receptor tyrosine kinase (curated),not_applicable,,,,,,,,,,,,51.0
+Q6IQ55,TTBK2,ePK,phosphorylase kinase,not_applicable,,,,,,,,,,,,97.0
+Q8TAS1,UHMK1,ePK,phosphorylase kinase,not_applicable,,,,,,,,,,,,95.0
+Q99986,VRK1,ePK,mitogen-activated protein kinase kinase,not_applicable,,,,,,,,,,,,72.0
+Q86Y07,VRK2,ePK,mitogen-activated protein kinase kinase,not_applicable,,,,,,,,,,,,89.0
+Q8IV63,VRK3,ePK,mitogen-activated protein kinase kinase,not_applicable,,,,,,,,,,,,76.0

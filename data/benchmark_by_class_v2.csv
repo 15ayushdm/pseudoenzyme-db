@@ -1,0 +1,7 @@
+class,n,hits_base,hits_over,recall_base,recall_over,delta
+ALL,43,29,37,0.6744186046511628,0.8604651162790697,8
+pseudokinase,21,14,21,0.6666666666666666,1.0,7
+pseudophosphatase,7,5,6,0.7142857142857143,0.8571428571428571,1
+pseudoprotease/DUB,6,3,3,0.5,0.5,0
+pseudo-GTPase,5,4,4,0.8,0.8,0
+other,4,3,3,0.75,0.75,0
