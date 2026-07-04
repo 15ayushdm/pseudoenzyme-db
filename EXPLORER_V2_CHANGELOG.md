@@ -248,3 +248,58 @@ the data does **not** support this at single-codon resolution:
 **Validation:** JSON parses (2670 records); esprima clean; QuickJS runs `gnomadPanel` (gene-level chips
 present, per-residue markup absent), `render()`, `setMode('info')`, `pepFig` callable; `resChips` no
 longer defined; AHCYL1 = 0.574 / high / measurable / observed_concordant — unchanged.
+
+---
+
+## Annotation-quality guards — off-domain cofactor peptides & gene-symbol collisions
+
+**Motivation.** Reviewing the titin (TTN, Q8WZ42) record exposed two annotation
+failure modes that scale with protein size and gene-symbol ambiguity, independent of
+the metabolite-relevance score itself.
+
+**Problem 1 — cofactor peptides outside the catalytic domain.** The PISA/PELSA
+cofactor channel reports binding at *peptide* resolution. In a very large protein a
+handful of peptides reach significance by chance, thousands of residues from the
+scored catalytic domain. Titin (~34,000 aa) picked up FAD/FMN/NADPH/PQQ hits — all in
+its Ig/Fn3 structural region (peptides ~7987–20418), none within the titin-kinase
+domain (32179–32432). The channel had already self-flagged (`experimental_channel =
+not_applicable`, `cofactor_concordance = no_prediction`), but the chips still displayed
+as if they were cofactor-sensing evidence.
+
+**Fix 1 (display-level).** Each cofactor's protected peptides are tested for overlap
+with the scored catalytic-domain window (±50 aa). Two new per-record flags:
+- `cof_offdomain` — cofactors whose peptides all fall outside the catalytic domain (430 records).
+- `cof_all_offdomain` — the whole cofactor channel is off-domain, no in-domain support (83 records).
+
+Rendering is two-tier:
+- **Fully off-domain** (e.g. titin) → red banner: "every significant cofactor is protected
+  outside the catalytic domain … treat this cofactor channel as uninformative."
+- **Partially off-domain** (e.g. AHCYL1, where THF at 41–53 sits in the N-terminal
+  regulatory extension but NAD/etc. bind in-domain) → quiet amber note; the in-domain
+  cofactors keep the signal. Off-domain chips get a ⚑ marker + tooltip either way.
+- The rate scales cleanly with length (frac with any off-domain: 0.31 <1kaa → 1.0 >5kaa),
+  confirming it is a length artifact, not biology.
+
+**Problem 2 — gene-symbol collisions in the literature screen.** The PubMed co-mention
+screen keys on gene symbol. "TTN" is also the standard abbreviation for *total turnover
+number* in biocatalysis, so titin's five "confirming" PMIDs were about Rieske
+oxygenases, ω-transaminases, and CRISPR PAM selection — none about titin. This produced
+a false `confirmed` (pseudoenzyme-support) literature status.
+
+**Fix 2 (display-level).** A curated methods-acronym set (`TTN`=total turnover number,
+`TON`, `TOF`, `PAM`) attaches a `lit_symbol_ambig` caveat that renders as an amber
+warning in the literature box, telling the reader the symbol collides with an unrelated
+technical term and that the hits need individual verification. Only symbols whose
+acronym is unrelated to the gene's own identity are included — genuine enzyme acronyms
+(CAT=catalase, CAD, ACE) are deliberately excluded. In the current DB, TTN is the only
+record where this corrects a false `confirmed` status.
+
+**Neither guard alters ranking.** metabolite_relevance stays = pocket_retention ×
+struct_conf (verified max deviation 0.0001 across all 2670); no affected positive drew
+concordant support from an off-domain peptide (`observed_concordant` count among
+fully-off-domain positives = 0). Both are display-level caveats only.
+
+**Validation:** JSON parses (2670 records, all three new flags present); esprima clean;
+QuickJS renders the full `openD` detail panel — titin shows the red cofactor banner,
+⚑ chips, and the literature symbol caveat; AHCYL1 shows the amber partial-note (no red
+banner), its sensor breakdown intact, and no false literature caveat.
