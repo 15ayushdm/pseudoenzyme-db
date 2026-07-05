@@ -376,3 +376,52 @@ this is disclosure, not a re-score. Methods section documents the 0.70 floor.
 the "Active-fold (rescued)" note + intact badge; PTPRN2 stays dead; KSR1 shows rescued (the
 documented cost); every record shows the "(default)" flag where the 0.70 floor applies. MR =
 pocket × conf integrity held (max dev 7.6e-5). Guards and rankings from v7 unaffected.
+
+
+---
+
+## v9 — struct_conf made a live axis for the whole table (2026-07-04)
+
+**Follow-up to F3.** The v8 fix *disclosed* that `struct_conf = 0.70` for 2435/2670 (91%) records
+but left the placeholder in place — so metabolite-relevance was still, for most proteins, just a
+rescaled `pocket_retention` (within that group MR vs pocket Spearman = 1.000; the second factor
+carried zero ranking information). A reader reasonably asked whether that made MR "pretty useless."
+It largely did for 91% of the table. This release fixes the root cause instead of only flagging it.
+
+**What changed.** Fetched the AlphaFold model for **every** protein (2659/2670 present; EBI AFDB
+v4/v6) and set `struct_conf` from real per-model confidence, with an explicit source hierarchy:
+
+| `struct_conf_source` | n | definition | panel tag |
+|---|---|---|---|
+| `measured` | 235 | original residue-specific active-site pLDDT (unchanged) | (active-site) |
+| `domain_mean` | 2,424 | mean pLDDT over the catalytic/pocket domain range | (domain pLDDT) |
+| `unavailable` | 11 | no AlphaFold model — giant-protein fragments (TTN, OBSCN, MDN1, DYNC1H1, RANBP2, USP34) + selenoproteins (TXNRD1/2/3, MSRB1, TG); keep 0.70 | (no model) |
+
+The flat-0.70 share dropped from **91.2% → 0.4%**. The confidence axis is now live for 99.6% of
+records. Normalization recovered exactly from the 235 measured pairs: `struct_conf =
+clip((pLDDT − 50)/45, 0, 1)` (max dev 5e-5; pLDDT 50→0, 95→1.0, and the old 0.70 default = pLDDT 81.5).
+
+**Why domain-mean and not residue-specific for the 2,424.** Catalytic-residue positions were only
+ever mapped for the 235; the other 2,435 never had them (that is *why* struct_conf defaulted). The
+domain-mean is the consistent measure computable for all. Caveat, measured directly: on the 235
+where both exist, domain-mean correlates with the residue-specific value (Pearson 0.57, median
+identical) but **overstates** confidence when the catalytic residue sits in a disordered loop inside
+an otherwise-folded domain (e.g. small GTPases RHOBTB1/2, RAB40, REM1/2: residue pLDDT 44–57 vs
+domain-mean 83–88). Domain-mean is therefore an upper bound on active-site confidence; the 235
+residue-specific values are kept precisely because they are the stricter measure.
+
+**Effect on scores.** MR recomputed = pocket_retention × struct_conf for all records (integrity now
+exact, max dev 0.0). High-band positives **56 → 112** — well-folded retained
+pockets that the placeholder had been suppressing. Notable: **AHCYL1 / AHCYL2 (IRBIT) 0.574 → 0.820**
+(domain pLDDT 95–96 → struct_conf 1.0; MR now equals pocket_retention, the honest reading — pocket
+retained *and* high structural confidence). Genuine pocket loss still zeroes MR regardless of
+confidence (NNT stays 0.00). Known pseudokinases land sensibly in medium (KSR1 0.42, TRIB1/2/3, ILK).
+
+**Bin movement:** 517/2670 records change bin; overall high 902→1325, medium 853→481, low 915→864.
+The shift is upward because most real active-site domains fold above pLDDT 81.5, so the 0.70 floor
+had been deflating them.
+
+**Validation (v9).** 2670 records parse; three source tags render (AHCYL1 → "(domain pLDDT)",
+ASNSD1 → "(active-site)", TTN → "(no model)"); esprima clean; QuickJS `openD` confirmed; MR =
+pocket × conf exact (dev 0.0). F1 rescued-notes and F2 benchmark unaffected (struct_conf is
+orthogonal to the death-motif gate). Per-protein pLDDT table saved as `active_site_plddt_v9.csv`.
