@@ -1,0 +1,140 @@
+gene,uniprot,truth,class,catalytic_lesion,evidence_level,source_note,in_db
+STRADA,Q7RTN6,pseudoenzyme,pseudokinase,VAIK+HRD degenerate; allosteric LKB1 activator,experimental,"Zeqiraj 2009; classic pseudokinase, no phosphotransfer",True
+STRADB,Q9C0K7,pseudoenzyme,pseudokinase,catalytic loop degenerate,structural,"STRADA paralog, same lesion",True
+KSR1,Q8IVT5,pseudoenzyme,pseudokinase,VAIK Lys->Arg; allosteric RAF activator,experimental,Brennan 2011; scaffold pseudokinase,True
+KSR2,Q6VAB6,pseudoenzyme,pseudokinase,VAIK Lys->Arg,experimental,Brennan 2011,True
+TRIB1,Q96RU8,pseudoenzyme,pseudokinase,"degenerate catalytic + DFG, COP1 adaptor",experimental,Murphy 2015; Tribbles pseudokinase,True
+TRIB2,Q92519,pseudoenzyme,pseudokinase,degenerate catalytic loop,experimental,Murphy 2015,True
+TRIB3,Q96RU7,pseudoenzyme,pseudokinase,degenerate catalytic loop,experimental,Murphy 2015,True
+ERBB3,P21860,pseudoenzyme,pseudokinase,catalytically impaired (weak); HER2 partner,experimental,Shi 2010; very low activity,True
+EPHA10,Q5JZY3,pseudoenzyme,pseudokinase,catalytic residues substituted,sequence,Eph pseudokinase,True
+EPHB6,O15197,pseudoenzyme,pseudokinase,catalytic residues substituted,experimental,"Eph pseudokinase, no activity",True
+ILK,Q13418,pseudoenzyme,pseudokinase,non-canonical catalytic residues; scaffold,experimental,Fukuda 2009; pseudokinase scaffold (debated but consensus pseudo),True
+CASK,O14936,pseudoenzyme,pseudokinase,Mg-independent atypical; near-dead,experimental,"Mukherjee 2008; unusual, near-pseudo",True
+MLKL,Q8NB16,pseudoenzyme,pseudokinase,"pseudokinase domain, executioner",experimental,Murphy 2013; necroptosis pseudokinase,True
+IRAK2,O43187,pseudoenzyme,pseudokinase,catalytic loop degenerate,experimental,IRAK pseudokinase,True
+IRAK3,Q9Y616,pseudoenzyme,pseudokinase,catalytic loop degenerate (IRAK-M),experimental,Kobayashi 2002; IRAK-M pseudokinase,True
+BUB1B,O60566,pseudoenzyme,pseudokinase,kinase domain degenerate (BUBR1),experimental,Suijkerbuijk 2012; BUBR1 pseudokinase,True
+PXK,Q7Z7A4,pseudoenzyme,pseudokinase,kinase domain lacks activity,sequence,PX-kinase pseudokinase,True
+STK40,Q8N2I9,pseudoenzyme,pseudokinase,catalytic residues degenerate,sequence,pseudokinase,True
+SCYL1,Q96KG9,pseudoenzyme,pseudokinase,catalytic residues degenerate,structural,SCY1-like pseudokinase,True
+SCYL2,Q6P3W7,pseudoenzyme,pseudokinase,catalytic residues degenerate,sequence,SCY1-like pseudokinase,True
+SCYL3,Q8IZE3,pseudoenzyme,pseudokinase,catalytic residues degenerate,sequence,SCY1-like pseudokinase,True
+PRAG1,Q86YV5,pseudoenzyme,pseudokinase,degenerate catalytic (PEAK2/SgK223),experimental,Patel 2017; PEAK pseudokinase,True
+PEAK1,Q9H792,pseudoenzyme,pseudokinase,degenerate catalytic (SgK269),experimental,PEAK pseudokinase scaffold,True
+PEAK3,Q6ZS72,pseudoenzyme,pseudokinase,degenerate catalytic,structural,PEAK family pseudokinase,False
+VRK3,Q8IV63,pseudoenzyme,pseudokinase,catalytic Lys/Asp substituted,experimental,Scheeff 2009; VRK3 pseudokinase,True
+NRBP1,Q9UHY1,pseudoenzyme,pseudokinase,catalytic residues degenerate,sequence,nuclear receptor binding pseudokinase,True
+NRBP2,Q9NSY0,pseudoenzyme,pseudokinase,catalytic residues degenerate,sequence,pseudokinase,True
+ULK4,Q96C45,pseudoenzyme,pseudokinase,catalytic residues degenerate,structural,Preuss 2020; ULK4 pseudokinase,True
+TRRAP,Q9Y4A5,pseudoenzyme,pseudokinase,"PIKK fold, catalytically dead",experimental,"huge PIKK pseudokinase, scaffold",False
+ROR1,Q01973,pseudoenzyme,pseudokinase,catalytic residues substituted,experimental,ROR pseudokinase (very low/none),True
+ROR2,Q01974,pseudoenzyme,pseudokinase,catalytic residues substituted,experimental,ROR pseudokinase,True
+RYK,P34925,pseudoenzyme,pseudokinase,catalytic residues substituted,experimental,Wnt pseudokinase receptor,True
+PTK7,Q13308,pseudoenzyme,pseudokinase,catalytic residues degenerate (CCK4),experimental,PTK7 pseudokinase,True
+STYK1,Q6J9G0,pseudoenzyme,pseudokinase,atypical catalytic (debated),sequence,"NOK/STYK1, weak/pseudo",True
+FAM20A,Q96MK3,pseudoenzyme,pseudokinase,degenerate; allosteric FAM20C activator,experimental,Cui 2017; FAM20A pseudokinase,False
+TBCK,Q8TEA7,pseudoenzyme,pseudokinase,kinase domain degenerate,sequence,TBC/kinase pseudokinase,True
+CAMKV,Q8NCB2,pseudoenzyme,pseudokinase,catalytic residues degenerate,sequence,CaMK-like pseudokinase,True
+PDIK1L,Q8N165,pseudoenzyme,pseudokinase,catalytic degenerate,sequence,pseudokinase,True
+STYX,Q8WUJ0,pseudoenzyme,pseudophosphatase,catalytic Cys->Gly (CX5R lost),experimental,Wishart 1995; archetypal pseudophosphatase,True
+STYXL1,Q9Y6J8,pseudoenzyme,pseudophosphatase,catalytic Cys substituted (DUSP27),experimental,MK-STYX-like pseudophosphatase,True
+PTPRN,Q16849,pseudoenzyme,pseudophosphatase,catalytic Asp/Cys substituted (IA-2),experimental,Magistrelli 1996; IA-2 pseudophosphatase,True
+PTPRN2,Q92932,pseudoenzyme,pseudophosphatase,catalytic residues substituted (phogrin),experimental,phogrin pseudophosphatase,True
+SBF1,O95248,pseudoenzyme,pseudophosphatase,CX5R Cys lost (MTMR5),experimental,myotubularin pseudophosphatase,True
+SBF2,Q86WG5,pseudoenzyme,pseudophosphatase,CX5R Cys lost (MTMR13),experimental,myotubularin pseudophosphatase,True
+MTMR9,Q96QG7,pseudoenzyme,pseudophosphatase,catalytic Cys substituted,experimental,"dead myotubularin, regulates MTMR6/7/8",True
+MTMR10,Q9NXD2,pseudoenzyme,pseudophosphatase,catalytic Cys substituted,structural,dead myotubularin,True
+MTMR11,A4FU01,pseudoenzyme,pseudophosphatase,catalytic Cys substituted,sequence,dead myotubularin,True
+MTMR12,Q9C0I1,pseudoenzyme,pseudophosphatase,catalytic Cys substituted,experimental,dead myotubularin (3-PAP),True
+TNS1,Q9HBL0,pseudoenzyme,pseudophosphatase,PTP domain catalytically dead (tensin-1),structural,tensin pseudo-PTP,True
+TNS2,Q63HR2,pseudoenzyme,pseudophosphatase,PTP domain degenerate,sequence,tensin-2 pseudo-PTP,True
+TNS3,Q68CZ2,pseudoenzyme,pseudophosphatase,PTP domain degenerate,sequence,tensin-3 pseudo-PTP,True
+TNS4,Q8IZW8,pseudoenzyme,pseudophosphatase,PTP domain degenerate (CTEN),sequence,CTEN pseudo-PTP,False
+TPTE,P56180,pseudoenzyme,pseudophosphatase,catalytic residues degenerate,structural,TPTE pseudophosphatase,True
+TPTE2,Q6XPS3,pseudoenzyme,pseudophosphatase,catalytic degenerate (TPIP),sequence,TPIP pseudophosphatase,True
+PTPN23,Q9H3S7,pseudoenzyme,pseudophosphatase,catalytic residues substituted (HD-PTP),experimental,HD-PTP pseudophosphatase,True
+PTPRQ,Q9UMZ3,pseudoenzyme,pseudophosphatase,catalytic residues weaken PTP (phosphatidylinositol),experimental,PTPRQ near-dead PTP,True
+CFLAR,O15519,pseudoenzyme,pseudoprotease,caspase catalytic Cys->? (c-FLIP),experimental,Irmler 1997; pseudo-caspase,True
+RHBDF1,Q96CC6,pseudoenzyme,pseudoprotease,rhomboid catalytic Ser/His lost (iRhom1),experimental,Zettl 2011; iRhom pseudoprotease,True
+RHBDF2,Q6PJF5,pseudoenzyme,pseudoprotease,rhomboid catalytic Ser/His lost (iRhom2),experimental,iRhom2 pseudoprotease,True
+DERL1,Q9BUN8,pseudoenzyme,pseudoprotease,"rhomboid-like, catalytic residues lost",experimental,Derlin pseudo-rhomboid,False
+DERL2,Q9GZP9,pseudoenzyme,pseudoprotease,rhomboid-like catalytic lost,structural,Derlin pseudo-rhomboid,False
+DERL3,Q96Q80,pseudoenzyme,pseudoprotease,rhomboid-like catalytic lost,sequence,Derlin pseudo-rhomboid,False
+CAPN6,Q9Y6Q1,pseudoenzyme,pseudoprotease,catalytic Cys->Lys (calpain-6),experimental,Dear 2000; pseudo-calpain,False
+TYSND1,Q2T9J0,pseudoenzyme,pseudoprotease,atypical (debated),sequence,"peroxisomal protease, borderline",False
+USP39,Q53GS9,pseudoenzyme,pseudo-DUB,catalytic Cys/His degenerate; spliceosome,experimental,van Leuken 2008; pseudo-DUB,True
+USP50,Q70EL3,pseudoenzyme,pseudo-DUB,catalytic residues degenerate,sequence,pseudo-DUB,True
+USP53,Q70EK8,pseudoenzyme,pseudo-DUB,catalytic triad incomplete,structural,catalytically inactive USP,True
+USP54,Q70EL1,pseudoenzyme,pseudo-DUB,catalytic triad incomplete,sequence,catalytically inactive USP,True
+OTULINL,Q9NUU6,pseudoenzyme,pseudo-DUB,OTU catalytic degenerate (FAM105A),experimental,pseudo-OTU (FAM105A),True
+USPL1,Q5W0Q7,pseudoenzyme,pseudo-DUB,atypical (debated SUMO),sequence,borderline,False
+RHOBTB1,O94844,pseudoenzyme,pseudo-GTPase,GTP-hydrolysis motifs degenerate,structural,RhoBTB atypical GTPase,True
+RHOBTB2,Q9BYZ6,pseudoenzyme,pseudo-GTPase,GTP-hydrolysis motifs degenerate,experimental,RhoBTB pseudo-GTPase,True
+RHOBTB3,O94955,pseudoenzyme,pseudo-GTPase,not a GTPase; ATPase instead,experimental,"Espinosa 2009; RhoBTB3 is an ATPase, pseudo-GTPase",True
+RHOH,Q15669,pseudoenzyme,pseudo-GTPase,GTPase-dead (constitutively GTP),experimental,Li 2002; RhoH GTPase-deficient,True
+RND1,Q92730,pseudoenzyme,pseudo-GTPase,GTPase-deficient (always GTP),experimental,Foster 1996; Rnd GTPase-dead,True
+RND2,P52198,pseudoenzyme,pseudo-GTPase,GTPase-deficient,experimental,Rnd GTPase-dead,True
+RND3,P61587,pseudoenzyme,pseudo-GTPase,GTPase-deficient (RhoE),experimental,Foster 1996; RhoE GTPase-dead,True
+CENPM,Q9NSP4,pseudoenzyme,pseudo-GTPase,"GTPase fold, nucleotide-binding degenerate",structural,Basilico 2014; kinetochore pseudo-GTPase,False
+DIRAS3,O95661,pseudoenzyme,pseudo-GTPase,atypical Ras (debated),sequence,borderline,True
+AHCYL1,O43865,pseudoenzyme,cofactor pseudoenzyme,AdoHcyase catalytic residues altered (IRBIT),experimental,Dekker 2002; IRBIT pseudo-AdoHcyase,True
+AHCYL2,Q96HN2,pseudoenzyme,cofactor pseudoenzyme,AdoHcyase catalytic altered (IRBIT2),experimental,IRBIT2 pseudo-AdoHcyase,True
+ALDH16A1,Q8IZ83,pseudoenzyme,metabolic pseudoenzyme,catalytic Cys absent (pseudo-ALDH),structural,Vasiliou; ALDH pseudoenzyme,True
+SELENOO,Q9BVL4,pseudoenzyme,metabolic pseudoenzyme,"atypical (SelO, AMPylase not kinase)",experimental,Sreelatha 2018; repurposed,False
+NME7,Q9Y5B8,pseudoenzyme,metabolic pseudoenzyme,NDP-kinase catalytic His degenerate,experimental,pseudo-NDK,True
+GLYATL3,Q5SZD4,pseudoenzyme,metabolic pseudoenzyme,acyltransferase degenerate,sequence,borderline,False
+ASNSD1,Q9NWL6,pseudoenzyme,metabolic pseudoenzyme,"asparagine-synthetase-like, degenerate",sequence,pseudo-AsnS domain,True
+BRAF,P15056,active,active kinase,,active_control,RAF active kinase (KSR comparator),True
+RAF1,P04049,active,active kinase,,active_control,active RAF,True
+EGFR,P00533,active,active kinase,,active_control,active RTK (ERBB3 comparator),True
+ERBB2,P04626,active,active kinase,,active_control,active RTK (HER2),True
+EPHA2,P29317,active,active kinase,,active_control,active Eph (EPHA10 comparator),True
+EPHB4,P54760,active,active kinase,,active_control,active Eph (EPHB6 comparator),True
+IRAK1,P51617,active,active kinase,,active_control,active IRAK (IRAK2/3 comparator),True
+IRAK4,Q9NWZ3,active,active kinase,,active_control,active IRAK,True
+CAMK2A,Q9UQM7,active,active kinase,,active_control,active CaMK,True
+BUB1,O43683,active,active kinase,,active_control,active BUB1 (BUBR1 comparator),True
+VRK1,Q99986,active,active kinase,,active_control,active VRK (VRK3 comparator),True
+VRK2,Q86Y07,active,active kinase,,active_control,active VRK,True
+ULK1,O75385,active,active kinase,,active_control,active ULK (ULK4 comparator),True
+FAM20C,Q8IXL6,active,active kinase,,active_control,active secretory kinase (FAM20A comparator),False
+MUSK,O15146,active,active kinase,,active_control,active RTK (ROR/RYK comparator),True
+DDR1,Q08345,active,active kinase,,active_control,active RTK,True
+SRC,P12931,active,active kinase,,active_control,active tyrosine kinase,True
+ABL1,P00519,active,active kinase,,active_control,active tyrosine kinase,True
+MAPK1,P28482,active,active kinase,,active_control,active ERK2,True
+CDK2,P24941,active,active kinase,,active_control,active CDK,True
+AURKA,O14965,active,active kinase,,active_control,active Aurora,True
+PRKACA,P17612,active,active kinase,,active_control,active PKA catalytic,True
+GSK3B,P49841,active,active kinase,,active_control,active GSK3,True
+MTOR,P42345,active,active kinase,,active_control,active PIKK (TRRAP comparator),False
+ATM,Q13315,active,active kinase,,active_control,active PIKK,False
+PTPN1,P18031,active,active phosphatase,,active_control,active PTP1B (pseudo-PTP comparator),True
+PTPRA,P18433,active,active phosphatase,,active_control,active receptor PTP,True
+PTPN11,Q06124,active,active phosphatase,,active_control,active SHP2,True
+DUSP3,P51452,active,active phosphatase,,active_control,active DUSP/VHR (STYX comparator),True
+MTM1,Q13496,active,active phosphatase,,active_control,active myotubularin (SBF/MTMR-dead comparator),True
+MTMR2,Q13614,active,active phosphatase,,active_control,active myotubularin,True
+MTMR6,Q9Y217,active,active phosphatase,,active_control,active myotubularin,True
+PTEN,P60484,active,active phosphatase,,active_control,active PTEN (TPTE comparator),True
+CDC14A,Q9UNH5,active,active phosphatase,,active_control,active CDC14,True
+CASP8,Q14790,active,active protease,,active_control,active caspase (CFLAR comparator),True
+CASP3,P42574,active,active protease,,active_control,active caspase,True
+PARL,Q9H300,active,active protease,,active_control,active rhomboid (iRhom comparator),False
+RHBDL2,Q9NX52,active,active protease,,active_control,active rhomboid,True
+CAPN1,P07384,active,active protease,,active_control,active calpain (CAPN6 comparator),False
+CAPN2,P17655,active,active protease,,active_control,active calpain,False
+USP7,Q93009,active,active DUB,,active_control,active USP (pseudo-DUB comparator),True
+USP5,P45974,active,active DUB,,active_control,active USP,True
+OTULIN,Q96BN8,active,active DUB,,active_control,active OTU (OTULINL comparator),True
+USP2,O75604,active,active DUB,,active_control,active USP,True
+RHOA,P61586,active,active GTPase,,active_control,active Rho (Rnd/RhoH comparator),True
+RAC1,P63000,active,active GTPase,,active_control,active Rho,True
+CDC42,P60953,active,active GTPase,,active_control,active Rho,True
+HRAS,P01112,active,active GTPase,,active_control,active Ras,True
+AHCY,P23526,active,active metabolic,,active_control,active AdoHcyase (AHCYL1/2 comparator),True
+ALDH2,P05091,active,active metabolic,,active_control,active ALDH (ALDH16A1 comparator),True
+NME1,P15531,active,active metabolic,,active_control,active NDK (NME7 comparator),True
+NME2,P22392,active,active metabolic,,active_control,active NDK,True
+ASNS,P08243,active,active metabolic,,active_control,active asparagine synthetase (ASNSD1 comparator),True

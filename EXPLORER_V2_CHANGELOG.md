@@ -425,3 +425,41 @@ had been deflating them.
 ASNSD1 → "(active-site)", TTN → "(no model)"); esprima clean; QuickJS `openD` confirmed; MR =
 pocket × conf exact (dev 0.0). F1 rescued-notes and F2 benchmark unaffected (struct_conf is
 orthogonal to the death-motif gate). Per-protein pLDDT table saved as `active_site_plddt_v9.csv`.
+
+---
+
+## v10 — "Database evaluation" tab (independent benchmark + leakage correction)
+
+**New fourth tab.** Added a *Database evaluation* mode that scores the tool against an
+**independent, literature-curated reference set** of known pseudoenzymes across seven classes
+(pseudokinase, pseudophosphatase, pseudo-GTPase, pseudoprotease, pseudo-DUB, metabolic, cofactor)
+plus active comparators drawn from the *same folds* (BRAF for pseudokinases, PTPN1 for
+pseudophosphatases, USP7 for pseudo-DUBs, etc.). Truth labels come from the Murphy / Eyers /
+Ribeiro / Todd / Tonks / Manning pseudoenzyme reviews and are independent of any tool score.
+Reference set: 139 proteins (86 pseudoenzymes + 53 active comparators); 120 present in the DB
+(73 pseudo + 47 active).
+
+**Train/test leakage found and corrected (mycelium review).** The death-motif gate was tuned on a
+69-protein gold set; 43/73 in-DB pseudoenzymes and 22/47 active comparators overlap it by UniProt
+accession. Reporting a single number over all 120 would report partly on training data and inflate
+recall. The tab now **leads with out-of-sample metrics** on the 55 disjoint proteins and shows the
+all-in-DB numbers second, labelled as including tuning-set members. An "in gold tuning set" column
+and a "show only out-of-sample" filter make the split reproducible in the table.
+
+**Headline metrics.**
+- **Out-of-sample (n = 30 pseudo + 25 active, never in tuning set): Sensitivity 0.63 [0.46–0.78], Specificity 0.96 [0.81–0.99].**
+- All in-DB (optimistic, includes tuning set): Sensitivity 0.71 [0.60–0.80], Specificity 0.98 [0.89–0.996].
+- Per-class sensitivity: pseudoprotease 3/3, cofactor 2/2, pseudo-GTPase 7/8 (0.88), pseudokinase 28/35 (0.80), metabolic 2/3, pseudophosphatase 10/17 (0.59), **pseudo-DUB 0/5**.
+- Sole false positive: PTEN (weak protein-phosphatase; flagged by the CX5R gate).
+
+**MR is a pocket-retention score, not a deadness detector.** Panel (a) shows MR is *higher* in
+active enzymes (median 0.48 vs 0.23; AUC pseudo>active = 0.35, below 0.5 by construction). The
+dead-call gate is the classifier; MR ranks how much pocket a dead protein retains.
+
+**Disclosed limitations.** The gate has no reach on pseudo-DUBs (no linear death motif on USP/OTU
+folds — 0/5); 19 literature pseudoenzymes are out of DB scope; several classes rest on small n
+(wide Wilson CIs shown). Full analysis in `EVAL_MYCELIUM_REVIEW.md`.
+
+**New data files.** `data/eval_reference_set.csv` (139-protein reference set),
+`data/eval_scored.csv` (per-protein scores + dead-call + in-gold flag),
+`data/eval_metrics.json` (sens/spec + Wilson CIs + OOS block + overlap block).

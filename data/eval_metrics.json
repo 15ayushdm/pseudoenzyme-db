@@ -1,0 +1,138 @@
+{
+  "overall": {
+    "n_pseudo": 73,
+    "n_active": 47,
+    "TP": 52,
+    "FN": 21,
+    "TN": 46,
+    "FP": 1,
+    "sensitivity": 0.712,
+    "sensitivity_ci": [
+      0.6,
+      0.803
+    ],
+    "specificity": 0.979,
+    "specificity_ci": [
+      0.889,
+      0.996
+    ],
+    "ppv": 0.981,
+    "ppv_ci": [
+      0.901,
+      0.997
+    ],
+    "npv": 0.687,
+    "npv_ci": [
+      0.568,
+      0.785
+    ]
+  },
+  "sensitivity_by_class": {
+    "cofactor pseudoenzyme": {
+      "n": 2,
+      "called_dead": 2,
+      "sensitivity": 1.0,
+      "ci": [
+        0.342,
+        1
+      ]
+    },
+    "metabolic pseudoenzyme": {
+      "n": 3,
+      "called_dead": 2,
+      "sensitivity": 0.667,
+      "ci": [
+        0.208,
+        0.939
+      ]
+    },
+    "pseudo-DUB": {
+      "n": 5,
+      "called_dead": 0,
+      "sensitivity": 0.0,
+      "ci": [
+        0,
+        0.434
+      ]
+    },
+    "pseudo-GTPase": {
+      "n": 8,
+      "called_dead": 7,
+      "sensitivity": 0.875,
+      "ci": [
+        0.529,
+        0.978
+      ]
+    },
+    "pseudokinase": {
+      "n": 35,
+      "called_dead": 28,
+      "sensitivity": 0.8,
+      "ci": [
+        0.641,
+        0.9
+      ]
+    },
+    "pseudophosphatase": {
+      "n": 17,
+      "called_dead": 10,
+      "sensitivity": 0.588,
+      "ci": [
+        0.36,
+        0.784
+      ]
+    },
+    "pseudoprotease": {
+      "n": 3,
+      "called_dead": 3,
+      "sensitivity": 1.0,
+      "ci": [
+        0.438,
+        1
+      ]
+    }
+  },
+  "MR_separation": {
+    "median_pseudo": 0.234,
+    "median_active": 0.476,
+    "mannwhitney_p": 0.0043,
+    "auc_pseudo_vs_active": 0.351,
+    "note": "AUC<0.5 is expected and correct: MR is a pocket-retention score, systematically HIGHER in active enzymes. MR is NOT a deadness detector; the dead-call gate is."
+  },
+  "MR_by_class": {
+    "cofactor pseudoenzyme": 0.82,
+    "metabolic pseudoenzyme": 0.59,
+    "pseudo-DUB": 0.0,
+    "pseudo-GTPase": 0.0,
+    "pseudokinase": 0.385,
+    "pseudophosphatase": 0.0,
+    "pseudoprotease": 0.0
+  },
+  "method_note": "Reference set is literature-curated (Murphy/Eyers/Ribeiro/Tonks pseudoenzyme reviews), independent of tool scores. Evaluated on 120/139 proteins present in DB. dead_call = override_pos (death-motif gate). Wilson 95% CIs.",
+  "out_of_sample": {
+    "definition": "Reference proteins whose UniProt accession is NOT in the gold development/tuning set (ps 46 pseudo + ac 23 active + gold comparators). These never influenced any gate threshold.",
+    "n_pseudo": 30,
+    "n_active": 25,
+    "TP": 19,
+    "FN": 11,
+    "TN": 24,
+    "FP": 1,
+    "sensitivity": 0.633,
+    "sensitivity_ci": [
+      0.455,
+      0.781
+    ],
+    "specificity": 0.96,
+    "specificity_ci": [
+      0.805,
+      0.993
+    ]
+  },
+  "overlap_with_gold": {
+    "pseudo_in_gold": 43,
+    "pseudo_total": 73,
+    "active_in_gold": 22,
+    "active_total": 47,
+    "note": "Gold set was used to TUNE gate thresholds (motif-loss rules, KSR1/2 casualties). Overlapping proteins are in-sample; report out_of_sample block as the unbiased estimate."
+  }
+}
