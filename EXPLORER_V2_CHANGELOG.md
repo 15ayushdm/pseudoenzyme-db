@@ -463,3 +463,37 @@ folds — 0/5); 19 literature pseudoenzymes are out of DB scope; several classes
 **New data files.** `data/eval_reference_set.csv` (139-protein reference set),
 `data/eval_scored.csv` (per-protein scores + dead-call + in-gold flag),
 `data/eval_metrics.json` (sens/spec + Wilson CIs + OOS block + overlap block).
+
+---
+
+## v11 — Metabolite-sensor–enriched evaluation (out-of-sample only)
+
+**Motivation.** The database's primary use is surfacing **metabolite sensors**, so the evaluation
+reference set was expanded to cover that class in depth, and — per request — the tab now reports
+**only out-of-sample metrics** (the "all in-DB" optimistic numbers were removed).
+
+**Expanded reference set.** Metabolic + cofactor pseudoenzymes grew from 7 to **14 in-DB proteins**,
+each matched to active enzymes of the same fold:
+- **Acatalytic carbonic anhydrases (CARPs):** CA8, CA10, CA11 (lack Zn-coordinating His) vs active CA1/CA2/CA9/CA12
+- **ALDH "dead enzymes":** ALDH16A1 (lacks catalytic Cys) vs active ALDH1A1/2/3A1/7A1/9A1
+- **Pseudo-NDPKs:** NME7/8/9 vs active NME1/2/3/4
+- **Pseudo-amidases:** PGLYRP1/3/4 vs the sole active amidase PGLYRP2
+- **SAHH paralogs (IRBIT prototype):** AHCYL1/AHCYL2 vs active AHCY; plus ASNSD1, GOT1L1
+Reference set total: 161 proteins (95 pseudo + 66 active); 142 in DB.
+
+**Out-of-sample metrics (only numbers reported).** Restricting to the 39+38 proteins whose
+UniProt accession never entered the gold gate-tuning set:
+- **Sensitivity 0.59 [0.43–0.73], Specificity 0.97 [0.86–0.99]** (n = 39 pseudo + 38 active).
+- Per-class out-of-sample sensitivity: pseudokinase 11/14, pseudo-GTPase 3/3, pseudophosphatase 4/10, metabolic 4/7, cofactor 1/3, pseudo-DUB 0/2.
+- Sole false positive: PTEN.
+
+**Key finding for metabolite sensing.** Specificity on metabolic/cofactor folds is near-perfect
+(no active metabolic enzyme is called dead), but the **linear death-motif gate does not reach several
+genuine metabolite-sensor candidates** — CA8 (MR 0.88), CA10 (0.62), NME7/NME9 (~0.56) are missed
+because CARP and NDPK folds have no scannable death motif. **MR, not the dead-call gate, is what
+surfaces these** — reinforcing that MR is the metabolite-sensor discovery signal and the gate is a
+conservative pseudoenzyme classifier.
+
+**Tab changes.** Evaluation cards reduced to the two out-of-sample numbers; "show only out-of-sample"
+table filter now defaults ON; per-class and coverage narrative recomputed on the out-of-sample split;
+figure redrawn (metabolic/cofactor classes highlighted, all panels out-of-sample).

@@ -78,13 +78,6 @@ RND2,P52198,pseudoenzyme,pseudo-GTPase,GTPase-deficient,experimental,Rnd GTPase-
 RND3,P61587,pseudoenzyme,pseudo-GTPase,GTPase-deficient (RhoE),experimental,Foster 1996; RhoE GTPase-dead,True
 CENPM,Q9NSP4,pseudoenzyme,pseudo-GTPase,"GTPase fold, nucleotide-binding degenerate",structural,Basilico 2014; kinetochore pseudo-GTPase,False
 DIRAS3,O95661,pseudoenzyme,pseudo-GTPase,atypical Ras (debated),sequence,borderline,True
-AHCYL1,O43865,pseudoenzyme,cofactor pseudoenzyme,AdoHcyase catalytic residues altered (IRBIT),experimental,Dekker 2002; IRBIT pseudo-AdoHcyase,True
-AHCYL2,Q96HN2,pseudoenzyme,cofactor pseudoenzyme,AdoHcyase catalytic altered (IRBIT2),experimental,IRBIT2 pseudo-AdoHcyase,True
-ALDH16A1,Q8IZ83,pseudoenzyme,metabolic pseudoenzyme,catalytic Cys absent (pseudo-ALDH),structural,Vasiliou; ALDH pseudoenzyme,True
-SELENOO,Q9BVL4,pseudoenzyme,metabolic pseudoenzyme,"atypical (SelO, AMPylase not kinase)",experimental,Sreelatha 2018; repurposed,False
-NME7,Q9Y5B8,pseudoenzyme,metabolic pseudoenzyme,NDP-kinase catalytic His degenerate,experimental,pseudo-NDK,True
-GLYATL3,Q5SZD4,pseudoenzyme,metabolic pseudoenzyme,acyltransferase degenerate,sequence,borderline,False
-ASNSD1,Q9NWL6,pseudoenzyme,metabolic pseudoenzyme,"asparagine-synthetase-like, degenerate",sequence,pseudo-AsnS domain,True
 BRAF,P15056,active,active kinase,,active_control,RAF active kinase (KSR comparator),True
 RAF1,P04049,active,active kinase,,active_control,active RAF,True
 EGFR,P00533,active,active kinase,,active_control,active RTK (ERBB3 comparator),True
@@ -133,8 +126,37 @@ RHOA,P61586,active,active GTPase,,active_control,active Rho (Rnd/RhoH comparator
 RAC1,P63000,active,active GTPase,,active_control,active Rho,True
 CDC42,P60953,active,active GTPase,,active_control,active Rho,True
 HRAS,P01112,active,active GTPase,,active_control,active Ras,True
-AHCY,P23526,active,active metabolic,,active_control,active AdoHcyase (AHCYL1/2 comparator),True
-ALDH2,P05091,active,active metabolic,,active_control,active ALDH (ALDH16A1 comparator),True
-NME1,P15531,active,active metabolic,,active_control,active NDK (NME7 comparator),True
-NME2,P22392,active,active metabolic,,active_control,active NDK,True
-ASNS,P08243,active,active metabolic,,active_control,active asparagine synthetase (ASNSD1 comparator),True
+AHCYL1,O43865,pseudoenzyme,cofactor pseudoenzyme,"SAHH-fold; dead SAH hydrolase paralog, retains NAD+",high,literature-curated (metabolic/cofactor expansion),True
+AHCYL2,Q96HN2,pseudoenzyme,cofactor pseudoenzyme,"SAHH-fold; dead SAH hydrolase paralog, retains NAD+",high,literature-curated (metabolic/cofactor expansion),True
+ALDH16A1,Q8IZ83,pseudoenzyme,metabolic pseudoenzyme,"ALDH-fold; lacks catalytic Cys, no NAD(P) dehydrogenase activity",high,literature-curated (metabolic/cofactor expansion),True
+NME7,Q9Y5B8,pseudoenzyme,metabolic pseudoenzyme,NDPK-fold; degenerate NDP-kinase motifs,medium,literature-curated (metabolic/cofactor expansion),True
+NME8,Q8N427,pseudoenzyme,metabolic pseudoenzyme,NDPK-fold; pseudo-NDPK (TXNDC3),medium,literature-curated (metabolic/cofactor expansion),True
+NME9,Q86XW9,pseudoenzyme,metabolic pseudoenzyme,NDPK-fold; pseudo-NDPK (TXNDC6),medium,literature-curated (metabolic/cofactor expansion),True
+ASNSD1,Q9NWL6,pseudoenzyme,metabolic pseudoenzyme,"Asn-synthetase-fold; pseudo, degenerate amidotransferase",medium,literature-curated (metabolic/cofactor expansion),True
+PGLYRP1,O75594,pseudoenzyme,metabolic pseudoenzyme,N-acetylmuramoyl-L-Ala amidase-fold; lacks catalytic residues,high,literature-curated (metabolic/cofactor expansion),True
+PGLYRP3,Q96LB9,pseudoenzyme,metabolic pseudoenzyme,amidase-fold; pseudo-amidase,medium,literature-curated (metabolic/cofactor expansion),True
+PGLYRP4,Q96LB8,pseudoenzyme,metabolic pseudoenzyme,amidase-fold; pseudo-amidase,medium,literature-curated (metabolic/cofactor expansion),True
+GOT1L1,Q8NHS2,pseudoenzyme,metabolic pseudoenzyme,PLP aminotransferase-fold; testis pseudo-transaminase,medium,literature-curated (metabolic/cofactor expansion),True
+CA8,P35219,pseudoenzyme,cofactor pseudoenzyme,"carbonic-anhydrase-fold; acatalytic (lacks Zn-His), CARP VIII",high,literature-curated (metabolic/cofactor expansion),True
+CA10,Q9NS85,pseudoenzyme,cofactor pseudoenzyme,carbonic-anhydrase-fold; acatalytic CARP X,high,literature-curated (metabolic/cofactor expansion),True
+CA11,O75493,pseudoenzyme,cofactor pseudoenzyme,carbonic-anhydrase-fold; acatalytic CARP XI,high,literature-curated (metabolic/cofactor expansion),True
+AHCY,P23526,active,active cofactor,active SAH hydrolase,high,literature-curated (metabolic/cofactor expansion),True
+ALDH2,P05091,active,active metabolic,active NAD-dependent ALDH,high,literature-curated (metabolic/cofactor expansion),True
+ALDH1A1,P00352,active,active metabolic,active ALDH,high,literature-curated (metabolic/cofactor expansion),True
+ALDH3A1,P30838,active,active metabolic,active ALDH,high,literature-curated (metabolic/cofactor expansion),True
+ALDH7A1,P49419,active,active metabolic,active ALDH,high,literature-curated (metabolic/cofactor expansion),True
+ALDH9A1,P49189,active,active metabolic,active ALDH,high,literature-curated (metabolic/cofactor expansion),True
+NME1,P15531,active,active metabolic,active NDP kinase,high,literature-curated (metabolic/cofactor expansion),True
+NME2,P22392,active,active metabolic,active NDP kinase,high,literature-curated (metabolic/cofactor expansion),True
+NME3,Q13232,active,active metabolic,active NDP kinase,high,literature-curated (metabolic/cofactor expansion),True
+NME4,O00746,active,active metabolic,active NDP kinase,high,literature-curated (metabolic/cofactor expansion),True
+ASNS,P08243,active,active metabolic,active asparagine synthetase,high,literature-curated (metabolic/cofactor expansion),True
+PGLYRP2,Q96PD5,active,active metabolic,active N-acetylmuramoyl-L-Ala amidase,high,literature-curated (metabolic/cofactor expansion),True
+GOT1,P17174,active,active metabolic,active aspartate aminotransferase,high,literature-curated (metabolic/cofactor expansion),True
+GOT2,P00505,active,active metabolic,active aspartate aminotransferase,high,literature-curated (metabolic/cofactor expansion),True
+CA1,P00915,active,active cofactor,active carbonic anhydrase,high,literature-curated (metabolic/cofactor expansion),True
+CA2,P00918,active,active cofactor,active carbonic anhydrase,high,literature-curated (metabolic/cofactor expansion),True
+CA9,Q16790,active,active cofactor,active carbonic anhydrase,high,literature-curated (metabolic/cofactor expansion),True
+CA12,O43570,active,active cofactor,active carbonic anhydrase,high,literature-curated (metabolic/cofactor expansion),True
+SELENOO,Q9BVL4,pseudoenzyme,metabolic pseudoenzyme,"atypical (SelO, AMPylase not kinase)",experimental,Sreelatha 2018; repurposed,False
+GLYATL3,Q5SZD4,pseudoenzyme,metabolic pseudoenzyme,acyltransferase degenerate,sequence,borderline,False

@@ -1,121 +1,143 @@
-gene,uniprot,truth,class,evidence_level,in_db,metabolite_relevance,metabolite_relevance_bin,pocket_retention,struct_conf,struct_conf_source,override_pos,motif_dead,home_family_name,base_pos,is_pseudo_pos,db_gene,dead_call,pair_class,in_gold
-STRADA,Q7RTN6,pseudoenzyme,pseudokinase,experimental,True,0.44,medium,0.44,1.0,measured,1.0,True,mitogen-activated protein kinase kinase,True,True,STRADA,True,pseudokinase,True
-STRADB,Q9C0K7,pseudoenzyme,pseudokinase,structural,True,0.4155,medium,0.44,0.9444,measured,1.0,False,mitogen-activated protein kinase kinase,True,True,STRADB,True,pseudokinase,True
-KSR1,Q8IVT5,pseudoenzyme,pseudokinase,experimental,True,0.4213,medium,0.56,0.7524,domain_mean,0.0,False,receptor protein-tyrosine kinase,False,True,KSR1,False,pseudokinase,True
-KSR2,Q6VAB6,pseudoenzyme,pseudokinase,experimental,True,0.3247,medium,0.5,0.6495,domain_mean,0.0,False,receptor protein-tyrosine kinase,False,True,KSR2,False,pseudokinase,True
-TRIB1,Q96RU8,pseudoenzyme,pseudokinase,experimental,True,0.2778,medium,0.32,0.868,domain_mean,1.0,True,mitogen-activated protein kinase kinase,True,True,TRIB1,True,pseudokinase,True
-TRIB2,Q92519,pseudoenzyme,pseudokinase,experimental,True,0.3019,medium,0.34,0.8878,domain_mean,1.0,True,mitogen-activated protein kinase kinase,True,True,TRIB2,True,pseudokinase,True
-TRIB3,Q96RU7,pseudoenzyme,pseudokinase,experimental,True,0.3746,medium,0.38,0.9858,domain_mean,1.0,True,mitogen-activated protein kinase kinase,True,True,TRIB3,True,pseudokinase,True
-ERBB3,P21860,pseudoenzyme,pseudokinase,experimental,True,0.4229,medium,0.54,0.7832,domain_mean,1.0,True,mitogen-activated protein kinase kinase,False,True,ERBB3,True,pseudokinase,True
-EPHA10,Q5JZY3,pseudoenzyme,pseudokinase,sequence,True,0.5383,high,0.57,0.9444,measured,1.0,True,protein kinase C,True,True,EPHA10,True,pseudokinase,True
-EPHB6,O15197,pseudoenzyme,pseudokinase,experimental,True,0.4622,medium,0.5,0.9244,measured,1.0,True,protein kinase C,True,True,EPHB6,True,pseudokinase,True
-ILK,Q13418,pseudoenzyme,pseudokinase,experimental,True,0.3093,medium,0.37,0.8359,domain_mean,1.0,True,protein kinase C,True,True,ILK,True,pseudokinase,False
-CASK,O14936,pseudoenzyme,pseudokinase,experimental,True,0.6049,high,0.68,0.8896,domain_mean,1.0,True,phosphorylase kinase,False,True,CASK,True,pseudokinase,True
-MLKL,Q8NB16,pseudoenzyme,pseudokinase,experimental,True,0.3823,medium,0.44,0.8689,measured,1.0,False,mitogen-activated protein kinase kinase,True,True,MLKL,True,pseudokinase,True
-IRAK2,O43187,pseudoenzyme,pseudokinase,experimental,True,0.2339,low,0.38,0.6156,measured,1.0,False,mitogen-activated protein kinase kinase,True,True,IRAK2,True,pseudokinase,True
-IRAK3,Q9Y616,pseudoenzyme,pseudokinase,experimental,True,0.3854,medium,0.46,0.8378,measured,1.0,True,mitogen-activated protein kinase kinase,True,True,IRAK3,True,pseudokinase,True
-BUB1B,O60566,pseudoenzyme,pseudokinase,experimental,True,0.209,low,0.33,0.6333,measured,1.0,False,protein kinase C,True,True,BUB1B,True,pseudokinase,True
-PXK,Q7Z7A4,pseudoenzyme,pseudokinase,sequence,True,0.32,medium,0.32,1.0,measured,1.0,False,mitogen-activated protein kinase kinase,True,True,PXK,True,pseudokinase,True
-STK40,Q8N2I9,pseudoenzyme,pseudokinase,sequence,True,0.4427,medium,0.54,0.8198,domain_mean,1.0,True,phosphorylase kinase,False,True,STK40,True,pseudokinase,True
-SCYL1,Q96KG9,pseudoenzyme,pseudokinase,structural,True,0.1125,low,0.12,0.9374,domain_mean,1.0,False,mitogen-activated protein kinase kinase,True,True,SCYL1,True,pseudokinase,True
-SCYL2,Q6P3W7,pseudoenzyme,pseudokinase,sequence,True,0.309,medium,0.34,0.9089,measured,1.0,True,mitogen-activated protein kinase kinase,True,True,SCYL2,True,pseudokinase,False
-SCYL3,Q8IZE3,pseudoenzyme,pseudokinase,sequence,True,0.3,medium,0.3,1.0,measured,1.0,False,protein kinase C,True,True,SCYL3,True,pseudokinase,False
-PRAG1,Q86YV5,pseudoenzyme,pseudokinase,experimental,True,0.4667,medium,0.75,0.6222,measured,0.0,False,protein kinase C,False,True,PRAG1,False,pseudokinase,True
-PEAK1,Q9H792,pseudoenzyme,pseudokinase,experimental,True,0.2848,medium,0.4,0.7119,domain_mean,1.0,False,protein kinase C,True,True,PEAK1,True,pseudokinase,True
-VRK3,Q8IV63,pseudoenzyme,pseudokinase,experimental,True,0.24,low,0.24,1.0,domain_mean,0.0,False,mitogen-activated protein kinase kinase,False,True,VRK3,False,pseudokinase,True
-NRBP1,Q9UHY1,pseudoenzyme,pseudokinase,sequence,True,0.1622,low,0.25,0.6489,measured,1.0,False,mitogen-activated protein kinase kinase,True,True,NRBP1,True,pseudokinase,False
-NRBP2,Q9NSY0,pseudoenzyme,pseudokinase,sequence,True,0.156,low,0.18,0.8667,measured,1.0,False,phosphorylase kinase,True,True,NRBP2,True,pseudokinase,False
-ULK4,Q96C45,pseudoenzyme,pseudokinase,structural,True,0.2841,medium,0.41,0.693,domain_mean,1.0,True,mitogen-activated protein kinase kinase,True,True,ULK4,True,pseudokinase,False
-ROR1,Q01973,pseudoenzyme,pseudokinase,experimental,True,0.4484,medium,0.71,0.6315,domain_mean,0.0,False,receptor protein-tyrosine kinase,False,True,ROR1,False,pseudokinase,False
-ROR2,Q01974,pseudoenzyme,pseudokinase,experimental,True,0.3973,medium,0.62,0.6408,domain_mean,0.0,False,receptor protein-tyrosine kinase,False,False,ROR2,False,pseudokinase,False
-RYK,P34925,pseudoenzyme,pseudokinase,experimental,True,0.5091,high,0.56,0.9091,domain_mean,1.0,True,receptor protein-tyrosine kinase,False,True,RYK,True,pseudokinase,False
-PTK7,Q13308,pseudoenzyme,pseudokinase,experimental,True,0.4781,medium,0.65,0.7356,measured,1.0,True,receptor protein-tyrosine kinase,False,True,PTK7,True,pseudokinase,False
-STYK1,Q6J9G0,pseudoenzyme,pseudokinase,sequence,True,0.537,high,0.68,0.7897,domain_mean,1.0,True,receptor protein-tyrosine kinase,False,True,STYK1,True,pseudokinase,False
-TBCK,Q8TEA7,pseudoenzyme,pseudokinase,sequence,True,0.44,medium,0.44,1.0,measured,1.0,True,mitogen-activated protein kinase kinase,True,True,TBCK,True,pseudokinase,False
-CAMKV,Q8NCB2,pseudoenzyme,pseudokinase,sequence,True,0.4155,medium,0.44,0.9444,measured,1.0,True,mitogen-activated protein kinase kinase,True,True,CAMKV,True,pseudokinase,False
-PDIK1L,Q8N165,pseudoenzyme,pseudokinase,sequence,True,0.3997,medium,0.52,0.7687,domain_mean,0.0,False,mitogen-activated protein kinase kinase,False,True,PDIK1L,False,pseudokinase,False
-STYX,Q8WUJ0,pseudoenzyme,pseudophosphatase,experimental,True,0.0,low,0.0,1.0,measured,0.0,False,Dual-specificity phosphatase (VHR/DUSP3),False,False,STYX,False,pseudophosphatase,True
-STYXL1,Q9Y6J8,pseudoenzyme,pseudophosphatase,experimental,True,0.0,low,0.0,1.0,measured,1.0,False,Dual-specificity phosphatase (VHR/DUSP3),True,True,STYXL1,True,pseudophosphatase,True
-PTPRN,Q16849,pseudoenzyme,pseudophosphatase,experimental,True,0.4205,medium,0.43,0.9778,measured,1.0,True,protein-tyrosine-phosphatase non-receptor type 1,True,True,PTPRN,True,pseudophosphatase,True
-PTPRN2,Q92932,pseudoenzyme,pseudophosphatase,experimental,True,0.0,low,0.0,0.9709,domain_mean,1.0,True,Classical protein-tyrosine phosphatase (PTP1B),False,True,PTPRN2,True,pseudophosphatase,True
-SBF1,O95248,pseudoenzyme,pseudophosphatase,experimental,True,0.0,low,0.0,0.9222,measured,1.0,False,Myotubularin lipid phosphatase (MTMR2),True,True,SBF1,True,pseudophosphatase,True
-SBF2,Q86WG5,pseudoenzyme,pseudophosphatase,experimental,True,0.0,low,0.0,0.9111,measured,1.0,False,Myotubularin lipid phosphatase (MTMR2),True,True,SBF2,True,pseudophosphatase,True
-MTMR9,Q96QG7,pseudoenzyme,pseudophosphatase,experimental,True,0.0,low,0.0,1.0,measured,1.0,False,Myotubularin lipid phosphatase (MTMR2),True,True,MTMR9,True,pseudophosphatase,False
-MTMR10,Q9NXD2,pseudoenzyme,pseudophosphatase,structural,True,0.0,low,0.0,1.0,measured,1.0,False,Myotubularin lipid phosphatase (MTMR2),True,True,MTMR10,True,pseudophosphatase,False
-MTMR11,A4FU01,pseudoenzyme,pseudophosphatase,sequence,True,0.0,low,0.0,1.0,measured,1.0,False,Myotubularin lipid phosphatase (MTMR2),True,True,MTMR11,True,pseudophosphatase,False
-MTMR12,Q9C0I1,pseudoenzyme,pseudophosphatase,experimental,True,0.0,low,0.0,1.0,measured,1.0,False,Myotubularin lipid phosphatase (MTMR2),True,True,MTMR12,True,pseudophosphatase,False
-TNS1,Q9HBL0,pseudoenzyme,pseudophosphatase,structural,True,0.0,low,0.0,0.9556,measured,1.0,False,dual-specificity phosphatase,True,True,TNS1,True,pseudophosphatase,True
-TNS2,Q63HR2,pseudoenzyme,pseudophosphatase,sequence,True,0.0,low,0.0,0.8604,domain_mean,0.0,False,dual-specificity phosphatase,False,False,TNS2,False,pseudophosphatase,False
-TNS3,Q68CZ2,pseudoenzyme,pseudophosphatase,sequence,True,0.0,low,0.0,0.8825,domain_mean,0.0,False,dual-specificity phosphatase,False,False,TNS3,False,pseudophosphatase,False
-TPTE,P56180,pseudoenzyme,pseudophosphatase,structural,True,0.0,low,0.0,0.9424,domain_mean,0.0,False,dual-specificity phosphatase,False,False,TPTE,False,pseudophosphatase,False
-TPTE2,Q6XPS3,pseudoenzyme,pseudophosphatase,sequence,True,0.0,low,0.0,0.9782,domain_mean,0.0,False,dual-specificity phosphatase,False,False,TPTE2,False,pseudophosphatase,False
-PTPN23,Q9H3S7,pseudoenzyme,pseudophosphatase,experimental,True,0.0,low,0.0,0.8534,domain_mean,0.0,False,Classical protein-tyrosine phosphatase (PTP1B),False,False,PTPN23,False,pseudophosphatase,False
-PTPRQ,Q9UMZ3,pseudoenzyme,pseudophosphatase,experimental,True,0.0,low,0.0,0.7382,domain_mean,0.0,False,Classical protein-tyrosine phosphatase (PTP1B),False,False,PTPRQ,False,pseudophosphatase,False
-CFLAR,O15519,pseudoenzyme,pseudoprotease,experimental,True,0.3149,medium,0.5,0.6297,domain_mean,1.0,True,caspase-1,True,True,CFLAR,True,pseudoprotease,True
-RHBDF1,Q96CC6,pseudoenzyme,pseudoprotease,experimental,True,0.0,low,0.0,0.9365,domain_mean,1.0,True,Rhomboid intramembrane protease (RHBDL2),True,True,RHBDF1,True,pseudoprotease,True
-RHBDF2,Q6PJF5,pseudoenzyme,pseudoprotease,experimental,True,0.0,low,0.0,0.9433,domain_mean,1.0,True,Rhomboid intramembrane protease (RHBDL2),True,True,RHBDF2,True,pseudoprotease,True
-USP39,Q53GS9,pseudoenzyme,pseudo-DUB,experimental,True,0.0,low,0.0,0.8647,domain_mean,0.0,False,Ubiquitin-specific protease / DUB (USP7),False,False,USP39,False,pseudo-DUB,True
-USP50,Q70EL3,pseudoenzyme,pseudo-DUB,sequence,True,0.0,low,0.0,0.811,domain_mean,0.0,False,Ubiquitin-specific protease / DUB (USP7),False,False,USP50,False,pseudo-DUB,True
-USP53,Q70EK8,pseudoenzyme,pseudo-DUB,structural,True,0.0,low,0.0,0.9778,domain_mean,0.0,False,Ubiquitin-specific protease / DUB (USP7),False,False,USP53,False,pseudo-DUB,False
-USP54,Q70EL1,pseudoenzyme,pseudo-DUB,sequence,True,0.0,low,0.0,0.9226,domain_mean,0.0,False,Ubiquitin-specific protease / DUB (USP7),False,False,USP54,False,pseudo-DUB,False
-OTULINL,Q9NUU6,pseudoenzyme,pseudo-DUB,experimental,True,0.0,low,0.0,0.9844,measured,0.0,False,OTU-family deubiquitinase (OTULIN),False,False,OTULINL,False,pseudo-DUB,True
-RHOBTB1,O94844,pseudoenzyme,pseudo-GTPase,structural,True,0.0,low,0.0,0.0,measured,1.0,False,Rho-family GTPase (RHOA),True,True,RHOBTB1,True,pseudo-GTPase,False
-RHOBTB2,Q9BYZ6,pseudoenzyme,pseudo-GTPase,experimental,True,0.0,low,0.0,0.0,measured,1.0,False,Rho-family GTPase (RHOA),True,True,RHOBTB2,True,pseudo-GTPase,True
-RHOBTB3,O94955,pseudoenzyme,pseudo-GTPase,experimental,True,0.0,low,0.0,0.5515,domain_mean,1.0,False,Rho-family GTPase (RHOA),True,True,RHOBTB3,True,pseudo-GTPase,False
-RHOH,Q15669,pseudoenzyme,pseudo-GTPase,experimental,True,0.0,low,0.0,1.0,domain_mean,0.0,False,Rho-family GTPase (RHOA),False,False,RHOH,False,pseudo-GTPase,True
-RND1,Q92730,pseudoenzyme,pseudo-GTPase,experimental,True,0.0,low,0.0,1.0,measured,1.0,False,Rho-family GTPase (RHOA),True,True,RND1,True,pseudo-GTPase,True
-RND2,P52198,pseudoenzyme,pseudo-GTPase,experimental,True,0.0,low,0.0,0.9956,measured,1.0,False,Rho-family GTPase (RHOA),True,True,RND2,True,pseudo-GTPase,True
-RND3,P61587,pseudoenzyme,pseudo-GTPase,experimental,True,0.0,low,0.0,1.0,measured,1.0,False,Rho-family GTPase (RHOA),True,True,RND3,True,pseudo-GTPase,True
-DIRAS3,O95661,pseudoenzyme,pseudo-GTPase,sequence,True,0.0,low,0.0,0.2733,measured,1.0,False,Rho-family GTPase (RHOA),True,True,DIRAS3,True,pseudo-GTPase,False
-AHCYL1,O43865,pseudoenzyme,cofactor pseudoenzyme,experimental,True,0.82,high,0.82,1.0,domain_mean,1.0,False,adenosylhomocysteinase,True,True,AHCYL1,True,cofactor pseudoenzyme,True
-AHCYL2,Q96HN2,pseudoenzyme,cofactor pseudoenzyme,experimental,True,0.82,high,0.82,1.0,domain_mean,1.0,False,adenosylhomocysteinase,True,True,AHCYL2,True,cofactor pseudoenzyme,True
-ALDH16A1,Q8IZ83,pseudoenzyme,metabolic pseudoenzyme,structural,True,0.0,low,0.0,0.9704,domain_mean,1.0,False,betaine-aldehyde dehydrogenase,True,True,ALDH16A1,True,metabolic pseudoenzyme,True
-NME7,Q9Y5B8,pseudoenzyme,metabolic pseudoenzyme,experimental,True,0.59,high,0.59,1.0,domain_mean,0.0,False,nucleoside-diphosphate kinase,False,False,NME7,False,metabolic pseudoenzyme,True
-ASNSD1,Q9NWL6,pseudoenzyme,metabolic pseudoenzyme,sequence,True,0.83,high,0.83,1.0,measured,1.0,False,(carboxyethyl)arginine beta-lactam-synthase,True,True,ASNSD1,True,metabolic pseudoenzyme,False
-BRAF,P15056,active,active kinase,active_control,True,0.3762,medium,0.53,0.7098,domain_mean,0.0,False,receptor protein-tyrosine kinase,False,False,BRAF,False,pseudokinase,True
-RAF1,P04049,active,active kinase,active_control,True,0.3774,medium,0.53,0.712,domain_mean,0.0,False,receptor protein-tyrosine kinase,False,False,RAF1,False,pseudokinase,False
-EGFR,P00533,active,active kinase,active_control,True,0.5767,high,1.0,0.5767,domain_mean,0.0,False,ERBB/EGFR receptor tyrosine kinase (curated),False,False,EGFR,False,pseudokinase,True
-ERBB2,P04626,active,active kinase,active_control,True,0.7415,high,1.0,0.7415,domain_mean,0.0,False,ERBB/EGFR receptor tyrosine kinase (curated),False,False,ERBB2,False,pseudokinase,False
-EPHA2,P29317,active,active kinase,active_control,True,0.4587,medium,0.68,0.6746,domain_mean,0.0,False,receptor protein-tyrosine kinase,False,False,EPHA2,False,pseudokinase,True
-EPHB4,P54760,active,active kinase,active_control,True,0.477,medium,0.68,0.7015,domain_mean,0.0,False,receptor protein-tyrosine kinase,False,False,EPHB4,False,pseudokinase,True
-IRAK1,P51617,active,active kinase,active_control,True,0.4674,medium,0.57,0.82,domain_mean,0.0,False,mitogen-activated protein kinase kinase,False,False,IRAK1,False,pseudokinase,True
-IRAK4,Q9NWZ3,active,active kinase,active_control,True,0.542,high,0.6,0.9034,domain_mean,0.0,False,mitogen-activated protein kinase kinase,False,False,IRAK4,False,pseudokinase,True
-CAMK2A,Q9UQM7,active,active kinase,active_control,True,0.8653,high,0.92,0.9405,domain_mean,0.0,False,phosphorylase kinase,False,False,CAMK2A,False,pseudokinase,True
-BUB1,O43683,active,active kinase,active_control,True,0.4143,medium,0.47,0.8815,domain_mean,0.0,False,mitogen-activated protein kinase kinase,False,False,BUB1,False,pseudokinase,True
-VRK1,Q99986,active,active kinase,active_control,True,0.4758,medium,0.48,0.9912,domain_mean,0.0,False,mitogen-activated protein kinase kinase,False,False,VRK1,False,pseudokinase,True
-VRK2,Q86Y07,active,active kinase,active_control,True,0.5,high,0.5,1.0,domain_mean,0.0,False,mitogen-activated protein kinase kinase,False,True,VRK2,False,pseudokinase,False
-ULK1,O75385,active,active kinase,active_control,True,0.5886,high,0.66,0.8918,domain_mean,0.0,False,phosphorylase kinase,False,False,ULK1,False,pseudokinase,False
-MUSK,O15146,active,active kinase,active_control,True,0.4854,medium,0.77,0.6304,domain_mean,0.0,False,receptor protein-tyrosine kinase,False,False,MUSK,False,pseudokinase,False
-DDR1,Q08345,active,active kinase,active_control,True,0.6052,high,0.73,0.8291,domain_mean,0.0,False,receptor protein-tyrosine kinase,False,True,DDR1,False,pseudokinase,False
-SRC,P12931,active,active kinase,active_control,True,0.6907,high,0.73,0.9461,domain_mean,0.0,False,receptor protein-tyrosine kinase,False,False,SRC,False,pseudokinase,False
-ABL1,P00519,active,active kinase,active_control,True,0.6314,high,0.73,0.865,domain_mean,0.0,False,receptor protein-tyrosine kinase,False,False,ABL1,False,pseudokinase,False
-MAPK1,P28482,active,active kinase,active_control,True,0.7085,high,0.76,0.9323,domain_mean,0.0,False,phosphorylase kinase,False,False,MAPK1,False,pseudokinase,False
-CDK2,P24941,active,active kinase,active_control,True,0.5001,high,0.57,0.8773,domain_mean,0.0,False,mitogen-activated protein kinase kinase,False,False,CDK2,False,pseudokinase,False
-AURKA,O14965,active,active kinase,active_control,True,0.5011,high,0.7,0.7158,domain_mean,0.0,False,protein kinase C,False,False,AURKA,False,pseudokinase,False
-PRKACA,P17612,active,active kinase,active_control,True,0.87,high,0.87,1.0,domain_mean,0.0,False,protein kinase C,False,False,PRKACA,False,pseudokinase,False
-GSK3B,P49841,active,active kinase,active_control,True,0.62,high,0.62,1.0,domain_mean,0.0,False,mitogen-activated protein kinase kinase,False,False,GSK3B,False,pseudokinase,False
-PTPN1,P18031,active,active phosphatase,active_control,True,0.0,low,0.0,0.6943,domain_mean,0.0,False,Classical protein-tyrosine phosphatase (PTP1B),False,False,PTPN1,False,pseudophosphatase,True
-PTPRA,P18433,active,active phosphatase,active_control,True,0.0,low,0.0,1.0,domain_mean,0.0,False,Classical protein-tyrosine phosphatase (PTP1B),False,False,PTPRA,False,pseudophosphatase,True
-PTPN11,Q06124,active,active phosphatase,active_control,True,0.0,low,0.0,0.9433,domain_mean,0.0,False,Classical protein-tyrosine phosphatase (PTP1B),False,False,PTPN11,False,pseudophosphatase,False
-DUSP3,P51452,active,active phosphatase,active_control,True,0.0,low,0.0,1.0,domain_mean,0.0,False,Dual-specificity phosphatase (VHR/DUSP3),False,False,DUSP3,False,pseudophosphatase,True
-MTM1,Q13496,active,active phosphatase,active_control,True,0.0,low,0.0,0.8932,domain_mean,0.0,False,Myotubularin lipid phosphatase (MTMR2),False,False,MTM1,False,pseudophosphatase,True
-MTMR2,Q13614,active,active phosphatase,active_control,True,0.0,low,0.0,0.8548,domain_mean,0.0,False,Myotubularin lipid phosphatase (MTMR2),False,False,MTMR2,False,pseudophosphatase,True
-MTMR6,Q9Y217,active,active phosphatase,active_control,True,0.0,low,0.0,1.0,domain_mean,0.0,False,Myotubularin lipid phosphatase (MTMR2),False,False,MTMR6,False,pseudophosphatase,False
-PTEN,P60484,active,active phosphatase,active_control,True,0.0,low,0.0,0.734,domain_mean,1.0,True,Classical protein-tyrosine phosphatase (PTP1B),False,True,PTEN,True,pseudophosphatase,False
-CDC14A,Q9UNH5,active,active phosphatase,active_control,True,0.0,low,0.0,1.0,domain_mean,0.0,False,Dual-specificity phosphatase (VHR/DUSP3),False,False,CDC14A,False,pseudophosphatase,False
-CASP8,Q14790,active,active protease,active_control,True,0.7082,high,1.0,0.7082,domain_mean,0.0,False,caspase-8,False,False,CASP8,False,pseudoprotease,True
-CASP3,P42574,active,active protease,active_control,True,0.7963,high,1.0,0.7963,domain_mean,0.0,False,caspase-3,False,False,CASP3,False,pseudoprotease,False
-RHBDL2,Q9NX52,active,active protease,active_control,True,0.0,low,0.0,0.7946,domain_mean,0.0,False,Rhomboid intramembrane protease (RHBDL2),False,False,RHBDL2,False,pseudoprotease,True
-USP7,Q93009,active,active DUB,active_control,True,0.0,low,0.0,0.806,domain_mean,0.0,False,Ubiquitin-specific protease / DUB (USP7),False,False,USP7,False,pseudo-DUB,True
-USP5,P45974,active,active DUB,active_control,True,0.0,low,0.0,0.8798,domain_mean,0.0,False,Ubiquitin-specific protease / DUB (USP7),False,False,USP5,False,pseudo-DUB,False
-OTULIN,Q96BN8,active,active DUB,active_control,True,0.0,low,0.0,0.751,domain_mean,0.0,False,OTU-family deubiquitinase (OTULIN),False,False,OTULIN,False,pseudo-DUB,True
-USP2,O75604,active,active DUB,active_control,True,0.0,low,0.0,0.9503,domain_mean,0.0,False,Ubiquitin-specific protease / DUB (USP7),False,False,USP2,False,pseudo-DUB,False
-RHOA,P61586,active,active GTPase,active_control,True,0.0,low,0.0,0.9685,domain_mean,0.0,False,Rho-family GTPase (RHOA),False,False,RHOA,False,pseudo-GTPase,True
-RAC1,P63000,active,active GTPase,active_control,True,0.0,low,0.0,0.9742,domain_mean,0.0,False,Rho-family GTPase (RHOA),False,False,RAC1,False,pseudo-GTPase,False
-CDC42,P60953,active,active GTPase,active_control,True,0.0,low,0.0,0.9662,domain_mean,0.0,False,Rho-family GTPase (RHOA),False,False,CDC42,False,pseudo-GTPase,False
-HRAS,P01112,active,active GTPase,active_control,True,0.0,low,0.0,0.9321,domain_mean,0.0,False,Ras-family GTPase (HRAS),False,False,HRAS,False,pseudo-GTPase,False
-AHCY,P23526,active,active metabolic,active_control,True,1.0,high,1.0,1.0,domain_mean,0.0,False,adenosylhomocysteinase,False,False,AHCY,False,metabolic pseudoenzyme,True
-ALDH2,P05091,active,active metabolic,active_control,True,1.0,high,1.0,1.0,domain_mean,0.0,False,aldehyde dehydrogenase (NAD+) (class 2),False,False,ALDH2,False,metabolic pseudoenzyme,True
-NME1,P15531,active,active metabolic,active_control,True,0.91,high,0.91,1.0,domain_mean,0.0,False,nucleoside-diphosphate kinase,False,False,NME1,False,metabolic pseudoenzyme,True
-NME2,P22392,active,active metabolic,active_control,True,0.91,high,0.91,1.0,domain_mean,0.0,False,nucleoside-diphosphate kinase,False,False,NME2,False,metabolic pseudoenzyme,False
-ASNS,P08243,active,active metabolic,active_control,True,0.88,high,0.88,1.0,domain_mean,0.0,False,asparagine synthase (glutamine-hydrolysing),False,False,ASNS,False,metabolic pseudoenzyme,False
+gene,uniprot,truth,class,pair_class,dead_call,metabolite_relevance,metabolite_relevance_bin,struct_conf,evidence_level,in_gold,in_db,out_of_sample
+STRADA,Q7RTN6,pseudoenzyme,pseudokinase,pseudokinase,True,0.44,medium,1.0,experimental,True,True,False
+STRADB,Q9C0K7,pseudoenzyme,pseudokinase,pseudokinase,True,0.4155,medium,0.9444,structural,True,True,False
+KSR1,Q8IVT5,pseudoenzyme,pseudokinase,pseudokinase,False,0.4213,medium,0.7524,experimental,True,True,False
+KSR2,Q6VAB6,pseudoenzyme,pseudokinase,pseudokinase,False,0.3247,medium,0.6495,experimental,True,True,False
+TRIB1,Q96RU8,pseudoenzyme,pseudokinase,pseudokinase,True,0.2778,medium,0.868,experimental,True,True,False
+TRIB2,Q92519,pseudoenzyme,pseudokinase,pseudokinase,True,0.3019,medium,0.8878,experimental,True,True,False
+TRIB3,Q96RU7,pseudoenzyme,pseudokinase,pseudokinase,True,0.3746,medium,0.9858,experimental,True,True,False
+ERBB3,P21860,pseudoenzyme,pseudokinase,pseudokinase,True,0.4229,medium,0.7832,experimental,True,True,False
+EPHA10,Q5JZY3,pseudoenzyme,pseudokinase,pseudokinase,True,0.5383,high,0.9444,sequence,True,True,False
+EPHB6,O15197,pseudoenzyme,pseudokinase,pseudokinase,True,0.4622,medium,0.9244,experimental,True,True,False
+ILK,Q13418,pseudoenzyme,pseudokinase,pseudokinase,True,0.3093,medium,0.8359,experimental,False,True,True
+CASK,O14936,pseudoenzyme,pseudokinase,pseudokinase,True,0.6049,high,0.8896,experimental,True,True,False
+MLKL,Q8NB16,pseudoenzyme,pseudokinase,pseudokinase,True,0.3823,medium,0.8689,experimental,True,True,False
+IRAK2,O43187,pseudoenzyme,pseudokinase,pseudokinase,True,0.2339,low,0.6156,experimental,True,True,False
+IRAK3,Q9Y616,pseudoenzyme,pseudokinase,pseudokinase,True,0.3854,medium,0.8378,experimental,True,True,False
+BUB1B,O60566,pseudoenzyme,pseudokinase,pseudokinase,True,0.209,low,0.6333,experimental,True,True,False
+PXK,Q7Z7A4,pseudoenzyme,pseudokinase,pseudokinase,True,0.32,medium,1.0,sequence,True,True,False
+STK40,Q8N2I9,pseudoenzyme,pseudokinase,pseudokinase,True,0.4427,medium,0.8198,sequence,True,True,False
+SCYL1,Q96KG9,pseudoenzyme,pseudokinase,pseudokinase,True,0.1125,low,0.9374,structural,True,True,False
+SCYL2,Q6P3W7,pseudoenzyme,pseudokinase,pseudokinase,True,0.309,medium,0.9089,sequence,False,True,True
+SCYL3,Q8IZE3,pseudoenzyme,pseudokinase,pseudokinase,True,0.3,medium,1.0,sequence,False,True,True
+PRAG1,Q86YV5,pseudoenzyme,pseudokinase,pseudokinase,False,0.4667,medium,0.6222,experimental,True,True,False
+PEAK1,Q9H792,pseudoenzyme,pseudokinase,pseudokinase,True,0.2848,medium,0.7119,experimental,True,True,False
+VRK3,Q8IV63,pseudoenzyme,pseudokinase,pseudokinase,False,0.24,low,1.0,experimental,True,True,False
+NRBP1,Q9UHY1,pseudoenzyme,pseudokinase,pseudokinase,True,0.1622,low,0.6489,sequence,False,True,True
+NRBP2,Q9NSY0,pseudoenzyme,pseudokinase,pseudokinase,True,0.156,low,0.8667,sequence,False,True,True
+ULK4,Q96C45,pseudoenzyme,pseudokinase,pseudokinase,True,0.2841,medium,0.693,structural,False,True,True
+ROR1,Q01973,pseudoenzyme,pseudokinase,pseudokinase,False,0.4484,medium,0.6315,experimental,False,True,True
+ROR2,Q01974,pseudoenzyme,pseudokinase,pseudokinase,False,0.3973,medium,0.6408,experimental,False,True,True
+RYK,P34925,pseudoenzyme,pseudokinase,pseudokinase,True,0.5091,high,0.9091,experimental,False,True,True
+PTK7,Q13308,pseudoenzyme,pseudokinase,pseudokinase,True,0.4781,medium,0.7356,experimental,False,True,True
+STYK1,Q6J9G0,pseudoenzyme,pseudokinase,pseudokinase,True,0.537,high,0.7897,sequence,False,True,True
+TBCK,Q8TEA7,pseudoenzyme,pseudokinase,pseudokinase,True,0.44,medium,1.0,sequence,False,True,True
+CAMKV,Q8NCB2,pseudoenzyme,pseudokinase,pseudokinase,True,0.4155,medium,0.9444,sequence,False,True,True
+PDIK1L,Q8N165,pseudoenzyme,pseudokinase,pseudokinase,False,0.3997,medium,0.7687,sequence,False,True,True
+STYX,Q8WUJ0,pseudoenzyme,pseudophosphatase,pseudophosphatase,False,0.0,low,1.0,experimental,True,True,False
+STYXL1,Q9Y6J8,pseudoenzyme,pseudophosphatase,pseudophosphatase,True,0.0,low,1.0,experimental,True,True,False
+PTPRN,Q16849,pseudoenzyme,pseudophosphatase,pseudophosphatase,True,0.4205,medium,0.9778,experimental,True,True,False
+PTPRN2,Q92932,pseudoenzyme,pseudophosphatase,pseudophosphatase,True,0.0,low,0.9709,experimental,True,True,False
+SBF1,O95248,pseudoenzyme,pseudophosphatase,pseudophosphatase,True,0.0,low,0.9222,experimental,True,True,False
+SBF2,Q86WG5,pseudoenzyme,pseudophosphatase,pseudophosphatase,True,0.0,low,0.9111,experimental,True,True,False
+MTMR9,Q96QG7,pseudoenzyme,pseudophosphatase,pseudophosphatase,True,0.0,low,1.0,experimental,False,True,True
+MTMR10,Q9NXD2,pseudoenzyme,pseudophosphatase,pseudophosphatase,True,0.0,low,1.0,structural,False,True,True
+MTMR11,A4FU01,pseudoenzyme,pseudophosphatase,pseudophosphatase,True,0.0,low,1.0,sequence,False,True,True
+MTMR12,Q9C0I1,pseudoenzyme,pseudophosphatase,pseudophosphatase,True,0.0,low,1.0,experimental,False,True,True
+TNS1,Q9HBL0,pseudoenzyme,pseudophosphatase,pseudophosphatase,True,0.0,low,0.9556,structural,True,True,False
+TNS2,Q63HR2,pseudoenzyme,pseudophosphatase,pseudophosphatase,False,0.0,low,0.8604,sequence,False,True,True
+TNS3,Q68CZ2,pseudoenzyme,pseudophosphatase,pseudophosphatase,False,0.0,low,0.8825,sequence,False,True,True
+TPTE,P56180,pseudoenzyme,pseudophosphatase,pseudophosphatase,False,0.0,low,0.9424,structural,False,True,True
+TPTE2,Q6XPS3,pseudoenzyme,pseudophosphatase,pseudophosphatase,False,0.0,low,0.9782,sequence,False,True,True
+PTPN23,Q9H3S7,pseudoenzyme,pseudophosphatase,pseudophosphatase,False,0.0,low,0.8534,experimental,False,True,True
+PTPRQ,Q9UMZ3,pseudoenzyme,pseudophosphatase,pseudophosphatase,False,0.0,low,0.7382,experimental,False,True,True
+CFLAR,O15519,pseudoenzyme,pseudoprotease,pseudoprotease,True,0.3149,medium,0.6297,experimental,True,True,False
+RHBDF1,Q96CC6,pseudoenzyme,pseudoprotease,pseudoprotease,True,0.0,low,0.9365,experimental,True,True,False
+RHBDF2,Q6PJF5,pseudoenzyme,pseudoprotease,pseudoprotease,True,0.0,low,0.9433,experimental,True,True,False
+USP39,Q53GS9,pseudoenzyme,pseudo-DUB,pseudo-DUB,False,0.0,low,0.8647,experimental,True,True,False
+USP50,Q70EL3,pseudoenzyme,pseudo-DUB,pseudo-DUB,False,0.0,low,0.811,sequence,True,True,False
+USP53,Q70EK8,pseudoenzyme,pseudo-DUB,pseudo-DUB,False,0.0,low,0.9778,structural,False,True,True
+USP54,Q70EL1,pseudoenzyme,pseudo-DUB,pseudo-DUB,False,0.0,low,0.9226,sequence,False,True,True
+OTULINL,Q9NUU6,pseudoenzyme,pseudo-DUB,pseudo-DUB,False,0.0,low,0.9844,experimental,True,True,False
+RHOBTB1,O94844,pseudoenzyme,pseudo-GTPase,pseudo-GTPase,True,0.0,low,0.0,structural,False,True,True
+RHOBTB2,Q9BYZ6,pseudoenzyme,pseudo-GTPase,pseudo-GTPase,True,0.0,low,0.0,experimental,True,True,False
+RHOBTB3,O94955,pseudoenzyme,pseudo-GTPase,pseudo-GTPase,True,0.0,low,0.5515,experimental,False,True,True
+RHOH,Q15669,pseudoenzyme,pseudo-GTPase,pseudo-GTPase,False,0.0,low,1.0,experimental,True,True,False
+RND1,Q92730,pseudoenzyme,pseudo-GTPase,pseudo-GTPase,True,0.0,low,1.0,experimental,True,True,False
+RND2,P52198,pseudoenzyme,pseudo-GTPase,pseudo-GTPase,True,0.0,low,0.9956,experimental,True,True,False
+RND3,P61587,pseudoenzyme,pseudo-GTPase,pseudo-GTPase,True,0.0,low,1.0,experimental,True,True,False
+DIRAS3,O95661,pseudoenzyme,pseudo-GTPase,pseudo-GTPase,True,0.0,low,0.2733,sequence,False,True,True
+BRAF,P15056,active,active kinase,pseudokinase,False,0.3762,medium,0.7098,active_control,True,True,False
+RAF1,P04049,active,active kinase,pseudokinase,False,0.3774,medium,0.712,active_control,False,True,True
+EGFR,P00533,active,active kinase,pseudokinase,False,0.5767,high,0.5767,active_control,True,True,False
+ERBB2,P04626,active,active kinase,pseudokinase,False,0.7415,high,0.7415,active_control,False,True,True
+EPHA2,P29317,active,active kinase,pseudokinase,False,0.4587,medium,0.6746,active_control,True,True,False
+EPHB4,P54760,active,active kinase,pseudokinase,False,0.477,medium,0.7015,active_control,True,True,False
+IRAK1,P51617,active,active kinase,pseudokinase,False,0.4674,medium,0.82,active_control,True,True,False
+IRAK4,Q9NWZ3,active,active kinase,pseudokinase,False,0.542,high,0.9034,active_control,True,True,False
+CAMK2A,Q9UQM7,active,active kinase,pseudokinase,False,0.8653,high,0.9405,active_control,True,True,False
+BUB1,O43683,active,active kinase,pseudokinase,False,0.4143,medium,0.8815,active_control,True,True,False
+VRK1,Q99986,active,active kinase,pseudokinase,False,0.4758,medium,0.9912,active_control,True,True,False
+VRK2,Q86Y07,active,active kinase,pseudokinase,False,0.5,high,1.0,active_control,False,True,True
+ULK1,O75385,active,active kinase,pseudokinase,False,0.5886,high,0.8918,active_control,False,True,True
+MUSK,O15146,active,active kinase,pseudokinase,False,0.4854,medium,0.6304,active_control,False,True,True
+DDR1,Q08345,active,active kinase,pseudokinase,False,0.6052,high,0.8291,active_control,False,True,True
+SRC,P12931,active,active kinase,pseudokinase,False,0.6907,high,0.9461,active_control,False,True,True
+ABL1,P00519,active,active kinase,pseudokinase,False,0.6314,high,0.865,active_control,False,True,True
+MAPK1,P28482,active,active kinase,pseudokinase,False,0.7085,high,0.9323,active_control,False,True,True
+CDK2,P24941,active,active kinase,pseudokinase,False,0.5001,high,0.8773,active_control,False,True,True
+AURKA,O14965,active,active kinase,pseudokinase,False,0.5011,high,0.7158,active_control,False,True,True
+PRKACA,P17612,active,active kinase,pseudokinase,False,0.87,high,1.0,active_control,False,True,True
+GSK3B,P49841,active,active kinase,pseudokinase,False,0.62,high,1.0,active_control,False,True,True
+PTPN1,P18031,active,active phosphatase,pseudophosphatase,False,0.0,low,0.6943,active_control,True,True,False
+PTPRA,P18433,active,active phosphatase,pseudophosphatase,False,0.0,low,1.0,active_control,True,True,False
+PTPN11,Q06124,active,active phosphatase,pseudophosphatase,False,0.0,low,0.9433,active_control,False,True,True
+DUSP3,P51452,active,active phosphatase,pseudophosphatase,False,0.0,low,1.0,active_control,True,True,False
+MTM1,Q13496,active,active phosphatase,pseudophosphatase,False,0.0,low,0.8932,active_control,True,True,False
+MTMR2,Q13614,active,active phosphatase,pseudophosphatase,False,0.0,low,0.8548,active_control,True,True,False
+MTMR6,Q9Y217,active,active phosphatase,pseudophosphatase,False,0.0,low,1.0,active_control,False,True,True
+PTEN,P60484,active,active phosphatase,pseudophosphatase,True,0.0,low,0.734,active_control,False,True,True
+CDC14A,Q9UNH5,active,active phosphatase,pseudophosphatase,False,0.0,low,1.0,active_control,False,True,True
+CASP8,Q14790,active,active protease,pseudoprotease,False,0.7082,high,0.7082,active_control,True,True,False
+CASP3,P42574,active,active protease,pseudoprotease,False,0.7963,high,0.7963,active_control,False,True,True
+RHBDL2,Q9NX52,active,active protease,pseudoprotease,False,0.0,low,0.7946,active_control,True,True,False
+USP7,Q93009,active,active DUB,pseudo-DUB,False,0.0,low,0.806,active_control,True,True,False
+USP5,P45974,active,active DUB,pseudo-DUB,False,0.0,low,0.8798,active_control,False,True,True
+OTULIN,Q96BN8,active,active DUB,pseudo-DUB,False,0.0,low,0.751,active_control,True,True,False
+USP2,O75604,active,active DUB,pseudo-DUB,False,0.0,low,0.9503,active_control,False,True,True
+RHOA,P61586,active,active GTPase,pseudo-GTPase,False,0.0,low,0.9685,active_control,True,True,False
+RAC1,P63000,active,active GTPase,pseudo-GTPase,False,0.0,low,0.9742,active_control,False,True,True
+CDC42,P60953,active,active GTPase,pseudo-GTPase,False,0.0,low,0.9662,active_control,False,True,True
+HRAS,P01112,active,active GTPase,pseudo-GTPase,False,0.0,low,0.9321,active_control,False,True,True
+AHCYL1,O43865,pseudoenzyme,cofactor pseudoenzyme,cofactor,True,0.82,high,1.0,high,True,True,False
+AHCYL2,Q96HN2,pseudoenzyme,cofactor pseudoenzyme,cofactor,True,0.82,high,1.0,high,True,True,False
+ALDH16A1,Q8IZ83,pseudoenzyme,metabolic pseudoenzyme,metabolic,True,0.0,low,0.9704,high,True,True,False
+NME7,Q9Y5B8,pseudoenzyme,metabolic pseudoenzyme,metabolic,False,0.59,high,1.0,medium,True,True,False
+NME8,Q8N427,pseudoenzyme,metabolic pseudoenzyme,metabolic,False,0.3471,medium,0.8467,medium,False,True,True
+NME9,Q86XW9,pseudoenzyme,metabolic pseudoenzyme,metabolic,False,0.559,high,0.822,medium,False,True,True
+ASNSD1,Q9NWL6,pseudoenzyme,metabolic pseudoenzyme,metabolic,True,0.83,high,1.0,medium,False,True,True
+PGLYRP1,O75594,pseudoenzyme,metabolic pseudoenzyme,metabolic,True,0.5,high,1.0,high,False,True,True
+PGLYRP3,Q96LB9,pseudoenzyme,metabolic pseudoenzyme,metabolic,True,0.2979,medium,0.9028,medium,False,True,True
+PGLYRP4,Q96LB8,pseudoenzyme,metabolic pseudoenzyme,metabolic,True,0.2825,medium,0.8562,medium,False,True,True
+GOT1L1,Q8NHS2,pseudoenzyme,metabolic pseudoenzyme,metabolic,False,0.53,high,1.0,medium,False,True,True
+CA8,P35219,pseudoenzyme,cofactor pseudoenzyme,cofactor,False,0.88,high,1.0,high,False,True,True
+CA10,Q9NS85,pseudoenzyme,cofactor pseudoenzyme,cofactor,False,0.62,high,1.0,high,False,True,True
+CA11,O75493,pseudoenzyme,cofactor pseudoenzyme,cofactor,True,0.25,medium,1.0,high,False,True,True
+AHCY,P23526,active,active cofactor,cofactor,False,1.0,high,1.0,high,True,True,False
+ALDH2,P05091,active,active metabolic,metabolic,False,1.0,high,1.0,high,True,True,False
+ALDH1A1,P00352,active,active metabolic,metabolic,False,0.93,high,1.0,high,False,True,True
+ALDH3A1,P30838,active,active metabolic,metabolic,False,0.6,high,1.0,high,False,True,True
+ALDH7A1,P49419,active,active metabolic,metabolic,False,0.0,low,1.0,high,False,True,True
+ALDH9A1,P49189,active,active metabolic,metabolic,False,0.0,low,1.0,high,False,True,True
+NME1,P15531,active,active metabolic,metabolic,False,0.91,high,1.0,high,True,True,False
+NME2,P22392,active,active metabolic,metabolic,False,0.91,high,1.0,high,False,True,True
+NME3,Q13232,active,active metabolic,metabolic,False,0.91,high,1.0,high,False,True,True
+NME4,O00746,active,active metabolic,metabolic,False,0.77,high,1.0,high,False,True,True
+ASNS,P08243,active,active metabolic,metabolic,False,0.88,high,1.0,high,False,True,True
+PGLYRP2,Q96PD5,active,active metabolic,metabolic,False,1.0,high,1.0,high,False,True,True
+GOT1,P17174,active,active metabolic,metabolic,False,0.97,high,1.0,high,False,True,True
+GOT2,P00505,active,active metabolic,metabolic,False,0.82,high,1.0,high,False,True,True
+CA1,P00915,active,active cofactor,cofactor,False,1.0,high,1.0,high,False,True,True
+CA2,P00918,active,active cofactor,cofactor,False,1.0,high,1.0,high,False,True,True
+CA9,Q16790,active,active cofactor,cofactor,False,1.0,high,1.0,high,False,True,True
+CA12,O43570,active,active cofactor,cofactor,False,1.0,high,1.0,high,False,True,True

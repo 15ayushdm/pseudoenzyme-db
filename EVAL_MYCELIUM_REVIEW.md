@@ -124,3 +124,39 @@ documented so it is not "fixed" later. Small-n classes and out-of-scope proteins
 
 Headline to carry forward: **out-of-sample Sensitivity 0.63 [0.46–0.78],
 Specificity 0.96 [0.81–0.99]** on 55 disjoint proteins.
+
+---
+
+## Addendum (v11) — metabolite-sensor enrichment + out-of-sample–only reporting
+
+Two changes were made at the user's request, and re-reviewed against the same lenses.
+
+**Change 1 — expanded metabolic/cofactor coverage.** The class most relevant to the database's
+purpose (metabolite sensing) was thin (7 pseudoenzymes). It was expanded to 16 literature-curated
+metabolic/cofactor pseudoenzymes (14 in DB): acatalytic carbonic anhydrases CA8/10/11 (CARPs, lack
+the Zn-coordinating histidines), the ALDH dead enzyme ALDH16A1, pseudo-NDPKs NME7/8/9, pseudo-amidases
+PGLYRP1/3/4, and the SAHH paralogs AHCYL1/AHCYL2 — each matched to active enzymes of the same fold
+(CA1/2/9/12, ALDH1A1/2/3A1/7A1/9A1, NME1/2/3/4, PGLYRP2, AHCY). Anti-circularity (M5) is preserved:
+every added label is a literature assignment, independent of tool scores.
+
+**Change 2 — dropped "all in-DB" metrics.** The optimistic in-sample numbers were removed entirely;
+the tab, figure, and `eval_metrics.json` now carry only the out-of-sample estimate. This fully
+resolves M1 (leakage) by construction — there is no longer an in-sample number that could be quoted.
+
+**Re-measured out-of-sample result:** Sensitivity 0.59 [0.43–0.73], Specificity 0.97 [0.87–0.99]
+(n = 39 pseudo + 38 active). The modest sensitivity drop vs the previous 0.63 is expected: the added
+metabolic/cofactor folds are exactly the ones the linear death-motif gate cannot see.
+
+**New finding (Major, disclosed — not a defect):** on metabolic/cofactor folds the gate has limited
+recall (metabolic 4/7, cofactor 1/3 out-of-sample) while specificity stays near-perfect (no active
+metabolic enzyme flagged). Several genuine high-MR metabolite-sensor candidates — CA8 (0.88),
+CA10 (0.62), NME7/NME9 (~0.56) — are **not** called dead by the gate. This is the same structural
+limitation as the pseudo-DUB blind spot (M4): CARP and NDPK folds have no scannable linear death
+motif. The practical consequence is stated plainly on the tab: **for metabolite-sensor discovery,
+MR (pocket retention) is the operative signal, and the dead-call gate is a conservative,
+high-specificity classifier that will miss motif-less dead folds.** MR's role (M2) is unchanged and
+still correct by construction (AUC < 0.5).
+
+**Verdict unchanged:** fit to publish. The leakage concern is now structurally eliminated (OOS-only),
+metabolite-sensor coverage is materially deeper, and the gate's fold-specific blind spots are
+disclosed rather than averaged away.
