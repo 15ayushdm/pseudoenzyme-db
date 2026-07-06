@@ -1,0 +1,13 @@
+gene,acc,family,wdiv,ch_paralog,is_active_ref,n_severe,severe_positions,contributing,ref_truth,gold_tuning
+GOT1L1,Q8NHS2,aspartate transaminase,0.43,True,False,2,39;141,39:G->R;141:W->K;387:R->Q,pseudoenzyme,False
+GOT1,P17174,aspartate transaminase,0.0,False,True,0,,,active,False
+GOT2,P00505,aspartate transaminase,0.0,False,True,0,,,active,False
+NME9,Q86XW9,nucleoside-diphosphate kinase,0.312,True,False,4,58;94;121;152,58:R->E;94:T->R;112:V->M;121:D->R;152:E->-,pseudoenzyme,False
+NME5,P56597,nucleoside-diphosphate kinase,0.242,True,False,3,88;94;112,58:R->K;88:R->L;94:T->N;112:V->D;121:D->N,,False
+NME8,Q8N427,nucleoside-diphosphate kinase,0.229,True,False,3,112;121;152,58:R->K;112:V->K;121:D->S;152:E->-,pseudoenzyme,False
+NME7,Q9Y5B8,nucleoside-diphosphate kinase,0.171,True,False,2,94;112,52:Y->H;88:R->K;94:T->A;112:V->G;152:E->K,pseudoenzyme,True
+NME4,O00746,nucleoside-diphosphate kinase,0.125,False,True,2,119;152,58:R->K;112:V->I;119:G->A;152:E->H,active,False
+NME6,O75414,nucleoside-diphosphate kinase,0.083,False,False,1,112,112:V->D,,False
+NME2,P22392,nucleoside-diphosphate kinase,0.0,False,True,0,,,active,False
+NME1,P15531,nucleoside-diphosphate kinase,0.0,False,True,0,,,active,True
+NME3,Q13232,nucleoside-diphosphate kinase,0.0,False,True,0,,,active,False

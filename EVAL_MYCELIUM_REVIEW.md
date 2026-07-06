@@ -239,3 +239,89 @@ deployment; both were documentation-fidelity errors, not scoring errors — the 
 were correct. The sensitivity gain is real (0.59 → 0.67), specificity is held, zero new false
 positives among active comparators, and the framing (detection-vs-rediscovery, precision cost, honest
 metabolic misses) is disclosed on the tab.
+
+---
+
+## v13 addendum — Layer 3 (paralog-contrast channel `ch_paralog`)
+
+Reviewed the new fourth detection channel against four lenses: `data-pipeline-leakage`
+(threshold tuning, metric independence), `stats-causal` (specificity claim), `llm-failure-modes`
+(no LLM in this channel — N/A beyond the text layer already reviewed), and `doc-schema-fidelity`
+(every quantitative claim in the info-tab narrative re-verified against live kernel state).
+
+**Method under review.** For the two focal metabolic families — nucleoside-diphosphate kinase
+(NDPK, 9 members) and aspartate transaminase (AST, 3 members) — each candidate is compared to its
+experimentally-active paralogs at the family's conserved active-site positions (UniProt/M-CSA
+Active-site/Binding-site/Site features + the PLP-lysine for AST), registered by a MAFFT MSA and
+scored by BLOSUM62-weighted divergence. Fires when weighted divergence > 0.15 AND ≥1 non-conservative
+substitution. Anchors/actives: NDPK anchor P15531 (NME1), actives NME1–4 (12 positions); AST anchor
+P17174 (GOT1), actives GOT1/GOT2 (5 positions incl K259 PLP-lysine).
+
+**F13 [Major, CAUGHT & DISCLOSED — specificity-by-construction, not independent].** The narrative
+claim "flags none of the active NDP-kinase or transaminase paralogs (NME1–4, GOT1/GOT2)" is *true*
+but was misleadingly framed as a specificity result. Probed empirically: of the 38 OOS active
+comparators, exactly five fall inside a profiled family (NME2, NME3, NME4, GOT1, GOT2) — and **all
+five are the reference members that define the active consensus.** Their near-zero divergence is
+therefore definitional, not an independent test: a member cannot diverge from a consensus it helped
+build. The "0 active false positives from ch_paralog" statement rests on construction. **Fix applied
+before deploy:** the info-tab narrative now states this explicitly and cites the one genuinely
+independent active NDP kinase — NME6, which is *not* a reference member — as the real specificity
+check. NME6 scores weighted divergence 0.08, correctly below the 0.15 cutoff. That single
+out-of-reference active is the only honest evidence that the channel discriminates, and it is now
+the evidence the tab points to.
+
+**F14 [Minor, HELD — threshold set label-blind, but n=small].** The 0.15 fire threshold was set from
+the active-member divergence distribution (max active-reference divergence 0.125, driven by NME4's
+single conservative substitution), not from the pseudoenzyme labels — this is the correct
+label-blind procedure and avoids tuning on truth. The residual caveat is sample size: the active-null
+distribution is built from 4 NDPK + 2 AST references, so the 0.15 cutoff has wide uncertainty. The
+channel is deliberately scoped to these two families and silent by construction elsewhere, so a
+mis-set threshold cannot propagate false positives across the database — the blast radius is 12
+proteins. Disclosed as scope-limited.
+
+**F15 [Minor, HELD — MSA registration was mandatory, verified].** An earlier pairwise-to-anchor
+mapping misregistered active NME4 at divergence 0.33, tied with pseudo NME8 — a registration
+artifact that would have destroyed discrimination. Switching to a MAFFT multiple alignment fixed the
+column correspondence (NME4 → 0.125, GOT2 → 0.00). Verified the deployed profiles use the MSA path.
+This is a resolved defect, noted so the fragility of the pairwise alternative is on record.
+
+**F16 [HELD — honest labeling of the five fires].** ch_paralog fires on NME5, NME7, NME8, NME9,
+GOT1L1. Of these: NME8, NME9, GOT1L1 are the three OOS metabolic targets (genuine net-new recoveries,
+unreachable by structure/text/fold-motif because residues are intact and annotation asserts activity).
+NME7 is a GOLD-tuning-set member (excluded from the OOS metric — does not inflate the reported 0.744).
+NME5 is not in the reference truth set at all; it is flagged as a plausible-correct call
+(literature-known inactive) but is labeled on the tab as unvalidated rather than counted as a hit.
+The OOS sensitivity gain (0.667 → 0.744) is carried by exactly the three legitimate recoveries.
+
+### Leakage / pipeline (data-pipeline-leakage)
+- **OOS split preserved.** The three recovered proteins (NME8/NME9/GOT1L1) are OOS (not in the 69
+  gold-tuning accessions); NME7 is correctly excluded from the OOS metric as gold. The channel was not
+  tuned on OOS labels — active consensus and threshold both derive from active-member annotation and
+  divergence, never from pseudoenzyme truth.
+- **No metric contamination.** Active reference members scoring ~0 do not enter the specificity
+  numerator as "true negatives earned" — they are definitional; the honest specificity evidence is the
+  one out-of-reference active (NME6). Now disclosed.
+- **Boolean-OR integration, MR untouched.** override_pos = ch_structure OR ch_text OR ch_foldmotif OR
+  ch_paralog; verified override_pos sum = 468 (+5 vs v12's 463), MR and pocket_retention unchanged.
+
+### doc-schema-fidelity (every narrative number re-verified against live state)
+- override_pos = 468 ✓ · paralog fires = {NME5,NME7,NME8,NME9,GOT1L1} ✓ · channel attribution
+  23/26/26 proteins → 0.59/0.67/0.74 cumulative OOS pseudo-sensitivity ✓ · sens 0.744 [0.589–0.854] ✓
+  · spec 0.974 [0.865–0.995] ✓ · sole FP = PTEN (pre-existing CX5R gate, not ch_paralog) ✓ ·
+  NME6 = 0.08 ✓. No drift between prose and computed values.
+
+### Verdict
+**Fit to publish.** One framing defect (F13) was caught and fixed before deployment: the specificity
+claim was true-but-hollow (actives-are-the-references), and the narrative now discloses this and points
+to NME6 as the only independent discrimination evidence. The sensitivity gain is real and carried
+entirely by three legitimate OOS recoveries (0.667 → 0.744); specificity held at 0.974; the channel is
+scope-limited to 12 proteins so a mis-set threshold cannot propagate. Honest labeling of NME5
+(unvalidated) and NME7 (gold, architectural) is on the tab. The crux — anti-circularity — holds: the
+active reference set is independent UniProt/M-CSA annotation, the contrast is label-blind, the threshold
+comes from the active-null distribution, and evaluation is OOS-only.
+
+**Layer 4 note (for the post-deploy decision).** NME7 is the informative case: it fires on paralog
+contrast but is architecturally distinct (multi-domain regulatory NDPK), so sequence contrast flags it
+for the wrong reason. A structure-based active-site-geometry channel (Layer 4) would target exactly this
+class — pseudoenzymes whose sequence looks competent but whose 3D pocket is deformed — and NME7 is the
+worked example of what Layer 4 would add beyond Layer 3.

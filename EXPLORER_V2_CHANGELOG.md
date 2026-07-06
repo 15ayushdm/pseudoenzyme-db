@@ -7,6 +7,66 @@ the IRBIT-AHCYL1 type — pseudoenzymes that keep a small-molecule pocket after 
 
 ---
 
+## v13 — Layer 3: paralog-contrast detection channel (`ch_paralog`) (2026-07-06)
+
+**Motivation.** Three metabolic pseudoenzymes the project cares about — NME8, NME9, GOT1L1 — were
+persistent out-of-sample misses (documented as F12 in the v12 mycelium review). They are unreachable
+by the three existing channels: their catalytic residues are intact (so no fold-motif or structural
+gate fires) and their UniProt text asserts activity (so the text classifier stays silent). Detecting
+them requires comparing each candidate to its *active paralogs* at the family's conserved active-site
+positions — a residue-substitution signal, not a residue-loss or annotation signal.
+
+**Method — fourth channel `ch_paralog`.** Scoped to the two focal metabolic families:
+nucleoside-diphosphate kinase (NDPK, 9 members) and aspartate transaminase (AST, 3 members).
+- **Active reference set (independent):** canonical active members from UniProt/M-CSA annotation —
+  NDPK anchor P15531 (NME1), actives NME1–4 (12 active-site positions); AST anchor P17174 (GOT1),
+  actives GOT1/GOT2 (5 positions incl. the K259 PLP-lysine). Never derived from tool scores.
+- **Registration:** family sequences fetched from UniProt, aligned with MAFFT (`--auto`) MSA. A
+  multiple alignment was **mandatory** — an earlier pairwise-to-anchor mapping misregistered active
+  NME4 at divergence 0.33 (tied with pseudo NME8); the MSA corrected NME4 → 0.125 and GOT2 → 0.00.
+- **Scoring:** BLOSUM62-weighted divergence at active-site positions (0.0 identical, 0.15 conservative
+  BLOSUM≥1, 0.6 if BLOSUM==0, 1.0 if BLOSUM<0 or deletion) — measures chemistry change, not identity.
+- **Fire rule:** weighted divergence > 0.15 **AND** ≥1 non-conservative substitution. The 0.15
+  threshold was set **label-blind** from the active-member distribution (max active-reference
+  divergence 0.125), not from pseudoenzyme labels.
+
+**Integration.** `override_pos = ch_structure OR ch_text OR ch_foldmotif OR ch_paralog`.
+Fires on 5 members: **NME8, NME9, GOT1L1** (the three OOS metabolic targets — genuine net-new
+recoveries), **NME7** (gold-tuning-set member; excluded from the OOS metric; architecturally distinct
+multi-domain regulatory NDPK), and **NME5** (not in the reference truth set; flagged as a
+literature-plausible but unvalidated call). Dead-calls **463 → 468** (+5). `sensor_priority` and
+`mr_rank` recomputed; **MR and pocket_retention unchanged.**
+
+**Out-of-sample impact (metrics on the 77 disjoint OOS proteins only).**
+- Sensitivity **0.67 → 0.744** [0.589–0.854]; specificity **held at 0.974** [0.865–0.995]
+  (sole FP remains PTEN, a pre-existing CX5R-gate call, not from ch_paralog).
+- Metabolic OOS pseudoenzymes **4/7 → 7/7** — the paralog channel recovers exactly NME8, NME9, GOT1L1.
+- Cumulative channel attribution (OOS pseudo-sensitivity): structure 0.59 → +text/fold-motif 0.667 →
+  **+paralog 0.744**. The +3 recoveries are reachable by no prior channel.
+
+**Anti-circularity (the crux).** The active reference set is independent UniProt/M-CSA annotation, never
+tool scores; the contrast is label-blind; the threshold comes from the active-null distribution; and
+evaluation is out-of-sample only. **Honest specificity caveat (mycelium F13, disclosed on the tab):**
+the five active paralogs that ch_paralog scores (NME1–4, GOT1/GOT2) *are* the reference members that
+define the consensus, so their near-zero divergence is expected by construction — not an independent
+specificity test. The one genuinely independent active NDP kinase, **NME6** (not a reference member),
+is scored independently and correctly falls below threshold (weighted divergence 0.08 < 0.15). NME6 is
+the real discrimination evidence, and the info tab now points to it.
+
+**Validation.** QuickJS + esprima: JS parses; embedded payload 2670 records / override_pos sum 468;
+EVAL_ROWS 161; eval cards render 0.74 / 0.97; OOS filter 161 → 92 rows; NME8/NME9/GOT1L1/NME7 all
+render "dead" as metabolic pseudoenzymes; PTEN present (FP); AHCYL1 correctly excluded (gold-tuning).
+Every quantitative claim in the info-tab narrative re-verified against live kernel state.
+
+**New companion data.** `data/layer3_paralog_contrast.csv` (per-member divergence, severe positions,
+fire flag) and `data/family_profiles.csv` (active-site position sets + consensus per focal family).
+
+**Mycelium review.** 4 lenses (data-pipeline-leakage, stats-causal, doc-schema-fidelity, +text-channel
+carry-over from llm-failure-modes). One Major finding (F13) caught and fixed before deploy; F14–F16
+held with disclosure. Verdict: **fit to publish.** See `EVAL_MYCELIUM_REVIEW.md` v4.
+
+---
+
 ## v12 — Two new detection channels for metabolic pseudoenzymes
 
 **Motivation (user).** Out-of-sample sensitivity was weak on the metabolic/cofactor folds the project

@@ -1,80 +1,67 @@
 {
-  "evaluation": "out_of_sample_only",
-  "definition": "OOS = UniProt accession NOT among the 69 gold tuning-set accessions used to develop the dead-call gate.",
-  "n_pseudo": 39,
-  "n_active": 38,
-  "TP": 26,
-  "FN": 13,
-  "TN": 37,
-  "FP": 1,
-  "sensitivity": 0.667,
-  "sensitivity_ci": [
-    0.51,
-    0.794
+  "version": "v13",
+  "channel_added": "ch_paralog",
+  "oos": {
+    "n_pseudo": 39,
+    "n_active": 38,
+    "sensitivity": 0.744,
+    "sens_ci": [
+      0.589,
+      0.854
+    ],
+    "TP": 29,
+    "FN": 10,
+    "specificity": 0.974,
+    "spec_ci": [
+      0.865,
+      0.995
+    ],
+    "TN": 37,
+    "FP": 1,
+    "fp_genes": [
+      "PTEN"
+    ]
+  },
+  "per_class_oos": {
+    "cofactor pseudoenzyme": [
+      3,
+      3
+    ],
+    "metabolic pseudoenzyme": [
+      7,
+      7
+    ],
+    "pseudo-DUB": [
+      0,
+      2
+    ],
+    "pseudo-GTPase": [
+      3,
+      3
+    ],
+    "pseudokinase": [
+      12,
+      14
+    ],
+    "pseudophosphatase": [
+      4,
+      10
+    ]
+  },
+  "channel_attribution_oos": {
+    "structure": 0.5897435897435898,
+    "plus_text": 0.6666666666666666,
+    "plus_foldmotif": 0.6666666666666666,
+    "plus_paralog": 0.7435897435897436,
+    "n": 39
+  },
+  "paralog_recoveries_oos": [
+    "NME8",
+    "NME9",
+    "GOT1L1"
   ],
-  "specificity": 0.974,
-  "specificity_ci": [
-    0.865,
-    0.995
-  ],
-  "ppv": 0.963,
-  "npv": 0.74,
-  "sensitivity_by_class": {
-    "cofactor pseudoenzyme": {
-      "called_dead": 3,
-      "n": 3
-    },
-    "metabolic pseudoenzyme": {
-      "called_dead": 4,
-      "n": 7
-    },
-    "pseudo-DUB": {
-      "called_dead": 0,
-      "n": 2
-    },
-    "pseudo-GTPase": {
-      "called_dead": 3,
-      "n": 3
-    },
-    "pseudokinase": {
-      "called_dead": 12,
-      "n": 14
-    },
-    "pseudophosphatase": {
-      "called_dead": 4,
-      "n": 10
-    }
-  },
-  "detection_channels": {
-    "description": "Dead-call = structure gate OR text classifier OR fold-specific catalytic-residue motif.",
-    "channel_structure": "Existing motif/domain gate (ePK VAIK/HRD/DFG, GHKL, phosphatase CX5R, M-CSA constellation).",
-    "channel_text": "LLM classifier over UniProt function comment; high-confidence explicit self-inactivity only (two-pass, strict).",
-    "channel_foldmotif": "Zn-His triad (alpha-carbonic-anhydrase), catalytic His (NDPK), catalytic Cys nucleophile (thiol-mechanism ALDH, EC 1.2.1.*), by alignment to CA2/NME1/ALDH2.",
-    "net_new_dead_calls_full_db": 28,
-    "net_new_text_only": 26,
-    "net_new_foldmotif_only": 0,
-    "net_new_text_and_fold": 2,
-    "oos_sensitivity_structure_only": 0.59,
-    "oos_sensitivity_plus_text": 0.667,
-    "oos_sensitivity_plus_foldmotif": 0.667,
-    "note": "On the OOS pseudo set the text and fold-motif channels are redundant on the CARPs (both fire); the fold-motif channel adds orthogonal structural confirmation and robustness where annotation is uninformative."
-  },
-  "MR_separation": {
-    "median_pseudo": 0.284,
-    "median_active": 0.613,
-    "mannwhitney_p": 0.0008,
-    "auc_pseudo_gt_active": 0.281,
-    "interpretation": "MR is higher in actives by construction (pocket retention); AUC<0.5 expected. MR is the metabolite-sensor discovery lever, not a deadness detector."
-  },
-  "reference_set": {
-    "total": 161,
-    "pseudo": 95,
-    "active": 66,
-    "in_db": 142,
-    "metabolic_cofactor_pseudo_in_db": 14
-  },
-  "FP_list": [
-    "PTEN"
-  ],
-  "method_note": "Dead-call gate -> sens/spec. Layers added this version: LLM function-text classifier + fold-specific catalytic-residue motifs. MR unchanged."
+  "mr_separation": {
+    "median_pseudo": 0.283,
+    "median_active": 0.501
+  }
 }
