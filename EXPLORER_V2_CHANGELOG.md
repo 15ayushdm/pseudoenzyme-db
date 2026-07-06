@@ -7,6 +7,62 @@ the IRBIT-AHCYL1 type — pseudoenzymes that keep a small-molecule pocket after 
 
 ---
 
+## v12 — Two new detection channels for metabolic pseudoenzymes
+
+**Motivation (user).** Out-of-sample sensitivity was weak on the metabolic/cofactor folds the project
+most cares about (v11: metabolic 4/7, cofactor 1/3). Two failure modes were diagnosed: (1) the
+catalytic-residue check reads M-CSA columns that omit fold-defining residues (the Zn-His triad of
+carbonic anhydrases, the catalytic His of NDP kinases), so CA8/CA10 scored "active"; (2) the database
+still annotated some as active. Two orthogonal channels were added to address these.
+
+### Channel 2 — LLM function-text classifier (`ch_text`)
+An LLM reads each protein's UniProt function comment, **blind to gene name and truth label**, and
+flags only *explicit* statements of lost catalytic activity. A strict two-pass filter (reasoning-model
+re-verification) rejects inactivity merely *inferred* from the absence of an activity claim — this
+removed demonstrated false positives (FGR, RHOC, NPR1, MAP3K8/TPL2, all active) and cut high-confidence
+text-dead calls 113 → 73. The channel flags **0 of 60** in-DB active comparators.
+
+### Channel 3 — Fold-specific catalytic-residue motifs (`ch_foldmotif`)
+Direct pairwise alignment to reference enzymes (CA2, NME1, ALDH2) tests whether the fold-defining
+nucleophile survives: the Zn-binding His triad of α-carbonic-anhydrases, the catalytic His of NDP
+kinases, the catalytic Cys of thiol-mechanism aldehyde dehydrogenases (scoped to EC 1.2.1.*). A
+global-identity ≥ 0.25 guard excludes spurious alignments. Result: 4 fold-motif dead-calls
+(CA8, CA10, CA11 by Zn-His loss; ALDH16A1 by Cys+Glu loss), **zero** active comparators flagged.
+
+### Integration & effect
+The dead-call `override_pos` is now the union of three channels (structure OR text OR fold-motif).
+
+| metric | v11 | v12 |
+|---|---|---|
+| full-DB dead-calls | 435 | **463** (+28: 26 text-only, 2 text+motif) |
+| OOS sensitivity | 0.59 [0.43–0.73] | **0.67 [0.51–0.79]** |
+| OOS specificity | 0.97 [0.87–0.99] | **0.97 [0.87–1.00]** |
+| cofactor (OOS) | 1/3 | **3/3** |
+| metabolic (OOS) | 4/7 | 4/7 |
+| new false positives (active comparators) | — | **0** |
+
+**Channel attribution (OOS pseudo sensitivity):** structure only 0.59 → +text 0.67 → +fold-motif 0.67.
+On this OOS set the text and fold-motif channels fire on the same CARPs, so the fold motif adds no
+*additional* OOS detections; its value is orthogonal, annotation-independent structural confirmation.
+CA8/CA10 are the genuine new recoveries (CA11 was already caught by the structure gate).
+
+**Honest limitations (disclosed on the tab).** NME8/NME9 and GOT1L1 remain not-dead: they retain their
+catalytic residues and their UniProt annotations assert activity, so neither channel can fire — these
+are regulatory/domain-level pseudoenzymes beyond the reach of structure- and text-based gates.
+The text channel's gain is best read as *rediscovery of annotation-documented dead enzymes* rather
+than novel detection (the classifier confirms an existing human curatorial judgment).
+
+**Self-review.** The mycelium pass (`llm-failure-modes`, `data-pipeline-leakage`, `doc-schema-fidelity`)
+caught and fixed two documentation-attribution defects before deployment (a misattributed text-precision
+number; CA11 wrongly credited to the new channels) and confirmed no new leakage — the text classifier is
+label-blind and the fold-motif thresholds derive from reference-enzyme biochemistry, not from fitting the
+OOS set. See `EVAL_MYCELIUM_REVIEW.md` (F7–F12).
+
+**New data files:** `data/layer1_textcalls.csv` (per-protein text calls + rationale),
+`data/layer2_foldmotifs.csv` (fold-motif residue observations).
+
+---
+
 ## Move 1 — Family-specific death-motif re-scoring
 
 **Problem.** The generic catalytic-column rule scored several textbook pseudoenzymes as *active*

@@ -1,104 +1,80 @@
 {
- "evaluation": "out_of_sample_only",
- "definition": "Reference proteins whose UniProt accession is NOT in the gold development/tuning set (69 accessions that set the death-motif gate thresholds). These proteins never influenced any threshold.",
- "n_pseudo": 39,
- "n_active": 38,
- "TP": 23,
- "FN": 16,
- "TN": 37,
- "FP": 1,
- "sensitivity": 0.59,
- "sensitivity_ci": [
-  0.434,
-  0.729
- ],
- "specificity": 0.974,
- "specificity_ci": [
-  0.865,
-  0.995
- ],
- "ppv": 0.958,
- "npv": 0.698,
- "sensitivity_by_class": {
-  "pseudokinase": {
-   "n": 14,
-   "called_dead": 11,
-   "sensitivity": 0.786,
-   "ci": [
-    0.524,
-    0.924
-   ]
+  "evaluation": "out_of_sample_only",
+  "definition": "OOS = UniProt accession NOT among the 69 gold tuning-set accessions used to develop the dead-call gate.",
+  "n_pseudo": 39,
+  "n_active": 38,
+  "TP": 26,
+  "FN": 13,
+  "TN": 37,
+  "FP": 1,
+  "sensitivity": 0.667,
+  "sensitivity_ci": [
+    0.51,
+    0.794
+  ],
+  "specificity": 0.974,
+  "specificity_ci": [
+    0.865,
+    0.995
+  ],
+  "ppv": 0.963,
+  "npv": 0.74,
+  "sensitivity_by_class": {
+    "cofactor pseudoenzyme": {
+      "called_dead": 3,
+      "n": 3
+    },
+    "metabolic pseudoenzyme": {
+      "called_dead": 4,
+      "n": 7
+    },
+    "pseudo-DUB": {
+      "called_dead": 0,
+      "n": 2
+    },
+    "pseudo-GTPase": {
+      "called_dead": 3,
+      "n": 3
+    },
+    "pseudokinase": {
+      "called_dead": 12,
+      "n": 14
+    },
+    "pseudophosphatase": {
+      "called_dead": 4,
+      "n": 10
+    }
   },
-  "pseudophosphatase": {
-   "n": 10,
-   "called_dead": 4,
-   "sensitivity": 0.4,
-   "ci": [
-    0.168,
-    0.687
-   ]
+  "detection_channels": {
+    "description": "Dead-call = structure gate OR text classifier OR fold-specific catalytic-residue motif.",
+    "channel_structure": "Existing motif/domain gate (ePK VAIK/HRD/DFG, GHKL, phosphatase CX5R, M-CSA constellation).",
+    "channel_text": "LLM classifier over UniProt function comment; high-confidence explicit self-inactivity only (two-pass, strict).",
+    "channel_foldmotif": "Zn-His triad (alpha-carbonic-anhydrase), catalytic His (NDPK), catalytic Cys nucleophile (thiol-mechanism ALDH, EC 1.2.1.*), by alignment to CA2/NME1/ALDH2.",
+    "net_new_dead_calls_full_db": 28,
+    "net_new_text_only": 26,
+    "net_new_foldmotif_only": 0,
+    "net_new_text_and_fold": 2,
+    "oos_sensitivity_structure_only": 0.59,
+    "oos_sensitivity_plus_text": 0.667,
+    "oos_sensitivity_plus_foldmotif": 0.667,
+    "note": "On the OOS pseudo set the text and fold-motif channels are redundant on the CARPs (both fire); the fold-motif channel adds orthogonal structural confirmation and robustness where annotation is uninformative."
   },
-  "pseudo-GTPase": {
-   "n": 3,
-   "called_dead": 3,
-   "sensitivity": 1.0,
-   "ci": [
-    0.438,
-    1
-   ]
+  "MR_separation": {
+    "median_pseudo": 0.284,
+    "median_active": 0.613,
+    "mannwhitney_p": 0.0008,
+    "auc_pseudo_gt_active": 0.281,
+    "interpretation": "MR is higher in actives by construction (pocket retention); AUC<0.5 expected. MR is the metabolite-sensor discovery lever, not a deadness detector."
   },
-  "pseudo-DUB": {
-   "n": 2,
-   "called_dead": 0,
-   "sensitivity": 0.0,
-   "ci": [
-    0,
-    0.658
-   ]
+  "reference_set": {
+    "total": 161,
+    "pseudo": 95,
+    "active": 66,
+    "in_db": 142,
+    "metabolic_cofactor_pseudo_in_db": 14
   },
-  "metabolic": {
-   "n": 7,
-   "called_dead": 4,
-   "sensitivity": 0.571,
-   "ci": [
-    0.25,
-    0.842
-   ]
-  },
-  "cofactor": {
-   "n": 3,
-   "called_dead": 1,
-   "sensitivity": 0.333,
-   "ci": [
-    0.061,
-    0.792
-   ]
-  }
- },
- "MR_separation": {
-  "median_pseudo": 0.284,
-  "median_active": 0.613,
-  "mannwhitney_p": 0.0008,
-  "auc_pseudo_vs_active": 0.281,
-  "note": "AUC<0.5 is expected: MR is a pocket-retention score, higher in active enzymes. MR is NOT a deadness detector; the dead-call gate is."
- },
- "MR_by_class_median_pseudo": {
-  "pseudokinase": 0.398,
-  "pseudophosphatase": 0.0,
-  "pseudo-GTPase": 0.0,
-  "pseudo-DUB": 0.0,
-  "metabolic": 0.5,
-  "cofactor": 0.62
- },
- "reference_set": {
-  "total": 161,
-  "pseudo": 95,
-  "active": 66,
-  "in_db": 142,
-  "metabolic_cofactor_pseudo_in_db": 14
- },
- "FP_list": [
-  "PTEN"
- ],
- "method_note": "Reference set literature-curated (Murphy/Eyers/Ribeiro/Todd/Tonks/Manning + metabolic/cofactor expansion: CARPs, ALDH dead enzymes, pseudo-NDPKs, pseudo-amidases). Independent of tool scores. dead_call=override_pos (death-motif gate). Wilson 95% CIs. ONLY out-of-sample metrics reported."
+  "FP_list": [
+    "PTEN"
+  ],
+  "method_note": "Dead-call gate -> sens/spec. Layers added this version: LLM function-text classifier + fold-specific catalytic-residue motifs. MR unchanged."
 }

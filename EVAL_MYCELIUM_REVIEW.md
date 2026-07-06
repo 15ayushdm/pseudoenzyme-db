@@ -160,3 +160,82 @@ still correct by construction (AUC < 0.5).
 **Verdict unchanged:** fit to publish. The leakage concern is now structurally eliminated (OOS-only),
 metabolite-sensor coverage is materially deeper, and the gate's fold-specific blind spots are
 disclosed rather than averaged away.
+
+
+---
+
+## v12 addendum — mycelium review of the two new detection channels
+
+**Scope of this review:** the two channels added to the dead-call in v12 — an LLM function-text
+classifier and fold-specific catalytic-residue motifs — plus the re-scoring and eval-tab rebuild
+they drove. Lenses applied: `llm-failure-modes`, `data-pipeline-leakage`, `doc-schema-fidelity`.
+
+### What changed
+- Dead-call `override_pos` is now the union of three channels: structure gate (unchanged),
+  text classifier (`ch_text`), fold-motif (`ch_foldmotif`).
+- Full-DB dead-calls 435 → 463 (+28 net-new: 26 text-only, 2 text+motif).
+- Out-of-sample: Sensitivity 0.59 → **0.67** [0.51–0.79]; Specificity **0.97** [0.87–1.00] held;
+  sole FP still PTEN (CX5R gate, not a new channel).
+- Per-class OOS: cofactor 1/3 → **3/3** (CA8/CA10 recovered by the new channels, CA11 already by
+  structure); metabolic held 4/7; pseudokinase 12/14; pseudo-GTPase 3/3; pseudophosphatase 4/10;
+  pseudo-DUB 0/2.
+
+### Findings
+
+**F7 [Major, FIXED during review] — misattributed precision number.** The channels narrative first
+read "precision on active comparators 37/38." That conflated the *whole-gate* OOS specificity
+(37/38, whose single FP is PTEN from the pre-existing CX5R gate) with the *text channel's own*
+precision. Direct check: the text channel flags **0 of 60** in-DB active comparators. Corrected the
+tab to state that the text channel flags none of the 60 actives. (`doc-schema-fidelity`: numerical
+claim in docs disagreed with the code output.)
+
+**F8 [Major, FIXED during review] — CA11 credited to the wrong channel.** The narrative claimed the
+new channels "recover CA8/CA10/CA11." In fact CA11 has `ch_structure=True` and was already a dead-call
+before v12; only CA8 and CA10 are genuine new recoveries. Corrected in three places on the tab.
+(`doc-schema-fidelity`: attribution contradicted by `base_override`.)
+
+**F9 [Major, HELD — anti-circularity of the text channel].** The most consequential question for a
+knowledge-based LLM channel: does it make "sensitivity" a measure of *rediscovery* rather than
+*detection*? Three structural guards keep the evaluation honest. (a) The classifier is blind to gene
+name and truth label — it reads only the UniProt function comment. (b) The reference set is
+literature-curated independently of any tool score. (c) The channel fires on an *explicit textual
+assertion of lost activity*, which is a real, human-written annotation signal, not a model prior.
+The residual caveat, stated plainly: where a curator has already written "lacks catalytic activity,"
+the text channel is confirming an existing human judgment, so the +0.08 sensitivity is best read as
+"the tool now surfaces annotation-documented dead enzymes it previously ignored," not "the tool
+discovered novel dead enzymes." This is disclosed on the tab and is the correct framing.
+
+**F10 [Major, HELD — precision cost of a DB-wide propagating channel].** A text channel that fires on
+2670 proteins can inject false positives far from the reference set (the reference-set precision check
+only sees comparators). The v12 strict two-pass filter (reasoning-model re-verification requiring an
+explicit self-inactivity statement) was added precisely for this: it cut high-confidence text-dead
+calls 113 → 73 and removed the demonstrated FPs (FGR, RHOC, NPR1, MAP3K8/TPL2 — all active, inactivity
+merely *inferred* from absence of a claim). Net active-comparator FPs from the new channels: **0**.
+The residual risk (unmeasurable without a full-DB gold set) is disclosed.
+
+**F11 [Minor, HELD — fold-motif redundancy on this OOS set].** On the OOS pseudo set the text and
+fold-motif channels fire on the same proteins (the CARPs), so the fold motif adds 0 *additional* OOS
+detections. This is not a defect — the fold motif is orthogonal structural evidence (residue-level,
+annotation-independent) and would catch a CARP whose annotation is uninformative — but the honest
+statement is that its incremental OOS value here is confirmatory, and this is stated on the tab.
+
+**F12 [Major, HELD — honest metabolic misses].** NME8/NME9 and GOT1L1 remain not-dead. Verified: they
+retain their catalytic residues (His118 for NDPKs) and their UniProt text asserts activity, so neither
+a residue-loss motif nor an explicit-inactivity text signal can fire. These are regulatory/domain-level
+pseudoenzymes beyond the reach of structure- and text-based gates. Disclosed on the tab rather than
+papered over.
+
+### Leakage / pipeline (data-pipeline-leakage)
+- **OOS split preserved:** the 69 gold-tuning accessions still define in-sample; all metrics are on the
+  77 disjoint OOS proteins. The new channels were *not* tuned on the OOS set — the text classifier is
+  label-blind and the fold-motif thresholds come from reference-enzyme biochemistry (CA2/NME1/ALDH2),
+  not from fitting the reference set. No new leakage path introduced.
+- **No silent coercions:** channel integration is boolean OR with explicit per-record flags; MR and
+  mr_rank unchanged (verified identical to v11 pocket-retention values).
+
+### Verdict
+**Fit to publish.** Two attribution defects (F7, F8) were caught and fixed during this review before
+deployment; both were documentation-fidelity errors, not scoring errors — the underlying dead-calls
+were correct. The sensitivity gain is real (0.59 → 0.67), specificity is held, zero new false
+positives among active comparators, and the framing (detection-vs-rediscovery, precision cost, honest
+metabolic misses) is disclosed on the tab.
