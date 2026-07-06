@@ -1,0 +1,143 @@
+gene,uniprot,truth,class,in_gold,named_in_dev_doc,curated_design_target,contaminated,dead,ch_structure,ch_text,ch_foldmotif,ch_paralog,mr,held_out,contamination_reason
+STRADA,Q7RTN6,pseudoenzyme,pseudokinase,True,True,True,True,True,True,True,False,False,0.44,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+STRADB,Q9C0K7,pseudoenzyme,pseudokinase,True,False,False,True,True,True,True,False,False,0.4155,False,gold_tuning_set
+KSR1,Q8IVT5,pseudoenzyme,pseudokinase,True,True,True,True,False,False,False,False,False,0.4213,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+KSR2,Q6VAB6,pseudoenzyme,pseudokinase,True,True,True,True,False,False,False,False,False,0.3247,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+TRIB1,Q96RU8,pseudoenzyme,pseudokinase,True,True,True,True,True,True,False,False,False,0.2778,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+TRIB2,Q92519,pseudoenzyme,pseudokinase,True,True,True,True,True,True,True,False,False,0.3019,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+TRIB3,Q96RU7,pseudoenzyme,pseudokinase,True,True,True,True,True,True,True,False,False,0.3746,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+ERBB3,P21860,pseudoenzyme,pseudokinase,True,True,True,True,True,True,False,False,False,0.4229,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+EPHA10,Q5JZY3,pseudoenzyme,pseudokinase,True,True,False,True,True,True,False,False,False,0.5383,False,gold_tuning_set;named_in_dev_doc
+EPHB6,O15197,pseudoenzyme,pseudokinase,True,True,False,True,True,True,True,False,False,0.4622,False,gold_tuning_set;named_in_dev_doc
+ILK,Q13418,pseudoenzyme,pseudokinase,False,True,False,True,True,True,False,False,False,0.3093,False,named_in_dev_doc
+CASK,O14936,pseudoenzyme,pseudokinase,True,True,True,True,True,True,False,False,False,0.6049,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+MLKL,Q8NB16,pseudoenzyme,pseudokinase,True,True,False,True,True,True,True,False,False,0.3823,False,gold_tuning_set;named_in_dev_doc
+IRAK2,O43187,pseudoenzyme,pseudokinase,True,True,True,True,True,True,False,False,False,0.2339,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+IRAK3,Q9Y616,pseudoenzyme,pseudokinase,True,True,True,True,True,True,True,False,False,0.3854,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+BUB1B,O60566,pseudoenzyme,pseudokinase,True,True,True,True,True,True,False,False,False,0.209,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+PXK,Q7Z7A4,pseudoenzyme,pseudokinase,True,True,False,True,True,True,False,False,False,0.32,False,gold_tuning_set;named_in_dev_doc
+STK40,Q8N2I9,pseudoenzyme,pseudokinase,True,True,True,True,True,True,False,False,False,0.4427,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+SCYL1,Q96KG9,pseudoenzyme,pseudokinase,True,True,False,True,True,True,False,False,False,0.1125,False,gold_tuning_set;named_in_dev_doc
+SCYL2,Q6P3W7,pseudoenzyme,pseudokinase,False,False,False,False,True,True,False,False,False,0.309,True,
+SCYL3,Q8IZE3,pseudoenzyme,pseudokinase,False,False,False,False,True,True,False,False,False,0.3,True,
+PRAG1,Q86YV5,pseudoenzyme,pseudokinase,True,True,True,True,True,False,True,False,False,0.4667,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+PEAK1,Q9H792,pseudoenzyme,pseudokinase,True,True,False,True,True,True,True,False,False,0.2848,False,gold_tuning_set;named_in_dev_doc
+VRK3,Q8IV63,pseudoenzyme,pseudokinase,True,True,True,True,False,False,False,False,False,0.24,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+NRBP1,Q9UHY1,pseudoenzyme,pseudokinase,False,False,False,False,True,True,False,False,False,0.1622,True,
+NRBP2,Q9NSY0,pseudoenzyme,pseudokinase,False,False,False,False,True,True,False,False,False,0.156,True,
+ULK4,Q96C45,pseudoenzyme,pseudokinase,False,True,False,True,True,True,True,False,False,0.2841,False,named_in_dev_doc
+ROR1,Q01973,pseudoenzyme,pseudokinase,False,False,False,False,True,False,True,False,False,0.4484,True,
+ROR2,Q01974,pseudoenzyme,pseudokinase,False,True,False,True,False,False,False,False,False,0.3973,False,named_in_dev_doc
+RYK,P34925,pseudoenzyme,pseudokinase,False,False,False,False,True,True,False,False,False,0.5091,True,
+PTK7,Q13308,pseudoenzyme,pseudokinase,False,True,True,True,True,True,True,False,False,0.4781,False,named_in_dev_doc;curated_design_target
+STYK1,Q6J9G0,pseudoenzyme,pseudokinase,False,True,True,True,True,True,False,False,False,0.537,False,named_in_dev_doc;curated_design_target
+TBCK,Q8TEA7,pseudoenzyme,pseudokinase,False,True,False,True,True,True,False,False,False,0.44,False,named_in_dev_doc
+CAMKV,Q8NCB2,pseudoenzyme,pseudokinase,False,False,False,False,True,True,True,False,False,0.4155,True,
+PDIK1L,Q8N165,pseudoenzyme,pseudokinase,False,True,False,True,False,False,False,False,False,0.3997,False,named_in_dev_doc
+STYX,Q8WUJ0,pseudoenzyme,pseudophosphatase,True,True,True,True,True,False,True,False,False,0.0,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+STYXL1,Q9Y6J8,pseudoenzyme,pseudophosphatase,True,True,True,True,True,True,True,False,False,0.0,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+PTPRN,Q16849,pseudoenzyme,pseudophosphatase,True,True,True,True,True,True,False,False,False,0.4205,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+PTPRN2,Q92932,pseudoenzyme,pseudophosphatase,True,True,True,True,True,True,False,False,False,0.0,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+SBF1,O95248,pseudoenzyme,pseudophosphatase,True,True,True,True,True,True,False,False,False,0.0,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+SBF2,Q86WG5,pseudoenzyme,pseudophosphatase,True,False,True,True,True,True,False,False,False,0.0,False,gold_tuning_set;curated_design_target
+MTMR9,Q96QG7,pseudoenzyme,pseudophosphatase,False,True,True,True,True,True,False,False,False,0.0,False,named_in_dev_doc;curated_design_target
+MTMR10,Q9NXD2,pseudoenzyme,pseudophosphatase,False,False,True,True,True,True,False,False,False,0.0,False,curated_design_target
+MTMR11,A4FU01,pseudoenzyme,pseudophosphatase,False,False,False,False,True,True,False,False,False,0.0,True,
+MTMR12,Q9C0I1,pseudoenzyme,pseudophosphatase,False,False,False,False,True,True,False,False,False,0.0,True,
+TNS1,Q9HBL0,pseudoenzyme,pseudophosphatase,True,True,False,True,True,True,False,False,False,0.0,False,gold_tuning_set;named_in_dev_doc
+TNS2,Q63HR2,pseudoenzyme,pseudophosphatase,False,False,False,False,False,False,False,False,False,0.0,True,
+TNS3,Q68CZ2,pseudoenzyme,pseudophosphatase,False,False,False,False,False,False,False,False,False,0.0,True,
+TPTE,P56180,pseudoenzyme,pseudophosphatase,False,False,False,False,False,False,False,False,False,0.0,True,
+TPTE2,Q6XPS3,pseudoenzyme,pseudophosphatase,False,False,False,False,False,False,False,False,False,0.0,True,
+PTPN23,Q9H3S7,pseudoenzyme,pseudophosphatase,False,False,False,False,False,False,False,False,False,0.0,True,
+PTPRQ,Q9UMZ3,pseudoenzyme,pseudophosphatase,False,False,False,False,False,False,False,False,False,0.0,True,
+CFLAR,O15519,pseudoenzyme,pseudoprotease,True,True,True,True,True,True,False,False,False,0.3149,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+RHBDF1,Q96CC6,pseudoenzyme,pseudoprotease,True,True,True,True,True,True,True,False,False,0.0,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+RHBDF2,Q6PJF5,pseudoenzyme,pseudoprotease,True,False,True,True,True,True,True,False,False,0.0,False,gold_tuning_set;curated_design_target
+USP39,Q53GS9,pseudoenzyme,pseudo-DUB,True,True,True,True,False,False,False,False,False,0.0,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+USP50,Q70EL3,pseudoenzyme,pseudo-DUB,True,True,True,True,False,False,False,False,False,0.0,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+USP53,Q70EK8,pseudoenzyme,pseudo-DUB,False,False,False,False,False,False,False,False,False,0.0,True,
+USP54,Q70EL1,pseudoenzyme,pseudo-DUB,False,False,False,False,False,False,False,False,False,0.0,True,
+OTULINL,Q9NUU6,pseudoenzyme,pseudo-DUB,True,True,True,True,True,False,True,False,False,0.0,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+RHOBTB1,O94844,pseudoenzyme,pseudo-GTPase,False,True,False,True,True,True,False,False,False,0.0,False,named_in_dev_doc
+RHOBTB2,Q9BYZ6,pseudoenzyme,pseudo-GTPase,True,True,True,True,True,True,False,False,False,0.0,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+RHOBTB3,O94955,pseudoenzyme,pseudo-GTPase,False,False,False,False,True,True,False,False,False,0.0,True,
+RHOH,Q15669,pseudoenzyme,pseudo-GTPase,True,True,False,True,False,False,False,False,False,0.0,False,gold_tuning_set;named_in_dev_doc
+RND1,Q92730,pseudoenzyme,pseudo-GTPase,True,True,True,True,True,True,True,False,False,0.0,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+RND2,P52198,pseudoenzyme,pseudo-GTPase,True,False,True,True,True,True,False,False,False,0.0,False,gold_tuning_set;curated_design_target
+RND3,P61587,pseudoenzyme,pseudo-GTPase,True,False,True,True,True,True,True,False,False,0.0,False,gold_tuning_set;curated_design_target
+DIRAS3,O95661,pseudoenzyme,pseudo-GTPase,False,False,False,False,True,True,False,False,False,0.0,True,
+BRAF,P15056,active,active kinase,True,True,False,True,False,False,False,False,False,0.3762,False,gold_tuning_set;named_in_dev_doc
+RAF1,P04049,active,active kinase,False,False,False,False,False,False,False,False,False,0.3774,True,
+EGFR,P00533,active,active kinase,True,False,False,True,False,False,False,False,False,0.5767,False,gold_tuning_set
+ERBB2,P04626,active,active kinase,False,False,False,False,False,False,False,False,False,0.7415,True,
+EPHA2,P29317,active,active kinase,True,False,False,True,False,False,False,False,False,0.4587,False,gold_tuning_set
+EPHB4,P54760,active,active kinase,True,True,False,True,False,False,False,False,False,0.477,False,gold_tuning_set;named_in_dev_doc
+IRAK1,P51617,active,active kinase,True,False,False,True,False,False,False,False,False,0.4674,False,gold_tuning_set
+IRAK4,Q9NWZ3,active,active kinase,True,True,False,True,False,False,False,False,False,0.542,False,gold_tuning_set;named_in_dev_doc
+CAMK2A,Q9UQM7,active,active kinase,True,False,False,True,False,False,False,False,False,0.8653,False,gold_tuning_set
+BUB1,O43683,active,active kinase,True,False,False,True,False,False,False,False,False,0.4143,False,gold_tuning_set
+VRK1,Q99986,active,active kinase,True,False,False,True,False,False,False,False,False,0.4758,False,gold_tuning_set
+VRK2,Q86Y07,active,active kinase,False,False,False,False,False,False,False,False,False,0.5,True,
+ULK1,O75385,active,active kinase,False,False,False,False,False,False,False,False,False,0.5886,True,
+MUSK,O15146,active,active kinase,False,False,False,False,False,False,False,False,False,0.4854,True,
+DDR1,Q08345,active,active kinase,False,True,True,True,False,False,False,False,False,0.6052,False,named_in_dev_doc;curated_design_target
+SRC,P12931,active,active kinase,False,False,False,False,False,False,False,False,False,0.6907,True,
+ABL1,P00519,active,active kinase,False,False,False,False,False,False,False,False,False,0.6314,True,
+MAPK1,P28482,active,active kinase,False,False,False,False,False,False,False,False,False,0.7085,True,
+CDK2,P24941,active,active kinase,False,False,False,False,False,False,False,False,False,0.5001,True,
+AURKA,O14965,active,active kinase,False,False,False,False,False,False,False,False,False,0.5011,True,
+PRKACA,P17612,active,active kinase,False,False,False,False,False,False,False,False,False,0.87,True,
+GSK3B,P49841,active,active kinase,False,False,False,False,False,False,False,False,False,0.62,True,
+PTPN1,P18031,active,active phosphatase,True,True,False,True,False,False,False,False,False,0.0,False,gold_tuning_set;named_in_dev_doc
+PTPRA,P18433,active,active phosphatase,True,True,False,True,False,False,False,False,False,0.0,False,gold_tuning_set;named_in_dev_doc
+PTPN11,Q06124,active,active phosphatase,False,False,False,False,False,False,False,False,False,0.0,True,
+DUSP3,P51452,active,active phosphatase,True,True,False,True,False,False,False,False,False,0.0,False,gold_tuning_set;named_in_dev_doc
+MTM1,Q13496,active,active phosphatase,True,False,False,True,False,False,False,False,False,0.0,False,gold_tuning_set
+MTMR2,Q13614,active,active phosphatase,True,True,False,True,False,False,False,False,False,0.0,False,gold_tuning_set;named_in_dev_doc
+MTMR6,Q9Y217,active,active phosphatase,False,False,False,False,False,False,False,False,False,0.0,True,
+PTEN,P60484,active,active phosphatase,False,True,False,True,True,True,False,False,False,0.0,False,named_in_dev_doc
+CDC14A,Q9UNH5,active,active phosphatase,False,False,False,False,False,False,False,False,False,0.0,True,
+CASP8,Q14790,active,active protease,True,False,False,True,False,False,False,False,False,0.7082,False,gold_tuning_set
+CASP3,P42574,active,active protease,False,False,False,False,False,False,False,False,False,0.7963,True,
+RHBDL2,Q9NX52,active,active protease,True,True,False,True,False,False,False,False,False,0.0,False,gold_tuning_set;named_in_dev_doc
+USP7,Q93009,active,active DUB,True,True,False,True,False,False,False,False,False,0.0,False,gold_tuning_set;named_in_dev_doc
+USP5,P45974,active,active DUB,False,False,False,False,False,False,False,False,False,0.0,True,
+OTULIN,Q96BN8,active,active DUB,True,True,False,True,False,False,False,False,False,0.0,False,gold_tuning_set;named_in_dev_doc
+USP2,O75604,active,active DUB,False,False,False,False,False,False,False,False,False,0.0,True,
+RHOA,P61586,active,active GTPase,True,True,False,True,False,False,False,False,False,0.0,False,gold_tuning_set;named_in_dev_doc
+RAC1,P63000,active,active GTPase,False,False,False,False,False,False,False,False,False,0.0,True,
+CDC42,P60953,active,active GTPase,False,False,False,False,False,False,False,False,False,0.0,True,
+HRAS,P01112,active,active GTPase,False,True,False,True,False,False,False,False,False,0.0,False,named_in_dev_doc
+AHCYL1,O43865,pseudoenzyme,cofactor pseudoenzyme,True,True,True,True,True,True,False,False,False,0.82,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+AHCYL2,Q96HN2,pseudoenzyme,cofactor pseudoenzyme,True,True,True,True,True,True,True,False,False,0.82,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+ALDH16A1,Q8IZ83,pseudoenzyme,metabolic pseudoenzyme,True,True,True,True,True,True,False,True,False,0.0,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+NME7,Q9Y5B8,pseudoenzyme,metabolic pseudoenzyme,True,True,True,True,True,False,False,False,True,0.59,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+NME8,Q8N427,pseudoenzyme,metabolic pseudoenzyme,False,True,True,True,True,False,False,False,True,0.3471,False,named_in_dev_doc;curated_design_target
+NME9,Q86XW9,pseudoenzyme,metabolic pseudoenzyme,False,True,True,True,True,False,False,False,True,0.559,False,named_in_dev_doc;curated_design_target
+ASNSD1,Q9NWL6,pseudoenzyme,metabolic pseudoenzyme,False,True,True,True,True,True,False,False,False,0.83,False,named_in_dev_doc;curated_design_target
+PGLYRP1,O75594,pseudoenzyme,metabolic pseudoenzyme,False,True,False,True,True,True,False,False,False,0.5,False,named_in_dev_doc
+PGLYRP3,Q96LB9,pseudoenzyme,metabolic pseudoenzyme,False,False,False,False,True,True,False,False,False,0.2979,True,
+PGLYRP4,Q96LB8,pseudoenzyme,metabolic pseudoenzyme,False,False,False,False,True,True,False,False,False,0.2825,True,
+GOT1L1,Q8NHS2,pseudoenzyme,metabolic pseudoenzyme,False,True,True,True,True,False,False,False,True,0.53,False,named_in_dev_doc;curated_design_target
+CA8,P35219,pseudoenzyme,cofactor pseudoenzyme,False,True,True,True,True,False,True,True,False,0.88,False,named_in_dev_doc;curated_design_target
+CA10,Q9NS85,pseudoenzyme,cofactor pseudoenzyme,False,True,True,True,True,False,True,True,False,0.62,False,named_in_dev_doc;curated_design_target
+CA11,O75493,pseudoenzyme,cofactor pseudoenzyme,False,True,True,True,True,True,True,True,False,0.25,False,named_in_dev_doc;curated_design_target
+AHCY,P23526,active,active cofactor,True,True,False,True,False,False,False,False,False,1.0,False,gold_tuning_set;named_in_dev_doc
+ALDH2,P05091,active,active metabolic,True,True,True,True,False,False,False,False,False,1.0,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+ALDH1A1,P00352,active,active metabolic,False,True,False,True,False,False,False,False,False,0.93,False,named_in_dev_doc
+ALDH3A1,P30838,active,active metabolic,False,False,False,False,False,False,False,False,False,0.6,True,
+ALDH7A1,P49419,active,active metabolic,False,False,False,False,False,False,False,False,False,0.0,True,
+ALDH9A1,P49189,active,active metabolic,False,False,False,False,False,False,False,False,False,0.0,True,
+NME1,P15531,active,active metabolic,True,True,True,True,False,False,False,False,False,0.91,False,gold_tuning_set;named_in_dev_doc;curated_design_target
+NME2,P22392,active,active metabolic,False,False,True,True,False,False,False,False,False,0.91,False,curated_design_target
+NME3,Q13232,active,active metabolic,False,False,True,True,False,False,False,False,False,0.91,False,curated_design_target
+NME4,O00746,active,active metabolic,False,True,True,True,False,False,False,False,False,0.77,False,named_in_dev_doc;curated_design_target
+ASNS,P08243,active,active metabolic,False,False,False,False,False,False,False,False,False,0.88,True,
+PGLYRP2,Q96PD5,active,active metabolic,False,True,False,True,False,False,False,False,False,1.0,False,named_in_dev_doc
+GOT1,P17174,active,active metabolic,False,True,True,True,False,False,False,False,False,0.97,False,named_in_dev_doc;curated_design_target
+GOT2,P00505,active,active metabolic,False,True,True,True,False,False,False,False,False,0.82,False,named_in_dev_doc;curated_design_target
+CA1,P00915,active,active cofactor,False,True,False,True,False,False,False,False,False,1.0,False,named_in_dev_doc
+CA2,P00918,active,active cofactor,False,True,True,True,False,False,False,False,False,1.0,False,named_in_dev_doc;curated_design_target
+CA9,Q16790,active,active cofactor,False,True,False,True,False,False,False,False,False,1.0,False,named_in_dev_doc
+CA12,O43570,active,active cofactor,False,True,False,True,False,False,False,False,False,1.0,False,named_in_dev_doc

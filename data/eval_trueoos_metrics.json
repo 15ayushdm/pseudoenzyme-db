@@ -1,0 +1,100 @@
+{
+  "evaluation": "true_out_of_sample",
+  "definition": "Held-out = UniProt accession NOT in the 69 gold gate-tuning set AND the gene/accession never named in any pipeline development, tuning, miss-analysis, or channel-design document. This excludes every protein the workflow was optimized against, including the specific proteins each detection channel (fold-motif, paralog) was built to recover.",
+  "contrast_with_prior": "The prior v13 'out-of-sample' number (0.744) excluded only the 69 structure-gate tuning accessions; it still counted the fold-motif and paralog channels' own design targets (CA8/CA10, NME8/NME9/GOT1L1) as OOS recoveries.",
+  "held_out": {
+    "n_pseudo": 21,
+    "n_active": 24,
+    "TP": 13,
+    "FN": 8,
+    "TN": 24,
+    "FP": 0,
+    "sensitivity": 0.619,
+    "sensitivity_ci": [
+      0.409,
+      0.792
+    ],
+    "specificity": 1.0,
+    "specificity_ci": [
+      0.862,
+      1.0
+    ],
+    "ppv": 1.0,
+    "npv": 0.75,
+    "fp_genes": [],
+    "fn_genes": [
+      "PTPN23",
+      "PTPRQ",
+      "TNS2",
+      "TNS3",
+      "TPTE",
+      "TPTE2",
+      "USP53",
+      "USP54"
+    ]
+  },
+  "per_class_heldout": {
+    "metabolic pseudoenzyme": [
+      2,
+      2
+    ],
+    "pseudo-DUB": [
+      0,
+      2
+    ],
+    "pseudo-GTPase": [
+      2,
+      2
+    ],
+    "pseudokinase": [
+      7,
+      7
+    ],
+    "pseudophosphatase": [
+      2,
+      8
+    ]
+  },
+  "channel_attribution_heldout": {
+    "structure": 0.5714,
+    "plus_text": 0.619,
+    "plus_foldmotif": 0.619,
+    "plus_paralog": 0.619,
+    "n": 21,
+    "note": "Fold-motif and paralog channels add 0 on the held-out set: their design targets are (correctly) excluded. Their apparent +0.077 gain in the prior number was rediscovery of their own tuning proteins."
+  },
+  "mr_separation_heldout": {
+    "median_pseudo": 0.0,
+    "median_active": 0.5,
+    "mannwhitney_p": 0.008587,
+    "auc_pseudo_gt_active": 0.282
+  },
+  "nested_definitions": {
+    "v13_oos_gold_only": {
+      "n_pseudo": 39,
+      "n_active": 38,
+      "sensitivity": 0.744,
+      "specificity": 0.974
+    },
+    "dev_scan_excluded": {
+      "n_pseudo": 22,
+      "n_active": 26,
+      "sensitivity": 0.636,
+      "specificity": 1.0
+    },
+    "true_heldout_curated": {
+      "n_pseudo": 21,
+      "n_active": 24,
+      "sensitivity": 0.619,
+      "specificity": 1.0
+    }
+  },
+  "contamination_summary": {
+    "total_in_db": 142,
+    "held_out": 45,
+    "excluded_total": 97,
+    "excluded_gold_tuning": 65,
+    "excluded_named_in_dev": 29,
+    "excluded_curated_only": 3
+  }
+}
