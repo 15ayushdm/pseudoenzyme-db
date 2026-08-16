@@ -11,6 +11,7 @@ The explorer scores **2,670 human proteins across 919 catalytic families** and r
 | File | Description |
 |------|-------------|
 | `index.html` | The explorer — a single self-contained HTML file (all data embedded; no server needed). This is what the live Pages site serves. Open it locally or use the link above. |
+| `explorer_features.py` | Re-appliable feature layers for `index.html` (see below). |
 | `EXPLORER_V2_CHANGELOG.md` | Full build log and rationale for every analytical step and revision. |
 | `data/metabolite_relevance.csv` | Per-protein metabolite-relevance scores and bins. |
 | `data/motif_calls.csv` | Family-specific death-motif calls (VAIK/HRD/DFG, CX5R, GHKL). |
@@ -33,6 +34,35 @@ The explorer scores **2,670 human proteins across 919 catalytic families** and r
 
 Full detail is in the tool's **About** panel and in `EXPLORER_V2_CHANGELOG.md`.
 
+## Exporting what you see
+
+Every table has an **⤓ Export CSV** button next to the result count. The download reflects the view
+you are currently looking at — search string, toggles, chips and sort order — and the filter is
+recorded in the filename, e.g.
+`pseudoenzymedb_candidates_search-nad_sensor-only_sort-metabolite-relevance-desc_2026-08-16.csv`.
+
+The export contains the **full filtered set**, not just the 500 rows the page draws, and reads values
+from the underlying data (full numeric precision, no markup). Secondary buttons widen the column set:
+`all fields` on the candidate table (83 columns — motif gate, pocket retention, structural
+confidence, experimental channel, DepMap breakdown), and `+ rationales & claims` on the literature
+table (adds every PMID-backed claim and the reference list). Files are UTF-8 with a BOM so Excel
+opens accented ligand names correctly.
+
+## Rebuilding the explorer
+
+`index.html` has no upstream generator — it is maintained by patching. All post-base features live in
+`explorer_features.py` as numbered, marker-guarded layers:
+
+```bash
+python3 explorer_features.py --file index.html --check   # which layers are present
+python3 explorer_features.py --file index.html           # apply any that are missing
+```
+
+Re-running is a no-op, and every edit asserts it matched exactly once, so a layer fails loudly rather
+than mispatching if the base HTML changes shape. Run it after regenerating the base file.
+
 ## Note on file size
 
-`index.html` is ~17.5 MB because the complete scored dataset is embedded directly in the page — this is intentional, so the tool runs entirely offline with no backend.
+`index.html` is ~22 MB because the complete scored dataset — including the 478-protein literature
+review with its claims and references — is embedded directly in the page. This is intentional, so the
+tool runs entirely offline with no backend.

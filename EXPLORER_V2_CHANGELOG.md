@@ -613,3 +613,85 @@ conservative pseudoenzyme classifier.
 **Tab changes.** Evaluation cards reduced to the two out-of-sample numbers; "show only out-of-sample"
 table filter now defaults ON; per-class and coverage narrative recomputed on the out-of-sample split;
 figure redrawn (metabolic/cofactor classes highlighted, all panels out-of-sample).
+
+---
+
+## v15 — CSV export + metabolic-coessentiality column (2026-08-16)
+
+**Artifact:** `pseudoenzyme_explorer_v3.html` · **Applied by:** `explorer_features.py`
+**Backup:** `pseudoenzyme_explorer_v3_preExport_20260815.bak.html` (pristine pre-feature base)
+
+### Build-process change
+
+There is no live generator for v3 — `prototype/make_explorer.py` builds v1 only and writes to a
+dead sandbox path. Post-hoc features were previously hand-patched, leaving no record of what had
+been applied. All custom feature layers now live in **`explorer_features.py`**, which is the
+generator substitute:
+
+```
+python3 explorer_features.py            # bring the explorer up to date with all layers
+python3 explorer_features.py --check    # report which layers are present
+python3 explorer_features.py --file X   # patch a different / regenerated file
+```
+
+Each layer is marker-guarded (idempotent — re-running is a no-op) and every edit asserts it matched
+**exactly once**, so a layer fails loudly rather than mispatching if the base HTML changes shape.
+Re-run it after any regeneration of the base file.
+
+### Layer 1 — `EXPORT_LAYER v1`: CSV export
+
+An `⤓ Export CSV` button beside the result count on the candidate, literature-prioritization and
+benchmark tables. The export reflects the **current view**: search string, toggles, chips, and sort
+order, encoded into the filename
+(`pseudoenzymedb_candidates_search-nad_sensor-only_sort-metabolite-relevance-desc_2026-08-16.csv`).
+
+- Serialises the **full filtered set**, not the 500 rows the DOM renders (verified: 2,670 on screen,
+  500 `<tr>`, 2,670 CSV rows). Values read from the data objects, so full numeric precision, no HTML.
+- Candidate table: 29 on-screen columns, or `all fields` → 83 columns (motif gate, pocket retention,
+  struct_conf + source, experimental channel, cofactor concordance, DepMap breakdown, top coessential
+  partners). Literature table: 21 columns, or `+ rationales & claims` → 29 including every
+  PMID-backed claim and the reference list.
+- UTF-8 BOM (Excel), CRLF, RFC-4180 quoting, and a leading-apostrophe guard on `=`/`+`/`@` so no cell
+  can execute as a spreadsheet formula.
+
+### Layer 2 — `DEPM_COLUMN v1`: metabolic coessentiality on the main table
+
+The DepMap metabolic-regulation score (`DEPM[acc].ds`, built for the Literature tab) now appears as a
+sortable **Metabolic** column on the main candidate table, between *Cofactor (exp)* and *Lit*, so the
+functional-genomics axis sits with the other experimental evidence. Bar scaled to the 0–11 range;
+teal ≥ 3 (metabolically wired), blue ≥ 1, grey below.
+
+**Semantics are carried over from the Literature tab deliberately, since the main table has a wider
+audience and the number is easy to misread:**
+
+- A **flat** coessentiality profile (`inf=0`, below the 0.25 informativeness gate) scores 0 but is
+  **untested** on this axis, not negative. Those cells carry a `flat` sub-label; 142 of the 320
+  scored rows in the default view are flat.
+- Proteins with **no DEPM entry** (outside the 478-protein reviewed set, or no DepMap data) render an
+  em-dash and **sort last in both directions** (151 of 471 default-view rows). This required an
+  explicit rule, and it **deliberately diverges from every other numeric column** in the table: the
+  shared sort maps null to `-Infinity`, which puts blanks last descending but *first* ascending
+  (`mis_z` and `metabolite_relevance` both behave that way). That is tolerable on a column with a few
+  gaps; here 32% of rows are blank, so ascending would have opened with 151 em-dashes and buried
+  every real low score. "No entry" on this axis means outside the reviewed set — genuinely absent,
+  not low — so it should never outrank a measured value.
+- Clicking a row now also shows the existing **DepMap metabolic assessment** panel (composite score,
+  fraction of coessential partners in KEGG metabolism with FDR q, nucleotide/cofactor subset, top
+  correlation, strongest nutrient screen), so the column value is explained rather than bare.
+- Coverage: 376 of 2,670 proteins; 320 of the 471 default-view rows. Calibration is unchanged —
+  HPRT1 scores 2.0, so this reads regulatory *positioning*, not pathway membership.
+
+CSV exports gained `metabolic_coessentiality`, `coessential_frac_metabolic` and
+`coessentiality_informative`; the all-fields export gained the 11-column `depmap_*` breakdown.
+
+### Verification
+
+Headless-DOM suite (jsdom) over the patched file: 12 filter/sort combinations exported and reparsed
+against RFC 4180 — uniform field counts, balanced quotes, no bare newlines, no console errors on
+load. Header/body column alignment 13 = 13; 471/471 exported `metabolic_coessentiality` values
+cross-checked against `DEPM` with 0 mismatches.
+
+Sort was checked by reading the null positions off both click directions rather than trusting the
+first: descending gives `first5=10.5,9,9,7.5,7 / nullpos=320..470`, ascending gives `first5=0,0,0,0,0
+/ nullpos=320..470`. An earlier build asserted nulls-last from the descending pass alone and was
+wrong on ascending — worth repeating this two-direction check on any future column with many blanks.
